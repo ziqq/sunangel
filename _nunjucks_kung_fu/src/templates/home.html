@@ -1,0 +1,32 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{# variable example #}
+	<h1>{{title}}</h1>
+
+	
+	{# partial example #}
+	{% include "partials/_header.html" %}
+
+	{# mixin example #}
+	{{mixin.icon('facebook')}}
+	{{mixin.icon('bm')}}
+	{{mixin.icon('areligion')}}
+
+	<div class="container"><a href="">adaadasdsa</a></div>
+	<a href="#" class="btn">Кнопка тест</a><button class="btn">Кнопка тест</button>
+	
+
+	{# data usage example #}
+		{% import "data/data.html" as tests %}
+		
+		{% for test in tests.list %}
+		<li>{{test.title}}</li>
+		{% endfor %}
+	{# end of example #}
+
+{% endblock %}

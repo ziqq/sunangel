@@ -1,0 +1,84 @@
+@import helpers/all
+@import includes/all
+@import generated/sprite-png
+// @import generated/sprite-svg
+
+
+
+body
+	input, textarea
+		&:focus, &:required, &:invalid
+			color: #666
+	input, textarea
+		&:required, &:valid
+			color: #666
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	min-width: 320px
+	font-family: $base-font-family
+	font-size: $base-font-size
+	color: $color-text
+	line-height: 1.5
+	overflow-x: hidden
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
+	font-family: encore-100, sans-serif
+	color: $color-text
+
+a
+	color: rgba($color-text, .7)
+	text-decoration: none
+	+tr(.35s)
+	&:hover
+		color: $color-brown
+		text-decoration: none
+
+p
+	font-family: encore-300, sans-serif
+	font-size: rem(16)
+	color: $color-text-lighten
+
+img ,.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.bg--dark
+	background-color: $color-bg-dark
+	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
+		color: $color-brown
+	p
+		color: $color-text-bg-dark
+	a
+		color: $color-text-bg-dark
+		&:hover
+			color: $color-brown-lighten
+	.fa
+		color: rgba(#fff, .75)
+
+//Buttons
+.btn
+	display: inline-block
+	padding: 15px 35px
+	margin-right: 50px
+	text-align: center
+	font-family: oswald-400, sans-serif
+	font-size: 12px
+	letter-spacing: 1px
+	color: $color-text-btn
+	text-transform: uppercase
+	background-color: $color-brown
+	+br(4px)
+	+tr(.35s)
+	&:hover
+		text-decoration: none
+		color: $color-text-btn
+		background-color: $color-brown-lighten
+
+
+
+@import layouts
