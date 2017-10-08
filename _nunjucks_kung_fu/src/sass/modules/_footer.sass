@@ -1,0 +1,68 @@
+.footer
+	padding: 90px 0
+	position: relative
+	background-image: url("../img/footer-bg.jpg")
+	background-size: cover
+	background-position: top center
+	+r(480)
+		padding: 50px 0
+
+	&__logo
+		display: block
+		font-size: 26px
+		text-transform: uppercase
+		font-family: oswald-300
+		letter-spacing: 2px
+
+	&__desc
+		display: block
+		margin-top: 25px
+		font-size: rem(13)
+		color: 555
+		span
+			display: block
+			font-size: rem(15)
+			line-height: 30px
+			color: #444444
+
+.footer-item
+	.h5
+		padding-top: 13px
+		padding-bottom: 11px
+		font-family: oswald-400, sans-serif
+	&__wrap
+		+r(768)
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			flex-flow: wrap
+			align-content: space-between
+
+
+.footer-list
+	&__link
+		display: block
+		margin-top: 18px
+		font-family: encore-300
+		font-size: 14px
+		color: $color-text-bg-dark
+		&::last-child
+			margin-top: 0
+
+.social
+	text-align: center
+	&__item
+		display: inline-block
+		& + &
+			margin-left: 30px
+
+.social-list
+	&_icon
+		display: block
+		margin-bottom: 27px
+		padding-top: 10px
+
+	&_communications
+		display: block
+		margin-bottom: 15px
+

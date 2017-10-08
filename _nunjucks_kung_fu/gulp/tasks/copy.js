@@ -29,11 +29,13 @@ gulp.task('copy:img', function() {
 });
 
 gulp.task('copy', [
+    'sprite:png',
+    'sprite:svg',
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:lib',
     'copy:fonts'
 ]);
 gulp.task('copy:watch', function() {
-    gulp.watch(config.src.img+'/*', ['copy']);
+    gulp.watch(config.src.img+'/**/*', ['copy']);
 });

@@ -1,4 +1,4 @@
-.icon-card {
+.icon-cart {
   width: 1em;
   height: 1em;
   fill: #606060;
@@ -8,10 +8,15 @@
   height: 1em;
   fill: #010002;
 }
-.icon-favorites {
-  width: 1.14em;
+.icon-favorite-img {
+  width: 1em;
   height: 1em;
-  fill: #606060;
+  fill: #3e3e3e;
+}
+.icon-favorite {
+  width: 1em;
+  height: 1em;
+  fill: initial;
 }
 .icon-logo {
   width: 3.95em;
@@ -21,11 +26,11 @@
 .icon-search {
   width: 1em;
   height: 1em;
-  fill: #606060;
+  fill: initial;
 }
 .icon-user {
   width: 1em;
   height: 1em;
-  fill: #606060;
+  fill: #95989a;
 }
 

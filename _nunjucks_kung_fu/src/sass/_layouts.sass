@@ -1,4 +1,61 @@
 @import includes/grids
 
+//base
 .container
 	+container
+	+r(1200)
+		padding: 0 10px
+
+//Header
+.callback
+	+span(3)
+
+.logo
+	+span(6)
+
+.action
+	+span(3)
+	margin-right: 0
+
+//Footer
+.footer-item
+	+span(2)
+	&_logo
+		+span(3)
+	&_social
+		+span(3)
+		margin-right: 0
+
+	+r(768)
+		margin: 0 auto 30px
+		+span(4)
+		&:last-child
+			margin-right: 0
+		&_logo
+			+span(6)
+		&_info
+			order: 3
+		&_buyers
+			order: 4
+		&_comp
+			order: 5
+			margin-right: 0
+		&_social
+			order: 2
+			+span(6)
+			margin-right: 0
+	+r(480)
+		width: 100%
+		text-align: center
+		&:last-child
+			margin-bottom: 0
+		&_info
+			order: initial
+		&_buyers
+			order: initial
+		&_comp
+			order: initial
+			margin-right: initial
+		&_social
+			order: initial
+			margin-right: initial

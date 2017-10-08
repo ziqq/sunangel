@@ -1,1 +1,72 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header" itemscope itemtype="http://schema.org/WPHeader">
+	<div class="container">
+
+		<div class="header__top-line">
+			<div class="city__wrap">
+				<div class="city js-city-hover">
+					Балаково
+					<ul class="city-dropdown my-scroll">
+						{% import "data/data.html" as cities %}
+						{% for city in cities.citieslist %}
+						<li class="city-dropdown__item">{{city.title}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<span class="time">с 9:00 до 21:00</span>
+			</div>
+		</div>
+
+		<div class="header__bottom">
+
+			<div class="callback">
+				<a href="#" class="callback__phone phone" itemprop="telephone">+7 937 221-34-43</a>
+				<a href="#" class="callback__link">Перезвоните мне</a>
+			</div>
+
+			<div class="logo">
+				<a href="#" class="logo__link">
+					<img src="../img/icons/logo.svg" alt="Logo" itemprop="logo">
+				</a>
+			</div>
+
+			<div class="action">
+				<ul class="action__list">
+					<li class="action__item action__item_search search">
+						{{mixin.icon('search')}}
+						<div class="action__dropdown bg--dark">
+							<h4 class=" h4 action__title">Поиск</h4>
+							<span class="search__desc">поиск среди 45 000 ювелирных изделий</span>
+							<div class="su-input__box">
+								<input class="su-input js-su-input" type="seatch">
+								<span class="su-input__placeholder">Введите название изделия или его индекс</span>
+								{{mixin.icon('search')}}
+							</div>
+						</div>
+					</li>
+					<li class="action__item action__item_use user">
+						{{mixin.icon('user')}}
+						<!-- <div class="action__dropdown bg--dark">
+							<h4 class="action__title">Войти</h4>
+						</div> -->
+					</li>
+					<li class="action__item action__item_favorite favorite">
+						{{mixin.icon('favorite')}}
+						<!-- <div class="action__dropdown bg--dark">
+							<h4 class="action__title">Избранное</h4>
+						</div> -->
+					</li>
+					<li class="action__item action__item_cart cart">
+						{{mixin.icon('cart')}}
+						<!-- <div class="action__dropdown bg--dark">
+							<h4 class="action__title">Ваша корзина</h4>
+						</div> -->
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+</header>
+<!-- end header -->

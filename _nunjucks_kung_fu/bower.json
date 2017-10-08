@@ -1,12 +1,12 @@
 {
-  "name": "_nunjucks_kung-fu",
+  "name": "sunangel",
   "description": "SunAngel",
-  "main": "",
+  "main": "index.html",
   "authors": [
     "antonustinoff <antonustinoff@mail.ru>"
   ],
-  "license": "MIT",
-  "homepage": "",
+  "license": "1.0.0",
+  "homepage": "https://github.com/ziqq/sunangel",
   "private": true,
   "ignore": [
     "**/.*",
@@ -14,5 +14,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "2.1.4"
+  }
 }

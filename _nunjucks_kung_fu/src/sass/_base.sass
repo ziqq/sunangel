@@ -6,12 +6,6 @@
 
 
 body
-	input, textarea
-		&:focus, &:required, &:invalid
-			color: #666
-	input, textarea
-		&:required, &:valid
-			color: #666
 
 html, body
 	height: 100%
@@ -29,6 +23,12 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 	font-family: encore-100, sans-serif
 	color: $color-text
 
+.h5
+	font-family: oswald-300
+	font-size: 14px
+	color: #fff
+	letter-spacing: 2.8px
+	text-transform: uppercase
 a
 	color: rgba($color-text, .7)
 	text-decoration: none
@@ -48,17 +48,37 @@ img ,.img-responsive
 	height: auto
 
 .bg--dark
-	background-color: $color-bg-dark
-	h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
+	background-color: $color-bg-darken
+	// background-color: $color-bg-dark
+	h1,.h1,h2,.h2,h3,.h3,h5,.h5,h6,.h6
 		color: $color-brown
+	h4,.h4
+		color: $color-text
+	.h5
+		color: rgba($color-brown, .75)
 	p
 		color: $color-text-bg-dark
 	a
 		color: $color-text-bg-dark
 		&:hover
 			color: $color-brown-lighten
-	.fa
+	.fa, .phone
 		color: rgba(#fff, .75)
+		&:hover
+			color: $color-brown-lighten
+	.footer
+		&__logo
+			color: #f0f0f0
+		&__desc
+			color: #555
+
+	.su-input
+		border: 1px solid $color-border-bg--dark
+		background-color: $color-input-bg--dark
+		&__placeholder
+			font-size: rem(14)
+			color: $color-brown-lighten
+			letter-spacing: 0.25px
 
 //Buttons
 .btn
@@ -79,6 +99,50 @@ img ,.img-responsive
 		color: $color-text-btn
 		background-color: $color-brown-lighten
 
+.my-scroll
+	+scrollbar
+		width: 7px
+	+scrollbar-track
+		background-color: $color-brown-lighten
+	+scrollbar-thumb
+		background-color: $color-brown
+	+scrollbar-track-piece
+
+//Custom Input
+.su-input
+	display: block
+	padding: 23px 25px 10px
+	width: 100%
+	font-family: encore-300, sans-serif
+	font-size: rem(18)
+	letter-spacing: 0.33px
+	color: $color-brown
+	border-radius: 3px
+	border: 1px solid $color-border
+	background-color: #fff
+	&__box
+		position: relative
+		&.is-focus
+			.icon
+				fill: $color-accent
+			.su-input
+				&__placeholder
+					font-family: encore-200, sans-serif
+					color: #b8b8b8
+					font-size: rem(13)
+					top: 5px
+
+	&__placeholder
+		text-align: left
+		font-family: encore-300, sans-serif
+		font-size: rem(18)
+		letter-spacing: 0.33px
+		color: $color-text-light
+		position: absolute
+		left: 25px
+		top: 19px
+		right: 25px
+		+text-overflow
 
 
 @import layouts

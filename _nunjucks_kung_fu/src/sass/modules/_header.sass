@@ -1,0 +1,217 @@
+=beforearr($color: #fff, $direction: t, $width: 12, $height: 6)
+	&::before
+		content: ''
+		display: block
+		+arr($width, $height, $color, $direction)
+		position: absolute
+		top: -6px
+		left: 50%
+		margin-left: -6px
+
+.header
+	color: $color-text
+
+.city
+	display: inline-block
+	margin: 10px 0 25px
+	font-family: encore-300
+	font-size: rem(14)
+	color: rgba($color-text, .7)
+	border-bottom: 1px dashed rgba($color-text, .7)
+	position: relative
+	cursor: pointer
+	transition: color .35s ease
+	&::before, &::after
+		display: inline-block
+		font-family: fontawesome
+		position: absolute
+		top: 0
+	&::before
+		content: '\f041'
+		left: -20px
+	&::after
+		content: '\f107'
+		font-size: rem(16)
+		right: -20px
+		top: -1px
+	&:hover
+		color: $color-brown
+		border-color: $color-brown
+	&.is-active
+		color: $color-brown
+		border-bottom-color: transparent
+		.city-dropdown
+			display: block
+
+	&__wrap
+		.time
+			margin-left: 50px
+			color: rgba($color-text, .7)
+
+.city-dropdown
+	display: none
+	position: absolute
+	top: 23px
+	left: -20px
+	right: -20px
+	max-height: 170px
+	overflow-y: auto
+	background-color: #FFF
+	// border: 1px solid $color-text-light
+	+bs(0 0 30px 1px rgba($color-text, .5))
+	z-index: 10
+	&::before
+		content: ''
+		display: block
+		+arr(12,6, #fff, t)
+		position: absolute
+		top: -6px
+		left: 50%
+		margin-left: -6px
+	&__item
+		display: block
+		padding: 0 5px
+		color: rgba($color-text, .7)
+		+text-overflow
+		&:hover
+			background-color: $color-brown-lighten
+
+
+	&__item
+		display: block
+		line-height: 1.5
+
+.phone
+	font-family: oswald-500
+	font-size: rem(18)
+	color: $color-text
+	text-transform: uppercase
+	letter-spacing: .33px
+
+.callback
+	display: inline-block
+	vertical-align: middle
+	padding-top: 10px
+	&__phone
+		padding-left: 30px
+		position: relative
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 3px
+			left: 0
+			+sprite(phone)
+	&__link
+		margin-left: 35px
+		font-family: encore-300, sans-serif
+		font-size: rem(14)
+		font-weight: 300
+		letter-spacing: 0.25px
+		border-bottom: 1px solid rgba($color-text, .4)
+		&:hover
+			color: $color-brown
+			border-color: $color-brown
+
+.logo
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	.icon
+		width: auto
+		height: 73px
+
+	img
+		margin: 0 auto
+
+.action
+	display: inline-block
+	vertical-align: middle
+	padding-top: 10px
+	&__item
+		display: inline-block
+		position: relative
+		& + &
+			margin-left: 50px
+		.icon
+			display: inline-block
+			width: 22px
+			height: 22px
+			fill: #606060
+			&-cart
+				width: 25px
+				height: 25px
+			&-favorite
+				width: 24px
+				height: 24px
+
+		.su-input 
+			&__placeholder
+				top: 25px
+				padding-right: 15px
+
+	&__dropdown
+		min-width: 320px
+		width: 460px
+		padding: 0 30px 35px
+		padding-bottom: 30px
+		position: absolute
+		top: 45px
+		left: 0
+		// background-color: $color-bg-darken
+		+beforearr($color-bg-darken, t, 22, 11)
+		&::before
+			top: -11px
+			margin-left: -11px
+	&__title
+		padding-top: 30px
+		font-family: encore-50, sans-serif
+		font-size: rem(36)
+		text-align: center
+		letter-spacing: 0.26px
+		color: $color-text
+
+.search
+	text-align: center
+	&__desc
+		display: block
+		margin-bottom: 20px
+		color: $color-text
+		font-family: encore-300
+		font-size: rem(14)
+		line-height: 18px
+	.action
+		&__title
+			margin-bottom: 30px
+		&__dropdown
+			left: 50%
+			transform: translateX(-50%)
+	.su-input 
+		padding-right: 35px
+		&__box
+			.icon-search
+				position: absolute
+				top: 18px
+				right: 15px
+				cursor: pointer
+				+tr(.35s)
+				&:hover
+					fill: $color-accent
+
+.user
+	.action
+		&__dropdown
+			left: 50%
+			transform: translateX(-50%)
+
+.cart
+	.action
+		&__dropdown
+			left: auto
+			right: 100%
+			transform: translateX(13%)
+			&::before
+				left: auto
+				right: 24px
+
+				

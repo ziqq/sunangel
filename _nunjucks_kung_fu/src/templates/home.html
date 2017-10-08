@@ -5,22 +5,13 @@ title: Index page
 
 {% block content %}
 	
-	{# variable example #}
-	<h1>{{title}}</h1>
-
-	
-	{# partial example #}
 	{% include "partials/_header.html" %}
 
-	{# mixin example #}
-	{{mixin.icon('facebook')}}
-	{{mixin.icon('bm')}}
-	{{mixin.icon('areligion')}}
+	<h1>{{title}}</h1>
 
-	<div class="container"><a href="">adaadasdsa</a></div>
 	<a href="#" class="btn">Кнопка тест</a><button class="btn">Кнопка тест</button>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vitae illum soluta aperiam inventore, veniam ullam maxime, laboriosam sint voluptatem et cum obcaecati consequuntur quibusdam culpa quia autem tenetur tempore. Iste veniam, harum nisi aut voluptatibus ducimus? Minima perferendis reprehenderit cupiditate rerum a, doloribus numquam expedita voluptates odit illum. Eum, harum aut velit amet expedita voluptate tenetur ducimus ex exercitationem totam fugit, temporibus unde porro, id, maxime provident ea optio dignissimos cum aliquid! Ipsam porro, quod adipisci dolorem est nisi, quo nostrum dolorum doloremque consectetur, id, amet voluptatibus! Porro excepturi eos nemo repellat id aspernatur quo ratione, dicta eius aut atque illum iusto dolor magni. Tenetur accusantium quidem quae vel facere magnam quod sed dolor vitae aperiam eveniet, sit incidunt alias molestiae culpa rem inventore. Ipsa esse numquam autem inventore temporibus. Unde perspiciatis illum id sed dolore libero hic ad, quis odio quod placeat, iste facilis! Commodi fuga fugit officia? Saepe laborum nisi, eos error numquam aspernatur? Nobis, molestias, quisquam! Provident sit modi, eaque labore reprehenderit atque earum alias impedit iure rem voluptatum eos omnis doloremque! Deleniti provident fugit in alias harum, animi cupiditate error voluptate. At eaque, ipsum ratione distinctio. Labore accusantium, saepe rem ab delectus debitis dignissimos fugiat ipsum est unde! Quo eligendi natus officiis reprehenderit temporibus! Aliquid vel earum molestiae consequuntur vitae inventore debitis dicta sint nihil, voluptates expedita, nesciunt deleniti, quasi id sit assumenda enim tempore totam ipsa maiores adipisci. Saepe eos harum libero exercitationem atque! Eum quasi sunt libero cum, maiores praesentium similique, repellendus voluptatibus voluptatum error esse, molestiae quaerat fugit dolore ratione mollitia amet. Consectetur dolorum libero, officia ea voluptatibus ullam quaerat dignissimos impedit, vero incidunt facere, eum, distinctio laudantium fuga similique ipsam ad quidem atque alias voluptas culpa enim magni. Pariatur dicta, eligendi sit quidem consequatur, quaerat harum, esse nostrum itaque ipsa totam quos adipisci fuga velit nam? Rem praesentium accusamus quam est, laboriosam cum animi reprehenderit laudantium sint tempora natus dignissimos blanditiis ut corporis dolorem voluptas assumenda, officia fuga quisquam ipsam ex. Molestias itaque est alias sapiente, voluptas quod, at maiores ea qui, vero sit accusamus in quas minima! Nulla asperiores voluptates reprehenderit quasi est ducimus, at minus, ad consequuntur deleniti pariatur eius, distinctio. Aliquam, deleniti voluptas corrupti. Provident aliquid, dolores maxime earum recusandae libero natus error pariatur vel ipsum. Magni, autem numquam sunt magnam. Quos distinctio vel recusandae nobis minima, assumenda debitis, quod explicabo. Adipisci molestias, fugiat temporibus molestiae, atque magnam corporis explicabo fuga! Animi laudantium, officiis a eligendi accusantium voluptatum ducimus fugit, incidunt eaque odit quod necessitatibus perferendis voluptatem. Deserunt molestiae rem ipsam, quasi quisquam, quaerat corporis accusantium minus eaque molestias ex minima numquam. Esse unde labore, architecto rerum sequi enim nihil earum excepturi deleniti non ipsa facere quidem, praesentium quo. Cum aliquid natus tempore assumenda, culpa distinctio, illum molestiae voluptatum iste excepturi quas perferendis sequi nihil, sit obcaecati velit architecto deserunt? Incidunt reiciendis distinctio, dolor eos fuga sed ipsam non quibusdam deleniti, suscipit harum quo commodi molestias et corrupti voluptatum temporibus ad at id vel molestiae? Et, quidem similique.
 	
-
 	{# data usage example #}
 		{% import "data/data.html" as tests %}
 		
@@ -28,5 +19,7 @@ title: Index page
 		<li>{{test.title}}</li>
 		{% endfor %}
 	{# end of example #}
+
+	{% include "partials/_footer.html" %}
 
 {% endblock %}
