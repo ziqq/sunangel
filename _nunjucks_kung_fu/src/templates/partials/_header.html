@@ -13,7 +13,6 @@
 						{% endfor %}
 					</ul>
 				</div>
-				<span class="time">с 9:00 до 21:00</span>
 			</div>
 		</div>
 
@@ -21,6 +20,7 @@
 
 			<div class="callback">
 				<a href="#" class="callback__phone phone" itemprop="telephone">+7 937 221-34-43</a>
+				<span class="callback__time">с 9:00 до 21:00</span>
 				<a href="#" class="callback__link">Перезвоните мне</a>
 			</div>
 
@@ -30,43 +30,171 @@
 				</a>
 			</div>
 
+			<!-- begin action -->
 			<div class="action">
 				<ul class="action__list">
 					<li class="action__item action__item_search search">
-						{{mixin.icon('search')}}
-						<div class="action__dropdown bg--dark">
+						<a class="action__link" href="javascript:void(0);">{{mixin.icon('search')}}</a>
+						<div class="action__dropdown bg--dark hidden">
 							<h4 class=" h4 action__title">Поиск</h4>
 							<span class="search__desc">поиск среди 45 000 ювелирных изделий</span>
-							<div class="su-input__box">
-								<input class="su-input js-su-input" type="seatch">
-								<span class="su-input__placeholder">Введите название изделия или его индекс</span>
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="seatch">
+								<span class="sa-input__placeholder">Введите название изделия или его индекс</span>
 								{{mixin.icon('search')}}
-							</div>
+							</label>
 						</div>
 					</li>
 					<li class="action__item action__item_use user">
-						{{mixin.icon('user')}}
-						<!-- <div class="action__dropdown bg--dark">
+						<a class="action__link" href="javascript:void(0);">{{mixin.icon('user')}}</a>
+						<div class="action__dropdown bg--dark hidden">
 							<h4 class="action__title">Войти</h4>
-						</div> -->
+							<div class="social header__social">
+								<span class="social__title">Через социальную сеть:</span>
+								<ul class="social__list social__list_icon">
+									<li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook"></i> </a></li>
+									<li class="social__item"><a href="#" class="social__link"><i class="fa fa-twitter"></i> </a></li>
+									<li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk"></i> </a></li>
+									<li class="social__item"><a href="#" class="social__link"><i class="fa fa-google-plus"></i></a></li>
+									<li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram"></i></a></li>
+								</ul>
+							</div>
+
+							<!-- begin auth -->
+							<div class="auth">
+								<div class="auth__tabs">
+									<span class="auth__tab">Телефон</span>
+									<span class="auth__tab">Email</span>    
+								</div>
+								<div class="auth__content">
+									<div class="auth__item auth__phone">
+										<label class="sa-input__box">
+											<input class="sa-input js-sa-input phone-mask" type="phone">
+											<span class="sa-input__placeholder">Введите Ваш номер телефона</span>
+										</label>
+
+										<div class="auth__desc">Если вы новый пользователь,  вам будет предложена регистрация и выслан пароль</div>
+										<button class="btn">Войти</button>
+
+										<div class="not-registered hidden">
+											<form class="not-registered__form">
+												<span class="not-registered__title">Вы незарегистрированый пользователь, <br> пожалуйста, заполните поля ниже:</span>
+												<label class="sa-input__box">
+													<input class="sa-input js-sa-input" type="text">
+													<span class="sa-input__placeholder">Введите Ваше имя</span>
+												</label>
+												<label class="sa-input__box">
+													<input class="sa-input js-sa-input phone-mask" type="phone">
+													<span class="sa-input__placeholder">Введите Ваш номер телефона</span>
+												</label>
+												<button class="btn">Зарегистрироватся</button>
+											</form>
+										</div>
+
+									</div>
+
+									<div class="auth__item auth__email">
+										<label class="sa-input__box">
+											<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+											<span class="sa-input__placeholder">Введите Ваш Email</span>
+										</label>
+
+										<div class="auth__desc">Если вы новый пользователь,  вам будет предложена регистрация и выслан пароль</div>
+										<button class="btn">Войти</button>
+
+										<div class="not-registered hidden">
+											<form class="not-registered__form">
+												<span class="not-registered__title">Вы незарегистрированый пользователь, <br> пожалуйста, заполните поля ниже:</span>
+												<label class="sa-input__box">
+													<input class="sa-input js-sa-input" type="text">
+													<span class="sa-input__placeholder">Введите Ваше имя</span>
+												</label>
+												<label class="sa-input__box">
+													<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+													<span class="sa-input__placeholder">Введите Ваш Email</span>
+												</label>
+												<button class="btn">Зарегистрироватся</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>							
+							<!-- end auth -->
+						</div>
 					</li>
 					<li class="action__item action__item_favorite favorite">
-						{{mixin.icon('favorite')}}
-						<!-- <div class="action__dropdown bg--dark">
+						<a class="action__link" href="javascript:void(0);">{{mixin.icon('favorite')}}</a>
+						<div class="action__dropdown bg--dark hidden">
 							<h4 class="action__title">Избранное</h4>
-						</div> -->
+
+							<div class="favorite__clean hidden">
+								<div class="favorite__img">
+									<img src="../img/general/favorite-img.png" alt="Избранное" class="img-responsive">
+								</div>
+								<p class="favorite__desc">В избранном пока пусто. <br> Чтобы добавить украшения в избранное, воспользуйтесь каталогом нашего магазина.</p>
+							</div>
+
+							<div class="favorite__inner">
+
+								<div class="cart-item">
+									<div class="cart-item__img">
+										{{mixin.pl(60, 60)}}
+									</div>
+									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
+									<span class="cart-item__price">13 490 <i class="fa fa-rub"></i></span>
+									<span class="cart-item__del">
+										{{mixin.icon('close')}}
+									</span>
+								</div>
+
+								<div class="cart__action">
+									<a href="/favorite.html" title="Перейти в избранное" class="btn">Перейти в избранное</a>
+								</div>
+
+							</div>
+						</div>						
 					</li>
 					<li class="action__item action__item_cart cart">
-						{{mixin.icon('cart')}}
-						<!-- <div class="action__dropdown bg--dark">
+						<a class="action__link cart__link" href="javascript:void(0);">
+							{{mixin.icon('cart')}}
+							<span>23</span>
+						</a>
+						<div class="action__dropdown bg--dark hidden">
 							<h4 class="action__title">Ваша корзина</h4>
-						</div> -->
+
+							<div class="cart__clean hidden">
+								<div class="favorite__img">
+									<img src="../img/general/favorite-img.png" alt="Корзина" class="img-responsive">
+								</div>
+								<p class="favorite__desc">В корзине пока пусто. <br> Чтобы добавить украшения в карзину, воспользуйтесь каталогом нашего магазина.</p>
+							</div>
+
+							<div class="cart__inner">
+
+								<div class="cart-item">
+									<div class="cart-item__img">
+										{{mixin.pl(60, 60)}}
+									</div>
+									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
+									<span class="cart-item__price">13 490 <i class="fa fa-rub"></i></span>
+									<span class="cart-item__del">
+										{{mixin.icon('close')}}
+									</span>
+								</div>
+
+								<div class="cart__action">
+									<a href="/cart.html" title="Перейти в корзину" class="btn">Перейти в корзину</a>
+									<div class="cart__summ"><span>Сумма:</span>32568 <i class="fa fa-rub"></i></div>
+								</div>
+
+							</div>
+						</div>
 					</li>
 				</ul>
-			</div>
-
+			</div>			
+			<!-- end action -->
 		</div>
-
 	</div>
+	{% include "partials/_menu.html" %}
 </header>
 <!-- end header -->

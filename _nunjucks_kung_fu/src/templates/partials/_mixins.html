@@ -1,3 +1,7 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+
+{% macro pl(w, h) %}
+<img src="http://via.placeholder.com/{{w}}x{{h}}" alt="alt">
+{% endmacro %}

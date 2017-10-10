@@ -3,9 +3,16 @@
 @import generated/sprite-png
 // @import generated/sprite-svg
 
+//mixins
+=my-scroll
+	+scrollbar
+		width: 7px
+	+scrollbar-track
+		background-color: $color-brown-lighten
+	+scrollbar-thumb
+		background-color: $color-brown
+	+scrollbar-track-piece
 
-
-body
 
 html, body
 	height: 100%
@@ -18,6 +25,7 @@ body
 	color: $color-text
 	line-height: 1.5
 	overflow-x: hidden
+	+my-scroll
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 	font-family: encore-100, sans-serif
@@ -47,6 +55,9 @@ img ,.img-responsive
 	max-width: 100%
 	height: auto
 
+.hidden
+	display: none !important
+
 .bg--dark
 	background-color: $color-bg-darken
 	// background-color: $color-bg-dark
@@ -56,12 +67,19 @@ img ,.img-responsive
 		color: $color-text
 	.h5
 		color: rgba($color-brown, .75)
-	p
-		color: $color-text-bg-dark
+	// p
+	// 	color: $color-text-bg-dark
 	a
 		color: $color-text-bg-dark
 		&:hover
 			color: $color-brown-lighten
+	.btn
+		color: $color-text-btn
+		background-color: $color-brown
+		&:hover
+			color: $color-text-btn
+			background-color: $color-brown-lighten
+
 	.fa, .phone
 		color: rgba(#fff, .75)
 		&:hover
@@ -72,22 +90,27 @@ img ,.img-responsive
 		&__desc
 			color: #555
 
-	.su-input
-		border: 1px solid $color-border-bg--dark
+	.sa-input
+		border: 1px solid  #3b3629
 		background-color: $color-input-bg--dark
 		&__placeholder
 			font-size: rem(14)
 			color: $color-brown-lighten
 			letter-spacing: 0.25px
+		&__box
+			&.is-focus
+				.js-sa-input
+					border-color: $color-border-bg--dark
 
 //Buttons
 .btn
 	display: inline-block
+	min-width: 195px
 	padding: 15px 35px
 	margin-right: 50px
 	text-align: center
 	font-family: oswald-400, sans-serif
-	font-size: 12px
+	font-size: 14px
 	letter-spacing: 1px
 	color: $color-text-btn
 	text-transform: uppercase
@@ -99,17 +122,8 @@ img ,.img-responsive
 		color: $color-text-btn
 		background-color: $color-brown-lighten
 
-.my-scroll
-	+scrollbar
-		width: 7px
-	+scrollbar-track
-		background-color: $color-brown-lighten
-	+scrollbar-thumb
-		background-color: $color-brown
-	+scrollbar-track-piece
-
 //Custom Input
-.su-input
+.sa-input
 	display: block
 	padding: 23px 25px 10px
 	width: 100%
@@ -121,11 +135,14 @@ img ,.img-responsive
 	border: 1px solid $color-border
 	background-color: #fff
 	&__box
+		display: block
 		position: relative
+		& + &
+			margin-top: 15px
 		&.is-focus
 			.icon
 				fill: $color-accent
-			.su-input
+			.sa-input
 				&__placeholder
 					font-family: encore-200, sans-serif
 					color: #b8b8b8
@@ -140,9 +157,10 @@ img ,.img-responsive
 		color: $color-text-light
 		position: absolute
 		left: 25px
-		top: 19px
+		top: 25px
 		right: 25px
 		+text-overflow
+		+tr(.5s)
 
 
 @import layouts
