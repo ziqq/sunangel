@@ -6,7 +6,7 @@
 			<div class="city__wrap">
 				<div class="city js-city-hover">
 					Балаково
-					<ul class="city-dropdown my-scroll">
+					<ul class="city-dropdown">
 						{% import "data/data.html" as cities %}
 						{% for city in cities.citieslist %}
 						<li class="city-dropdown__item">{{city.title}}</li>
@@ -19,7 +19,7 @@
 		<div class="header__bottom">
 
 			<div class="callback">
-				<a href="#" class="callback__phone phone" itemprop="telephone">+7 937 221-34-43</a>
+				<a href="tel: +79372213443" class="callback__phone phone" itemprop="telephone">+7 937 221-34-43</a>
 				<span class="callback__time">с 9:00 до 21:00</span>
 				<a href="#" class="callback__link">Перезвоните мне</a>
 			</div>
@@ -31,11 +31,11 @@
 			</div>
 
 			<!-- begin action -->
-			<div class="action">
+			<div class="action js-action">
 				<ul class="action__list">
-					<li class="action__item action__item_search search">
+					<li class="action__item action__item_search search js-action__link">
 						<a class="action__link" href="javascript:void(0);">{{mixin.icon('search')}}</a>
-						<div class="action__dropdown bg--dark hidden">
+						<div class="action__dropdown bg--dark">
 							<h4 class=" h4 action__title">Поиск</h4>
 							<span class="search__desc">поиск среди 45 000 ювелирных изделий</span>
 							<label class="sa-input__box">
@@ -45,9 +45,9 @@
 							</label>
 						</div>
 					</li>
-					<li class="action__item action__item_use user">
+					<li class="action__item action__item_use user js-action__link">
 						<a class="action__link" href="javascript:void(0);">{{mixin.icon('user')}}</a>
-						<div class="action__dropdown bg--dark hidden">
+						<div class="action__dropdown bg--dark">
 							<h4 class="action__title">Войти</h4>
 							<div class="social header__social">
 								<span class="social__title">Через социальную сеть:</span>
@@ -122,9 +122,9 @@
 							<!-- end auth -->
 						</div>
 					</li>
-					<li class="action__item action__item_favorite favorite">
+					<li class="action__item action__item_favorite favorite js-action__link">
 						<a class="action__link" href="javascript:void(0);">{{mixin.icon('favorite')}}</a>
-						<div class="action__dropdown bg--dark hidden">
+						<div class="action__dropdown bg--dark">
 							<h4 class="action__title">Избранное</h4>
 
 							<div class="favorite__clean hidden">
@@ -141,7 +141,7 @@
 										{{mixin.pl(60, 60)}}
 									</div>
 									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="fa fa-rub"></i></span>
+									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
 									<span class="cart-item__del">
 										{{mixin.icon('close')}}
 									</span>
@@ -154,12 +154,12 @@
 							</div>
 						</div>						
 					</li>
-					<li class="action__item action__item_cart cart">
+					<li class="action__item action__item_cart cart js-action__link">
 						<a class="action__link cart__link" href="javascript:void(0);">
 							{{mixin.icon('cart')}}
 							<span>23</span>
 						</a>
-						<div class="action__dropdown bg--dark hidden">
+						<div class="action__dropdown bg--dark">
 							<h4 class="action__title">Ваша корзина</h4>
 
 							<div class="cart__clean hidden">
@@ -176,7 +176,7 @@
 										{{mixin.pl(60, 60)}}
 									</div>
 									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="fa fa-rub"></i></span>
+									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
 									<span class="cart-item__del">
 										{{mixin.icon('close')}}
 									</span>
@@ -184,7 +184,7 @@
 
 								<div class="cart__action">
 									<a href="/cart.html" title="Перейти в корзину" class="btn">Перейти в корзину</a>
-									<div class="cart__summ"><span>Сумма:</span>32568 <i class="fa fa-rub"></i></div>
+									<div class="cart__summ"><span>Сумма:</span>32568 <i class="rub">a</i></div>
 								</div>
 
 							</div>

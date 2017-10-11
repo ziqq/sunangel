@@ -8,7 +8,7 @@ var babel = require('gulp-babel');
 reload = browserSync.reload;
 
 
-gulp.task('js', ['js:libs'], function () {
+gulp.task('js', function () {
     gulp.src(config.src.js + '/main.js')
         .pipe(include())
         .on('error', function(){notify("Javascript include error");})
@@ -29,5 +29,6 @@ gulp.task('js:libs', function() {
 });
 
 gulp.task('js:watch', function() {
-    gulp.watch(config.src.js + '/*', ['js']);
+    gulp.watch(config.src.js + '/main.js', ['js']);
+    gulp.watch(config.src.js + '/libs.js', ['js:libs']);
 });

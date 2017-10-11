@@ -10,6 +10,12 @@
 
 .header
 	color: $color-text
+	&__top-line
+		+r(480)
+			background-color: #FFF
+			padding-bottom: 20px
+			width: 100%
+			z-index: 99
 	&__bottom
 		margin-bottom: 45px
 		+clr
@@ -48,6 +54,11 @@
 	position: relative
 	cursor: pointer
 	transition: color .35s ease
+	+r(480)
+		margin: 16px 0 0 30px
+		&__wrap
+			display: inline-block
+			padding-left: 30px
 	&::before, &::after
 		display: inline-block
 		font-family: fontawesome
@@ -69,6 +80,8 @@
 		border-bottom-color: transparent
 		.city-dropdown
 			display: block
+			overflow: auto
+
 
 .city-dropdown
 	display: none
@@ -114,11 +127,22 @@
 	display: inline-block
 	vertical-align: middle
 	padding-top: 10px
+	position: relative
+	+r(1200)
+		padding-left: 55px
+	+r(480)
+		float: none
+		margin: 15px 0 0 15px
+		padding-top: 0
+		padding-left: 0
+		width: 100%
 	&__time
 		margin-left: 20px
 		color: rgba($color-text, .7)
 		font-family: oswald-300
-		font-size: rem(14)
+		font-size: rem(16)
+		+r(992)
+			display: none
 	&__phone
 		padding-left: 30px
 		position: relative
@@ -129,13 +153,20 @@
 			top: 3px
 			left: 0
 			+sprite(phone)
+		+r(480)
+			font-size: rem(14)
+			&::before
+				top: 0
 	&__link
+		display: inline-block
 		margin-left: 35px
 		font-family: encore-300, sans-serif
 		font-size: rem(14)
 		font-weight: 300
 		letter-spacing: 0.25px
 		border-bottom: 1px solid rgba($color-text, .4)
+		+r(480)
+			display: none
 		&:hover
 			color: $color-brown
 			border-color: $color-brown
@@ -144,6 +175,12 @@
 	display: inline-block
 	vertical-align: middle
 	text-align: center
+	+r(480)
+		width: 100%
+		float: none
+		img
+			width: 188px
+			height: auto
 	.icon
 		width: auto
 		height: 73px
@@ -155,8 +192,16 @@
 	display: inline-block
 	vertical-align: middle
 	padding-top: 10px
-	&__list
+	text-align: right
+	+r(1024)
+		text-align: left
+	+r(992)
 		text-align: right
+	+r(480)
+		display: inline-block
+		width: auto
+		float: right
+		padding-top: 20px
 	&__link
 		.icon
 			+tr(.35s)
@@ -167,17 +212,28 @@
 		position: relative
 		& + &
 			margin-left: 50px
+			+r(768)
+				margin-left: 35px
 		.icon
 			display: inline-block
 			width: 22px
 			height: 22px
 			fill: #606060
+			+r(480)
+				width: 18px
+				height: 18px
 			&-cart
 				width: 25px
 				height: 25px
+				+r(480)
+					width: 18px
+					height: 18px
 			&-favorite
 				width: 24px
 				height: 24px
+				+r(480)
+					width: 18px
+					height: 18px
 
 		.sa-input 
 			&__placeholder
@@ -185,12 +241,15 @@
 				padding-right: 15px
 
 	&__dropdown
+		display: none
 		min-width: 320px
 		width: 460px
 		padding: 0 30px 35px
+		text-align: left
 		position: absolute
 		top: 45px
 		left: 0
+		z-index: 99
 		+beforearr($color-bg-darken, t, 22, 11)
 		&::before
 			top: -11px
@@ -384,10 +443,12 @@
 		height: 60px
 		margin-right: 20px
 	&__text
+		float: left
 		display: inline-block
 		vertical-align: middle
 		width: 150px
 		font-size: 14px
+		text-align: left
 		line-height: 1.3
 		color: $color-text-light
 	&__price

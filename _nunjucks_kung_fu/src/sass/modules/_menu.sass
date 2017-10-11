@@ -1,14 +1,19 @@
 //Menu
 .menu
 	margin: 0
-	padding: 0
+	padding: 20px 0
 	list-style-type: none
 	+clr
 	&__list
 		display: inline-block
 		vertical-align: middle
+		+r(1200)
+			display: block
+			float: none
 		& + &
 			margin-left: 65px
+			+r(1200)
+				margin-left: 0
 		&_gender
 			float: left
 		&_sale
@@ -18,3 +23,133 @@
 		vertical-align: middle
 		& + &
 			margin-left: 30px
+			+r(1200)
+				margin-left: 0
+		+r(1200)
+			display: block
+		&.is-active
+			.menu__link
+				color: $color-accent
+
+	&__link
+		&:hover
+			color: $color-accent
+		&_sale
+			position: relative
+			&:hover
+				&::before
+					+scale(1.3)
+					font-size: rem(12)
+			&::before
+				content: '%'
+				display: block
+				width: 21px
+				height: 21px
+				+br(50%)
+				background-color: $color-brown-lighten
+				font-family: encore-300
+				font-size: rem(11)
+				line-height: rem(21)
+				text-align: center
+				color: $color-accent
+				+scale(1)
+				+tr(.35s)
+				position: absolute
+				left: -24px
+				top: 0
+
+//Mobile menu
+.mobile-menu
+	position: fixed
+	top: 0
+	left: 0
+	width: 320px
+	height: 100%
+	overflow: auto
+	z-index: -1
+
+	&__logo
+		display: block
+		margin: 15px 0 0 15px
+		text-transform: uppercase
+		font-family: oswald-600
+		font-size: 32px
+		color: $color-bg-dark
+
+	.menu
+		&__list
+			padding: 15px 0
+			border-bottom: 1px solid $color-text-btn
+			&:last-child
+				border-bottom: none
+		&__item
+			& + .menu__item
+				margin-top: 7px
+			&:hover, &:active, &.is-active
+				.menu__link
+					color: $color-text-light
+					background-color: rgba($color-accent, .1)
+					&::after
+						background-color: $color-accent
+		&__link
+			display: block
+			padding: 5px 0 6px 25px
+			color: $color-text-light
+			position: relative
+			&::after
+				content: ''
+				display: block
+				width: 4px
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+
+
+//toggle-menu
+.toggle-menu
+	display: inline-block
+	width: 28px
+	height: 28px
+	position: absolute
+	top: 23px
+	left: 0
+	+r(480)
+		top: 19px
+		left: 10px
+	span
+		position: relative
+		display: block
+		width: 100%
+		height: 2px
+		background-color: $color-text
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+		&:after, &:before
+			content: ' '
+			position: absolute
+			left: 0
+			top: 9px
+		&:after
+			top: 18px
+			width: 100%
+			height: 2px
+			background-color: $color-text
+			transition: all 0.3s
+			backface-visibility: hidden
+			border-radius: 2px
+		&:before
+			width: 100%
+			height: 2px
+			background-color: $color-text
+			transition: all 0.3s
+			backface-visibility: hidden
+			border-radius: 2px
+	&.on
+		span
+			background-color: transparent
+			&:before
+				transform: rotate(45deg) translate(-1px, 0px)
+			&:after
+				transform: rotate(-45deg) translate(6px, -7px)

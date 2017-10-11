@@ -10,6 +10,7 @@ function build(cb) {
         'sass',
         'sass:libs',
         'js',
+        'js:libs',
         'nunjucks',
         'copy',
         'list-pages',

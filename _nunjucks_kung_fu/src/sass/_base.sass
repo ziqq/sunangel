@@ -6,7 +6,7 @@
 //mixins
 =my-scroll
 	+scrollbar
-		width: 7px
+		width: 5px
 	+scrollbar-track
 		background-color: $color-brown-lighten
 	+scrollbar-thumb
@@ -26,6 +26,11 @@ body
 	line-height: 1.5
 	overflow-x: hidden
 	+my-scroll
+	&.is-fixed
+		position: fixed
+		width: 100%
+		height: 100%
+		overflow: hidden
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 	font-family: encore-100, sans-serif
@@ -55,12 +60,33 @@ img ,.img-responsive
 	max-width: 100%
 	height: auto
 
+//rouble
+.rub
+	font-family: rouble
+	font-style: normal
+
 .hidden
-	display: none !important
+	display: none 
+
+.wrapper
+	position: relative
+	z-index: 10
+	background-color: #fff
+	+r(1200)
+		transform: translateX(0)
+		overflow: auto
+		+tr(.5s)
+
+	&.is-menu-open
+		overflow: hidden
+		+r(1200)
+			transform: translateX(320px)
 
 .bg--dark
 	background-color: $color-bg-darken
 	// background-color: $color-bg-dark
+	&_lighten
+		background-color: $color-bg-dark-lighten
 	h1,.h1,h2,.h2,h3,.h3,h5,.h5,h6,.h6
 		color: $color-brown
 	h4,.h4
@@ -69,10 +95,6 @@ img ,.img-responsive
 		color: rgba($color-brown, .75)
 	// p
 	// 	color: $color-text-bg-dark
-	a
-		color: $color-text-bg-dark
-		&:hover
-			color: $color-brown-lighten
 	.btn
 		color: $color-text-btn
 		background-color: $color-brown
