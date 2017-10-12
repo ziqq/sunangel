@@ -34,11 +34,11 @@
 			<div class="action js-action">
 				<ul class="action__list">
 					<li class="action__item action__item_search search js-action__link">
-						<a class="action__link" href="javascript:void(0);">{{mixin.icon('search')}}</a>
+						<a class="action__link js-search" href="javascript:void(0);">{{mixin.icon('search')}}</a>
 						<div class="action__dropdown bg--dark">
 							<h4 class=" h4 action__title">Поиск</h4>
 							<span class="search__desc">поиск среди 45 000 ювелирных изделий</span>
-							<label class="sa-input__box">
+							<label class="sa-input__box mobile-search">
 								<input class="sa-input js-sa-input" type="seatch">
 								<span class="sa-input__placeholder">Введите название изделия или его индекс</span>
 								{{mixin.icon('search')}}
@@ -46,9 +46,10 @@
 						</div>
 					</li>
 					<li class="action__item action__item_use user js-action__link">
-						<a class="action__link" href="javascript:void(0);">{{mixin.icon('user')}}</a>
-						<div class="action__dropdown bg--dark">
+						<a class="action__link js-auth--open" href="javascript:void(0);">{{mixin.icon('user')}}</a>
+						<div class="action__dropdown bg--dark user-enter">
 							<h4 class="action__title">Войти</h4>
+							<div class="sa-close js-auth--close">{{mixin.icon('close')}}</div>
 							<div class="social header__social">
 								<span class="social__title">Через социальную сеть:</span>
 								<ul class="social__list social__list_icon">
@@ -63,8 +64,8 @@
 							<!-- begin auth -->
 							<div class="auth">
 								<div class="auth__tabs">
-									<span class="auth__tab">Телефон</span>
-									<span class="auth__tab">Email</span>    
+									<span class="auth__tab auth__tab_phone">Телефон</span>
+									<span class="auth__tab auth__tab_email">Email</span>    
 								</div>
 								<div class="auth__content">
 									<div class="auth__item auth__phone">

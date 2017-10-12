@@ -1,0 +1,20 @@
+.user-enter
+	+rmin(480)
+		.sa-close
+			display: none
+	+r(480)
+		position: fixed
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		z-index: 999
+		background-color: $color-bg-dark-lighten
+		display: block
+		overflow-y: auto
+		transform: translateX(-250%)
+		+tr(.5s)
+		&.is-open
+			transform: translateX(0)
+		.not-registered__form
+			padding-bottom: 30px

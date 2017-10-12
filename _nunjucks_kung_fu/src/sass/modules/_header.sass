@@ -13,9 +13,17 @@
 	&__top-line
 		+r(480)
 			background-color: #FFF
-			padding-bottom: 20px
+			padding-bottom: 13px
 			width: 100%
 			z-index: 99
+			transform: translateX(0)
+			transition: transform .5s ease
+			position: fixed
+			&.is-menu-open
+				transform: translateX(320px)
+		+r(320)
+			&.is-menu-open
+				transform: translateX(271px)
 	&__bottom
 		margin-bottom: 45px
 		+clr
@@ -37,6 +45,8 @@
 				vertical-align: middle
 				float: right
 				text-align: right
+				+r(375)
+					float: none
 				&_icon
 					margin: 0
 					padding: 0
@@ -80,7 +90,6 @@
 		border-bottom-color: transparent
 		.city-dropdown
 			display: block
-			overflow: auto
 
 
 .city-dropdown
@@ -90,7 +99,6 @@
 	left: -20px
 	right: -20px
 	max-height: 170px
-	overflow-y: auto
 	background-color: #FFF
 	// border: 1px solid $color-text-light
 	+bs(0 0 30px 1px rgba($color-text, .5))
@@ -187,13 +195,17 @@
 
 	img
 		margin: 0 auto
+		+r(1200)
+			margin-left: 13%
+		+r(480)
+			margin: 0 auto
 
 .action
 	display: inline-block
 	vertical-align: middle
 	padding-top: 10px
 	text-align: right
-	+r(1024)
+	+r(1200)
 		text-align: left
 	+r(992)
 		text-align: right
@@ -214,6 +226,8 @@
 			margin-left: 50px
 			+r(768)
 				margin-left: 35px
+			+r(375)
+				margin-left: 15px
 		.icon
 			display: inline-block
 			width: 22px
@@ -288,12 +302,44 @@
 				&:hover
 					fill: $color-accent
 
+//Mobile Search
++r(480)
+	.mobile-search
+		position: absolute
+		top: -100%
+		left: 0
+		width: 100%
+		+tr(.35s)
+		&.is-visible
+			top: 0
+		.sa-input
+			padding-right: 40px
+			+br(0)
+			+placeholder
+				font-size: 14px
+		.icon
+			position: absolute
+			top: 50%
+			right: 10px
+			width: 23px
+			height: 23px
+			margin-top: -11.5px
+			fill: $color-accent
+
 //User
 .user
 	.action
-		&__dropdown
-			left: 50%
-			transform: translateX(-50%)
+		+rmin(480)
+			&__dropdown
+				left: 50%
+				transform: translateX(-50%)
+				+r(1200)
+					left: auto
+					transform: translateX(12%)
+					right: 100%
+					&::before
+						left: auto
+						right: 32px
 
 //Social
 .social
@@ -305,6 +351,9 @@
 		font-size: 16px
 		line-height: 18px
 		color: $color-text
+		+r(375)
+			display: block
+			margin-bottom: 15px
 	&__item
 		display: inline-block
 		& + &
@@ -350,6 +399,10 @@
 		font-size: rem(14)
 		line-height: 1.3
 
+	&__email
+		+r(480)
+			display: none
+
 .not-registered
 	margin-top: 30px
 	&__title
@@ -371,6 +424,10 @@
 			&::before
 				left: auto
 				right: 116px
+			+r(1200)
+				transform: translateX(7%)
+				&::before
+					right: 33px
 	&__img
 		margin-bottom: 40px
 		img
@@ -392,6 +449,11 @@
 			&::before
 				left: auto
 				right: 35px
+			+r(1200)
+				transform: translateX(8%)
+				&::before
+					right: 12px
+
 	&__link
 		position: relative
 		span

@@ -1,5 +1,5 @@
 .footer
-	padding: 90px 0
+	padding: 80px 0
 	position: relative
 	background-image: url("../img/general/footer-bg.jpg")
 	background-size: cover
@@ -24,6 +24,10 @@
 			font-size: rem(15)
 			line-height: 30px
 			color: #444444
+	&__phone
+		display: block
+		margin-top: 15px
+		letter-spacing: 3.6px
 
 .footer-item
 	.h5
@@ -48,4 +52,10 @@
 		color: $color-text-bg-dark
 		&::last-child
 			margin-top: 0
+
+.social
+	&__item
+		&_text
+			& + &
+				margin-left: 24px
 

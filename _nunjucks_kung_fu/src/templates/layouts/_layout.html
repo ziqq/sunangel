@@ -29,12 +29,14 @@
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 
+	<div class="loading"><div class="loading__inner" data-width="80%"></div></div>
 
 	<div class="wrapper">
 		{% block content %}{% endblock %}
 	</div>
 
-
+	
+	{% include "partials/_popup.html" %}
 	<!-- BEGIN scripts -->
 	<script type="text/javascript" src="js/libs.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
