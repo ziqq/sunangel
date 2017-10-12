@@ -1,0 +1,108 @@
+.filter-sm
+	&__wrap
+		text-align: center
+		position: relative
+		padding-bottom: 15px
+		border-bottom: 1px solid $color-border
+		+clr
+		+r(480)
+			text-align: left
+	&__item
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		padding: 0 20px
+		+tr(.35)
+		&::after
+			content: '\f107'
+			font-family: FontAwesome
+			font-size: 16px
+			color: #b8b8b8
+			display: inline-block
+			position: absolute
+			top: 1px
+			right: 0
+		&:hover
+			color: $color-accent
+		&.is-active
+			color: $color-accent
+		+r(480)
+			padding-left: 8px
+			&:first-child
+				padding-left: 0
+		+r(480)
+			padding-left: 0
+
+	&__btn
+		display: inline-block
+		vertical-align: middle
+		padding-right: 30px
+		position: absolute
+		top: 0
+		right: 0
+		&::after
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			position: absolute
+			top: 6px
+			right: 0
+			+s(filtr__btn)
+		span
+			+r(480)
+				display: none
+
+.sorting
+	&__wrap
+		text-align: center
+		position: relative
+		padding: 15px 0 17px	
+		border-bottom: 1px solid $color-border
+		+clr
+		+r(480)
+			text-align-last: 
+	&__item
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		color: $color-text-light
+		cursor: pointer
+		+tr(.35s)
+
+		& + &
+			margin-left: 50px
+			+r(480)
+				margin-left: 0
+				margin-right: 25px
+		&:hover
+			color: $color-brown
+		&.is-active
+			color: $color-brown
+			&::after
+				content: '\f0d7'
+				font-family: FontAwesome
+				font-size: 16px
+				color: $color-brown
+				display: inline-block
+				position: absolute
+				top: 1px
+				right: -15px	
+		&_title
+			color: $color-text
+			+r(480)
+				display: block
+	&__btn
+		display: inline-block
+		vertical-align: middle
+		padding-right: 30px
+		position: absolute
+		top: 0
+		right: 0
+		&::after
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			position: absolute
+			top: 6px
+			right: 0
+			+s(filtr__btn)

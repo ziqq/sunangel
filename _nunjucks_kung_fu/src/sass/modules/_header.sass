@@ -10,9 +10,13 @@
 
 .header
 	color: $color-text
+	border-bottom: 1px solid $color-border
+	+r(480)
+		border-bottom: none
 	&__top-line
 		+r(480)
 			background-color: #FFF
+			border-bottom: 1px solid $color-border
 			padding-bottom: 13px
 			width: 100%
 			z-index: 99
@@ -27,6 +31,8 @@
 	&__bottom
 		margin-bottom: 45px
 		+clr
+		+r(480)
+			margin-bottom: 30px
 	&__social
 		margin-bottom: 30px
 		padding-bottom: 25px
@@ -329,17 +335,17 @@
 //User
 .user
 	.action
-		+rmin(480)
+		+rmin(481)
 			&__dropdown
 				left: 50%
 				transform: translateX(-50%)
-				+r(1200)
-					left: auto
-					transform: translateX(12%)
-					right: 100%
-					&::before
-						left: auto
-						right: 32px
+		+r(1200)
+			left: auto
+			transform: translateX(12%)
+			right: 100%
+			&::before
+				left: auto
+				right: 32px
 
 //Social
 .social

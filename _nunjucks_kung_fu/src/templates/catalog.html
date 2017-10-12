@@ -1,0 +1,63 @@
+---
+title: Подвески со знаками зодиака
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+
+<main class="main">
+	<div class="container">
+
+		{{mixin.breadcrumbs()}}
+
+		<div class="page-title">
+			<h1 class="h1">{{title}}</h1>
+		</div>
+
+		<div class="filter-sm__wrap">
+			<ul class="filter-sm">
+				<li class="filter-sm__item">
+					Вид украшения
+					<ul class="filter-sm__dropdown">
+						<li class="filter-sm__dropdown-item is-active"></li>
+					</ul>
+				</li>
+				<li class="filter-sm__item">
+					Метал
+					<ul class="filter-sm__dropdown">
+						<li class="filter-sm__dropdown-item"></li>
+					</ul>
+				</li>
+				<li class="filter-sm__item">
+					Вставка
+					<ul class="filter-sm__dropdown">
+						<li class="filter-sm__dropdown-item"></li>
+					</ul>
+				</li>
+				<li class="filter-sm__item">
+					Бренд
+					<ul class="filter-sm__dropdown">
+						<li class="filter-sm__dropdown-item"></li>
+					</ul>
+				</li>
+			</ul>
+			<a href="javascript:void(0);" class="filter-sm__btn"><span>Расширенный фильтр</span></a>
+		</div>
+
+		<div class="sorting__wrap">
+			<ul class="sorting">
+				<li class=" sorting__item sorting__item_title">Сортировать по:</li>
+				<li class="sorting__item">по популярности</li>
+				<li class="sorting__item is-active">возрастанию цены</li>
+				<li class="sorting__item"> убыванию цены</li>
+			</ul>
+		</div>
+
+	</div>
+</main>
+
+{% include "partials/_footer.html" %}
+
+{% endblock %}

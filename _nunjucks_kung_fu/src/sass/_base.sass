@@ -35,9 +35,14 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 	font-family: encore-100, sans-serif
 	color: $color-text
 
+.h1
+	font-size: rem(36)
+	+r(480)
+		font-size: rem(28)
+
 .h5
 	font-family: oswald-300
-	font-size: 14px
+	font-size: rem(14)
 	color: #fff
 	letter-spacing: 2.8px
 	text-transform: uppercase
@@ -53,6 +58,12 @@ p
 	font-family: encore-300, sans-serif
 	font-size: rem(16)
 	color: $color-text-lighten
+
+.page-title
+	text-align: center
+	padding: 55px 0
+	+r(480)
+		padding: 10px 0 35px
 
 img ,.img-responsive
 	display: block
@@ -76,7 +87,7 @@ img ,.img-responsive
 		overflow: auto
 		+tr(.5s)
 	+r(480)
-		padding-top: 58px
+		padding-top: 75px
 
 	&.is-menu-open
 		overflow: hidden
@@ -228,5 +239,59 @@ img ,.img-responsive
 		border-color: #877c5f
 		.icon
 			fill: $color-accent
+
+//Breadcrumbs
+.breadcrumbs
+	padding: 10px 0 11px
+	&__item
+		display: inline-block
+		vertical-align: middle
+		color: #b8b8b8
+		font-size: rem(14)
+		&::after
+			display: inline-block
+			padding: 0 20px
+			vertical-align: middle
+			content: '\f105'
+			font-family: FontAwesome
+			font-size: 13px
+			+r(425)
+				padding: 0 10px
+		&_back
+			margin-right: 65px
+			+r(480)
+				margin-right: 35px
+			+r(375)
+				margin-right: 15px
+			&::after
+				display: none
+			.fa
+				margin-right: 15px
+				+r(375)
+					margin-right: 5px
+		&:last-child
+			&::after
+				display: none
+		span
+			margin-left: 30px
+			position: relative
+			&::after
+				content: ''
+				display: inline-block
+				height: 1px
+				width: 12px
+				background-color: #b8b8b8
+				position: absolute
+				top: 50%
+				margin-top: -.5px
+				left: -21px
+
+	&__link
+		font-size: 15px
+		color: #b8b8b8
+		&:hover
+			color: $color-brown
+
+
 
 @import layouts
