@@ -3,9 +3,9 @@
 	<div class="container">
 
 		<div class="header__top-line">
-			<div class="city__wrap">
-				<div class="city js-city-hover">
-					Балаково
+			<div class="city js-city-hover">
+				Балаково
+				<div class="city__inner">
 					<ul class="city-dropdown">
 						{% import "data/data.html" as cities %}
 						{% for city in cities.citieslist %}
@@ -64,7 +64,7 @@
 							<!-- begin auth -->
 							<div class="auth">
 								<div class="auth__tabs">
-									<span class="auth__tab auth__tab_phone">Телефон</span>
+									<span class="auth__tab auth__tab_phone is-active">Телефон</span>
 									<span class="auth__tab auth__tab_email">Email</span>    
 								</div>
 								<div class="auth__content">
@@ -143,7 +143,7 @@
 									</div>
 									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
 									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del">
+									<span class="cart-item__del del">
 										{{mixin.icon('close')}}
 									</span>
 								</div>

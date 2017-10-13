@@ -94,29 +94,32 @@
 	&.is-active
 		color: $color-brown
 		border-bottom-color: transparent
-		.city-dropdown
+		.city__inner
 			display: block
+
+	&__inner		
+		display: none
+		position: absolute
+		top: 23px
+		left: -20px
+		right: -20px
+		background-color: #FFF
+		// border: 1px solid $color-text-light
+		+bs(0 0 30px 1px rgba($color-text, .5))
+		z-index: 10
+		&::before
+			content: ''
+			display: block
+			+arr(12,6, #fff, t)
+			position: absolute
+			top: -6px
+			left: 50%
+			margin-left: -6px
 
 
 .city-dropdown
-	display: none
-	position: absolute
-	top: 23px
-	left: -20px
-	right: -20px
+	overflow-y: auto
 	max-height: 170px
-	background-color: #FFF
-	// border: 1px solid $color-text-light
-	+bs(0 0 30px 1px rgba($color-text, .5))
-	z-index: 10
-	&::before
-		content: ''
-		display: block
-		+arr(12,6, #fff, t)
-		position: absolute
-		top: -6px
-		left: 50%
-		margin-left: -6px
 	&__item
 		display: block
 		padding: 0 5px

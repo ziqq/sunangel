@@ -1,21 +1,18 @@
-//=include header.js
-
 $(document).ready(function () {
 
+	//Partials
+	//=include partials/header.js
+	//=include partials/filter.js
 	
 	$(window).on("load",function(){
-		// if($(window).width >= 768){
-			$('.city-dropdown, .mobile-menu'). niceScroll({
-			cursorcolor: '#ee8b76',
-			cursorborderradius: '4px',
-			horizrailenabled: false,
-			"verge": "500",
-			cursorwidth: '3px',
-			cursorborder: 'none',
-			cursorborderradius:'0'
+		$('.city-dropdown, .mobile-menu').niceScroll({
+		cursorcolor: '#ee8b76',
+		horizrailenabled: false,
+		"verge": "500",
+		cursorwidth: '3px',
+		cursorborder: 'none',
+		cursorborderradius:'0'
 		});
-		// }
-		
 	});
 
 	//Custom Input
