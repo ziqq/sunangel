@@ -74,3 +74,37 @@
 		&_social
 			order: initial
 			margin-right: initial
+
+//Catalog Item
+.product-item
+	width: 25%
+	float: left
+	+r(768)
+		+span(4)
+		margin-bottom: gutter()
+		&:nth-child(3n)
+			margin-right: 0
+	+r(480)
+		width: 100%
+		margin-bottom: 30px
+		&:nth-child(3n)
+			margin-right: gutter()
+
+//Product
+.product
+	&-img
+		+span(6)
+	&-text
+		+span(6)
+		margin-right: 0
+
+.product-desc__item
+	+span(5)
+	margin-right: 80px
+	&:nth-child(2)
+		+span(4)
+	&:nth-child(3)
+		+span(2)
+		margin-right: 0	
+
+	

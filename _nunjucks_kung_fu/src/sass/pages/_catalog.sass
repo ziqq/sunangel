@@ -5,6 +5,8 @@
 		padding-bottom: 15px
 		border-bottom: 1px solid $color-border
 		+clr
+		+r(768)
+			text-align: left
 		+r(480)
 			text-align: left
 	&__item
@@ -38,7 +40,7 @@
 		vertical-align: middle
 		padding-right: 30px
 		position: absolute
-		top: 0
+		top: 1px
 		right: 0
 		&::after
 			content: ''
@@ -54,13 +56,13 @@
 
 .sorting
 	&__wrap
+		margin-bottom: 70px
 		text-align: center
 		position: relative
-		padding: 15px 0 17px	
-		border-bottom: 1px solid $color-border
+		padding: 15px 0 17px
 		+clr
 		+r(480)
-			text-align-last: 
+			margin-bottom: 5px
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -106,3 +108,119 @@
 			top: 6px
 			right: 0
 			+s(filtr__btn)
+
+//Catalog Item
+.catalog
+	&__seo-text
+		margin-top: 120px
+
+.product-item
+	padding: 25px 30px 25px 30px
+	border: 1px solid transparent
+	+tr(0.35s)
+	&:hover
+		border: 1px solid $color-brown-lighten
+		background-color: #fff
+		.product-item__button
+			opacity: 1
+	+r(768)
+		padding: 15px
+		border: 1px solid $color-brown-lighten
+	+r(480)
+		padding: 10px 50px 30px 50px
+	+r(375)
+		padding: 15px 15px 30px
+	&__img
+		margin-bottom: 5px
+		img
+			margin: 0 auto
+			display: block
+	//product-item__title
+	&__title
+		display: block
+		margin-bottom: 15px
+		text-align: center
+		color: #606060
+		font-family: encore-300
+		font-size: rem(16)
+	//product-item__price
+	&__price
+		display: block
+		margin-bottom: 40px
+		font-family: oswald-300
+		font-size: rem(18)
+		text-align: center
+		color: $color-accent
+		position: relative
+		+clr
+		+r(768)
+			margin-bottom: 20px
+		+r(480)
+			margin-bottom: 40px
+		&_old
+			font-family: oswald-300
+			font-size: rem(14)
+			text-decoration: line-through
+			color: $color-text-light
+			position: absolute
+			top: 4px
+			left: 0
+		&_sale
+			padding: 1px 10px
+			color: $color-accent
+			font-family: oswald-400
+			font-size: rem(11)
+			position: absolute
+			top: 4px
+			right: 0
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				+s(sale_clean)
+				z-index: -1
+	//product-item__button
+	&__button
+		opacity: 0
+		+tr(.35s)
+		+r(768)
+			opacity: 1
+			.btn
+				&_add
+					font-size: rem(10)
+				&_fav
+					width: 44px
+					height: 44px
+		+r(480)
+			text-align: center
+			.btn
+				&_add
+					font-size: rem(13)
+				&_fav
+					width: 47px
+					height: 47px
+					position: relative
+					top: -2px
+
+//seo-text
+.seo-text
+	text-align: center
+	padding-bottom: 70px
+	&__title
+		margin-bottom: 20px
+		color: #474747
+		font-family: encore-50, sans-serif
+		font-size: rem(36)
+	&__desc
+		display: block
+		margin-bottom: 25px
+		position: relative
+		max-width: 950px
+		overflow: hidden
+		margin: 0 auto
+		color: $color-text
+		font-family: encore-300, sans-serif
+		font-size: rem(16)
+

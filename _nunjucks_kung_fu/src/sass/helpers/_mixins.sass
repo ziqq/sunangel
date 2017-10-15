@@ -38,15 +38,35 @@
 	.no-touch &:hover
 		@content
 
-%pseudo
+%pseudoa
 	position: relative
-	&:before,&:after
+	&:after
 		content: ' '
 		position: absolute
 		top: 0
 		left: 0
-=pseudo
-	@extend %pseudo
+
+%pseudob
+	position: relative
+	&:before
+		content: ' '
+		position: absolute
+		top: 0
+		left: 0
+
+=pseudoa
+	@extend %pseudoa
+
+=pseudob
+	@extend %pseudob
+
+=posa($top: auto, $left: auto, $right: auto, $bottom: auto)
+	position: absolute
+	top: $top
+	left: $left
+	right: $right
+	bottom: $bottom
+
 
 =coverdiv
 	position: absolute
@@ -74,6 +94,11 @@
 	top: 50%
 	left: 50%
 	transform: translate(-50%,-50%)
+
+=vc
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
 
 //simple gradient
 =g($color1, $color2)

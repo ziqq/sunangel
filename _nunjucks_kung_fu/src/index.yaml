@@ -3,5 +3,7 @@ ProjectTitle: SUNANGEL
 PageList:
 - file: home.html
   ready: 50
+- file: product.html
+  ready: 50
 - file: catalog.html
   ready: 50

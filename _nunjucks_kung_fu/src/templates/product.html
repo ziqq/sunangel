@@ -1,0 +1,230 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}	
+
+<main class="main">
+	<div class="container">
+		{{mixin.breadcrumbs()}}
+		<!-- begin product -->
+		<section class="product">
+			<div class="product__inner">
+				<div class="product-img">
+					<div class="product-slider_big">
+						<div class="product-slider__item">{{mixin.img(500, 500)}}</div>
+						<div class="product-slider__item">{{mixin.img(500, 500)}}</div>
+						<div class="product-slider__item">{{mixin.img(500, 500)}}</div>
+					</div>
+					<div class="product-slider_small">
+						<a href="#" data-slide-index="0" class="product-slider__item">{{mixin.img(60, 60)}}</a>
+						<a href="#" data-slide-index="1" class="product-slider__item">{{mixin.img(60, 60)}}</a>
+						<a href="#" data-slide-index="2" class="product-slider__item">{{mixin.img(60, 60)}}</a>
+					</div>
+				</div>
+
+				<div class="product-text">
+					<span class="product__articul">Артикул 3020399</span>
+					<h1 class="product__title">Подвеска из комбинированного золота с эмалью, бриллиантами и рубинами</h1>
+					<div class="product-text__inner">
+
+						<div class="size">
+							<div class="extra-item js-extra-item">
+								Выбирете размер
+								<div class="extra-item__dropdown bg--dark">
+									<ul class="size__list">
+										<ul>
+											<li class="size__item">16</li>
+											<li class="size__item">16.5</li>
+											<li class="size__item">17</li>
+											<li class="size__item">17.5</li>
+										</ul>
+										<ul>
+											<li class="size__item">18</li>
+											<li class="size__item">18.5</li>
+											<li class="size__item">19</li>
+											<li class="size__item">19.5</li>
+										</ul>
+										<ul>
+											<li class="size__item">20</li>
+											<li class="size__item">20.5</li>
+											<li class="size__item">21</li>
+											<li class="size__item">21.5</li>
+										</ul>
+										<li class="size__item size__item_none"><a href="#">нет моего размера</a></li>
+									</ul>
+								</div>
+							</div>
+							<a href="#howsize" class="extra-item extra-item_noarrowbutton js-popup">Как выбрать размер ?</a>
+						</div>
+
+						<div class="product-text__action">
+
+							<div class="product-item__price">
+								586800 <i class="rub">a</i>
+								<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+								<span class="product-item__price_sale">-88%</span>
+							</div>
+							<div class="product-item__button">
+								<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+							</div>
+
+						</div>
+
+						<div class="product-text__extra extra">
+							<button class="extra-item extra-item_credit">Купить в кредит</button>
+							<button class="extra-item extra-item_fav">В избранное</button>
+							<div class="extra-item extra-item_gift js-extra-item">
+								Хочу в подарок
+								<div class="extra-item__dropdown bg--dark">
+									<div class="social header__social">
+										<ul class="social__list social__list_icon">
+											<li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook"></i> </a></li>
+											<li class="social__item"><a href="#" class="social__link"><i class="fa fa-twitter"></i> </a></li>
+											<li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk"></i> </a></li>
+											<li class="social__item"><a href="#" class="social__link"><i class="fa fa-google-plus"></i></a></li>
+											<li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-desc">
+				<div class="product-desc__item product-desc__item_about">
+					<h3 class="product-desc__title">Об украшинии</h3>
+					<p class="product-desc__text">В этом украшении используется красное золото — ювелирный материал, сплав золота с медью, которая придает металлу красный цвет. Чем больше содержание меди в сплаве — тем насыщеннее красный оттенок золота.</p>
+					<p class="product-desc__text">Большая часть современных ювелирных украшений выполнена именно в красном золоте. Красное золото — прекрасная огранка для драгоценных и полудрагоценных камней, оно сочетается с любыми вставками и смотрится стильно и изысканно.</p>
+				</div>
+
+				<div class="product-desc__item product-desc__item_info">
+					<h3 class="product-desc__title">Характеристики</h3>
+					<table class="info__list">
+						<tr><td>Бренд:</td><td>Название бренда</td></tr>
+						<tr><td>Металл:</td><td>Золото</td></tr>
+						<tr><td>Вес изделия:</td><td>2.20</td></tr>
+						<tr><td>Проба:</td><td>585</td></tr>
+						<tr><td>Вставки:</td><td>Текст из 1с</td></tr>
+						<tr><td>Форма вставки:</td><td>Текст из 1с</td></tr>
+						<tr><td>Для кого:</td><td>Для женщин</td></tr>
+					</table>
+				</div>
+
+				<div class="product-desc__item product-desc__item_color">
+					<h3 class="product-desc__title">В другом цвете</h3>
+					<ul class="another-color">
+						<li class="another-color__item">
+							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
+						</li>
+						<li class="another-color__item">
+							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
+						</li>
+						<li class="another-color__item">
+							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
+						</li>
+						<li class="another-color__item">
+							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- end product -->
+		<!-- begin addition -->
+		<section class="addition">
+			<div class="container">
+				<h2 class="h2">Дополниет свой образ</h2>
+				<div class="addition__slider">
+
+					<div class="product-item">
+						<div class="product-item__img">
+							<img src="img/catalog/thumbs/1.png" alt="alt">
+						</div>
+						<div class="product-item__other">
+							<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+							<div class="product-item__price">
+								58684444 <i class="rub">a</i>
+								<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+								<span class="product-item__price_sale">-100%</span>
+							</div>
+							<div class="product-item__button">
+								<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+								<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-item">
+						<div class="product-item__img">
+							<img src="img/catalog/thumbs/1.png" alt="alt">
+						</div>
+						<div class="product-item__other">
+							<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+							<div class="product-item__price">
+								58684444 <i class="rub">a</i>
+								<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+								<span class="product-item__price_sale">-100%</span>
+							</div>
+							<div class="product-item__button">
+								<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+								<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-item">
+						<div class="product-item__img">
+							<img src="img/catalog/thumbs/1.png" alt="alt">
+						</div>
+						<div class="product-item__other">
+							<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+							<div class="product-item__price">
+								58684444 <i class="rub">a</i>
+								<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+								<span class="product-item__price_sale">-100%</span>
+							</div>
+							<div class="product-item__button">
+								<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+								<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-item">
+						<div class="product-item__img">
+							<img src="img/catalog/thumbs/1.png" alt="alt">
+						</div>
+						<div class="product-item__other">
+							<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+							<div class="product-item__price">
+								58684444 <i class="rub">a</i>
+								<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+								<span class="product-item__price_sale">-100%</span>
+							</div>
+							<div class="product-item__button">
+								<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+								<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- end addition -->
+
+	</div>
+</main>
+
+
+
+{% include "partials/_footer.html" %}
+
+{% endblock %}

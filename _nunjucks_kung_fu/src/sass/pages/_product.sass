@@ -1,0 +1,269 @@
+.product
+	padding-top: 70px
+	&__inner
+		margin-bottom: 60px
+		padding-bottom: 20px
+		border-bottom: 1px solid $color-border
+		+clr
+	&-img
+		position: relative
+		+clr
+	//product-text
+	&-text
+		padding-left: 65px
+		//product-text__action
+		&__action
+			margin-bottom: 30px
+		.product-item
+			//product-item__price
+			&__price
+				display: inline-block
+				width: 50%
+				margin-right: 50px
+			//product-item__button
+			&__button
+				opacity: 1
+				display: inline-block
+				.btn_add
+					padding: 16px 25px 15px 45px
+					&::after
+						left: 15px
+			//product-item__price
+			&__price
+				text-align: left
+				position: relative
+				color: $color-text
+				font-family: oswald-500, sans-serif
+				font-size: rem(24)
+				line-height: 1
+				color: $color-text
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					top: -33px
+					left: -35px
+					+s(price-border)
+				&_old
+					margin-left: 12px
+					font-family: oswald-300, sans-serif
+					font-size: rem(14)
+					color: #b1b1b1
+					text-decoration: line-through
+					position: static
+					left: auto
+					top: auto
+				&_sale
+					position: relative
+					top: -4px
+					right: -30px
+	//product__articul
+	&__articul
+		display: block
+		margin-bottom: 30px
+		font-family: oswald-300
+		font-size: rem(12)
+		color: #b8b8b8
+		text-transform: uppercase
+	//product__title
+	&__title
+		margin-bottom: 80px
+		color: #474747
+		font-family: encore-50, sans-serif
+		font-size: rem(36)
+		line-height: 1.3
+
+//product-desc
+.product-desc
+	margin-bottom: 120px
+	font-family: encore-100, sans-serif
+	+clr
+	//product-desc__title
+	&__title
+		display: block
+		margin-bottom: 30px
+		font-size: rem(18)
+		color: $color-brown
+		text-transform: uppercase
+		letter-spacing: 0.5px
+	//product-desc__text
+	&__text
+		display: block
+		margin-bottom: 35px
+		color: $color-text
+		font-size: rem(16)
+		&:last-child
+			margin-bottom: 0
+	//product-desc__item
+	&__item
+		.info__list
+			tr
+				height: 30px
+			td
+
+//extra
+.extra
+	&-item
+		display: inline-block
+		padding: 0 20px 0 30px
+		font-family: encore-300, sans-serif
+		font-size: rem(16)
+		color: $color-text-light
+		background-color: transparent
+		position: relative
+		cursor: pointer
+		+tr(.35s)
+		&:hover
+			color: $color-accent
+		&::before
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+		&_credit
+			padding-left: 25px
+			&::before
+				content: '%'
+				color: $color-accent
+		&_fav
+			&::before
+				content: ''
+				top: 5px
+				+s('favorite')
+		&_gift
+			&::before
+				content: ''
+				top: 5px
+				+s('gift')
+		&.is-visible
+			.extra-item__dropdown
+				display: block
+		//extra-item__dropdown
+		&__dropdown
+			display: none
+			padding: 20px 25px
+			position: absolute
+			width: max-content
+			top: 34px
+			left: -7px
+			color: $color-text
+			background-color: #fff
+			+br(3px)
+			z-index: 99
+			&::before
+				content: ''
+				display: block
+				+arr(12, 6, #fff, t)
+				position: absolute
+				top: -6px
+				left: 10px
+			&.bg--dark
+				background-color: $color-bg-darken
+				&::before
+					+arr(12, 6, $color-bg-dark, t)
+			.social
+				border: 0
+				margin: 0
+				padding: 0
+				.fa
+					font-size: rem(14)
+
+//size
+.size
+	margin-bottom: 50px
+	.extra-item
+		padding: 0
+		margin-right: 30px
+		border-bottom: 1px dashed $color-border
+		&:last-child
+			margin-right: 0
+		&::after
+			content: '\f107'
+			font-family: FontAwesome
+			display: inline-block
+			position: relative
+			top: 1px
+		&_noarrow
+			&::after
+				display: none
+		&__dropdown
+			max-width: 195px
+			padding-right: 0
+			padding-left: 20px
+	//size__item
+	&__item
+		display: inline-block
+		vertical-align: middle
+		margin-right: 14px
+		padding: 4px 6px 4px 4px
+		// Style for "16"
+		color: $color-text-lighten
+		font-family: oswald-300, sans-serif
+		font-size: rem(12)
+		background-color: transparent
+		+br(3px)
+		+tr(.35s)
+		&:hover
+			background-color: $color-accent
+
+		&_none
+			color: $color-text-lighten
+			font-family: encore-300, sans-serif
+			font-size: rem(16)
+			padding: 0
+			background-color: transparent
+			+br(0)
+			&:hover
+				background-color: transparent
+	//size__list
+	&__list
+		ul
+			display: block
+			margin-bottom: 15px
+
+
+//product-slider
+.product-slider
+	//product-slider_small
+	&_small
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		.product-slider__item
+			display: block
+			margin: 16px 2px
+			width: 62px
+			height: 62px
+			cursor: pointer
+			border: 1px solid transparent
+			&:hover
+				border: 1px solid $color-brown-lighten
+			&.active
+				border: 1px solid $color-brown-lighten
+			img
+				@extend %i
+	//product-slider_big
+	&_big
+		margin-left: 60px
+
+//another-color
+.another-color
+	&__item
+		display: inline-block
+		margin-right: 15px
+		margin-bottom: 15px
+		&:nth-child(2n)
+			margin-right: 0
+
+//addition
+.addition
+	.h2
+		display: block
+		margin-bottom: 50px
+		text-align: center
+	//addiion__slider
+	&__slider
+		+clr
+		.product-item
+			width: 300px

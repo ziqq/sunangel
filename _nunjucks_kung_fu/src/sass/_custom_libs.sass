@@ -1,17 +1,45 @@
-._mCS_1 .mCSB_dragger .mCSB_dragger_bar
-	background-color: red
+.bx-wrapper
+	box-shadow: none
+	border: none
+	background: #fff
+	position: relative
+	left: 65px
+	.img
+		position: relative
+		left: -60px
+	.bx-prev, .bx-next
+		background: none
+		&::after
+			content: '\f117'
+			font-family: FontAwesome
+			font-size: 22px
+			position: absolute
+			top: 0
+			left: 0
+			color: #000
 
-._mCS_2 .mCSB_dragger .mCSB_dragger_bar
-	background-color: green
+//fancybox
+.fancybox-slide
+	+my-scroll
+	> div
+		padding: 30px
+		margin: 0
+		background-color: $color-bg-darken
+		overflow: initial
 
-#mCSB_3_dragger_vertical .mCSB_dragger_bar
-	background-color: blue
-
-#mCSB_1_scrollbar_vertical .mCSB_dragger
-	height: 100px
-
-#mCSB_1_scrollbar_horizontal .mCSB_dragger
-	width: 100px
-
-.mCSB_1_scrollbar .mCSB_dragger .mCSB_draggerRail
-	width: 4px
+.fancybox-close-small
+	&::after 
+		content: '×'
+		top: 5px
+		right: 5px
+		width: 30px
+		height: 30px
+		font-family: encore-400, sans-serif
+		font-size: 24px
+		color: $color-accent
+		background: transparent
+		+br(0)
+	&:hover
+		&::after
+			background-color: transparent
+			color: $color-accent

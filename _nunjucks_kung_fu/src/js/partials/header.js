@@ -3,6 +3,8 @@
 	// 	width: $('.loading__inner').data('width')
 	// });
 
+	// $('.main').css('paddingBottom', $('.footer').height());
+
 	if ($(window).width() <= 480) {
 		//скрытие и отображение меню при скроле
 		var header = $(".header__top-line"); // Меню

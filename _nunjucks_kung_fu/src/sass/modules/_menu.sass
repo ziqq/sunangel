@@ -32,6 +32,7 @@
 				color: $color-accent
 
 	&__link
+		font-size: rem(16)
 		&:hover
 			color: $color-accent
 		&_sale
@@ -123,7 +124,7 @@
 		width: 100%
 		height: 2px
 		background-color: $color-text
-		transition: all 0.3s
+		+tr(.35s)
 		backface-visibility: hidden
 		border-radius: 2px
 		&:after, &:before
@@ -136,14 +137,14 @@
 			width: 100%
 			height: 2px
 			background-color: $color-text
-			transition: all 0.3s
+			+tr(.35s)
 			backface-visibility: hidden
 			border-radius: 2px
 		&:before
 			width: 100%
 			height: 2px
 			background-color: $color-text
-			transition: all 0.3s
+			+tr(.35s)
 			backface-visibility: hidden
 			border-radius: 2px
 	&.on

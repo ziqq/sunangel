@@ -22,3 +22,66 @@
 			transform: translateX(0)
 		.not-registered__form
 			padding-bottom: 30px
+
+//howsize
+.popup
+	min-width: 320px
+	width: 460px
+	+my-scroll
+	&__title
+		margin-bottom: 30px
+		color: $color-text
+		font-family: encore-50, sans-serif
+		font-size: rem(36)
+		text-align: center
+	&__desc
+		display: block
+		margin-bottom: 40px
+		font-family: encore-300, sans-serif
+		font-size: rem(14)
+		color: $color-text-light
+	.extra-item
+		position: relative
+		margin-bottom: 30px
+		padding: 0 35px 0 0
+		color: $color-brown-lighten
+		border-bottom: 1px dashed $color-text
+		&:hover, &.is-visible
+			color: $color-accent
+		&::after
+			content: '\f107'
+			font-family: FontAwesome
+			color: $color-text
+			position: absolute
+			top: 1px
+			right: 0
+
+		&__dropdown
+			left: 86%
+			z-index: 999
+			.size__item	
+				color: $color-text	
+				&:hover
+					color: #fff
+
+.howsize
+	&__result
+		margin-top: 30px
+		padding-top: 25px
+		border-top: 1px solid $color-text-btn
+		color: $color-brown
+		font-family: encore-100, sans-serif
+		font-size: rem(16)
+		span
+			color: $color-accent
+			font-family: oswald-500
+			font-size: rem(24)
+
+//callback
+#callback
+	.popup
+		&__desc
+			margin-bottom: 0
+			color: $color-text
+	.btn
+		margin: 40px 0 20px

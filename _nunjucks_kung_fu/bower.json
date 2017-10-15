@@ -18,6 +18,8 @@
   "dependencies": {
     "jquery": "2.1.4",
     "jquery.maskedinput": "^1.4.1",
-    "jquery.nicescroll": "^3.7.6"
+    "jquery.nicescroll": "^3.7.6",
+    "slick-carousel": "slick.js#^1.8.1",
+    "bxslider-4": "bxSlider#^4.2.12"
   }
 }

@@ -24,7 +24,7 @@ body
 	color: $color-text
 	line-height: 1.5
 	overflow-x: hidden
-	// +my-scroll
+	+my-scroll
 	&.is-fixed
 		position: fixed
 		width: 100%
@@ -32,13 +32,15 @@ body
 		overflow: hidden
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
-	font-family: encore-100, sans-serif
+	font-family: encore-50, sans-serif
 	color: $color-text
 
 .h1
 	font-size: rem(36)
 	+r(480)
 		font-size: rem(28)
+.h2
+	font-size: rem(36)
 
 .h5
 	font-family: oswald-300
@@ -65,10 +67,13 @@ p
 	+r(480)
 		padding: 10px 0 35px
 
-img ,.img-responsive
+%i
 	display: block
 	max-width: 100%
 	height: auto
+
+img ,.img-responsive
+	@extend %i
 
 .my-scroll
 	+my-scroll
@@ -110,6 +115,9 @@ img ,.img-responsive
 		color: $color-text
 	.h5
 		color: rgba($color-brown, .75)
+	&.popup
+		h1,.h1,h2,.h2,h3,.h3,h5,.h5,h6,.h6
+			color: $color-text
 	// p
 	// 	color: $color-text-bg-dark
 	.btn
@@ -184,6 +192,67 @@ img ,.img-responsive
 			color: $color-text-light
 			&::before
 				animation: reset-rotate 2s linear infinite
+	//btn ADD
+	&_add
+		width: auto
+		min-width: auto
+		padding: 15px 15px 15px 31px
+		color: #8f806a
+		font-family: oswald-400, sans-serif
+		font-size: rem(12)
+		text-transform: uppercase
+		background-color: $color-brown-lighten
+		position: relative
+		+tr(.35s)
+		&::after
+			content: ''
+			+vc
+			left: 8px
+			+s(add-to-card)
+		&:hover
+			color: $color-accent
+
+	//btn FAVORITE
+	&_fav
+		display: inline-block
+		vertical-align: middle
+		width: 47px
+		height: 47px
+		border-radius: 3px
+		border: 1px solid $color-brown-lighten
+		background-color: #fff
+		+tr(.35s)
+		&:hover
+			border-color: $color-accent
+			.icon
+				fill: $color-accent
+		.icon
+			margin-top: 4px
+			width: 20px
+			height: 20px
+			fill: $color-brown 
+
+	//btn_next
+	&_next
+		display: inline-block
+		position: relative
+		color: $color-text-light
+		font-family: encore-300, sans-serif
+		font-size: rem(16)
+		cursor: pointer
+		+tr(.35s)
+		&::after
+			content: '\f107'
+			font-family: FontAwesome
+			font-size: 16px
+			color: $color-text-light
+			position: absolute
+			top: 1px
+			right: -15px
+		&:hover
+			color: $color-text
+			&::after
+				color: $color-text
 
 @keyframes reset-rotate
 	%0
@@ -278,7 +347,7 @@ img ,.img-responsive
 		display: inline-block
 		vertical-align: middle
 		color: #b8b8b8
-		font-size: rem(14)
+		font-size: rem(15)
 		&::after
 			display: inline-block
 			padding: 0 20px
@@ -319,11 +388,45 @@ img ,.img-responsive
 				left: -21px
 
 	&__link
-		font-size: 15px
+		font-size: rem(15)
 		color: #b8b8b8
 		&:hover
 			color: $color-brown
 
+//Paginator
+.paginator
+	text-align: center
+	padding: 15px 0
+	&__item
+		padding: 0 10px
+		display: inline-block
+		font-family: oswald-500
+		font-size: rem(14)
+		color: rgba($color-text, .5)
+		cursor: pointer
+		+tr(.35s)
+		&:first-child
+			&::before
+				content: '\f177'
+				font-family: FontAwesome
+				font-size: 16px
+				display: inline-block
+				vertical-align: middle
+				padding-right: 15px
+		&:last-child
+			&::after
+				content: '\f178'
+				font-family: FontAwesome
+				font-size: 16px
+				display: inline-block
+				vertical-align: middle
+				padding-left: 15px
+		&:hover
+			color: $color-text
+			&::before, &::after
+				color: $color-text
+		&.is-active
+			color: $color-text
 
 
 @import layouts

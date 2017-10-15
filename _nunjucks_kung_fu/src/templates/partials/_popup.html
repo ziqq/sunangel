@@ -1,5 +1,98 @@
-<div class="hidden_">
+<div class="hidden">
 
 	{% include "partials/_filter.html" %}
+
+	<div id="howsize" class="howsize popup bg--dark">
+
+		<h3 class="popup__title">Как выбрать размер?</h3>
+		<p class="popup__desc">Возьмите измерительную ленту (также подойдет любой шнурок, нитка, которую потом можно измерить по линейке). Измерьте внутреннюю сторону вашего кольца (или того человека, которому вы делаете подарок). Если кольца нет, просто измерьте окружность пальца, на котором будут носить кольцо. Результат появится в третьей строке: "Ваш размер кольца". Укажите его при покупке.</p>
+
+		<div class="extra-item extra-item_ring js-extra-item">
+			Измерьте окружность кольца (мм):
+			<div class="extra-item__dropdown">
+				<ul class="size__list">
+					<ul>
+						<li class="size__item">10</li>
+						<li class="size__item">11</li>
+						<li class="size__item">12</li>
+						<li class="size__item">13</li>
+					</ul>
+					<ul>
+						<li class="size__item">50</li>
+						<li class="size__item">52</li>
+						<li class="size__item">53</li>
+						<li class="size__item">54</li>
+					</ul>
+					<ul>
+						<li class="size__item">55</li>
+						<li class="size__item">56</li>
+						<li class="size__item">57</li>
+						<li class="size__item">58</li>
+					</ul>
+					<ul>
+						<li class="size__item">59</li>
+						<li class="size__item">60</li>
+						<li class="size__item">61</li>
+						<li class="size__item">62</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+
+		<div class="extra-item extra-item_finger js-extra-item">
+			Измерьте окружность пальца (мм):
+			<div class="extra-item__dropdown">
+				<ul class="size__list">
+					<ul>
+						<li class="size__item">47</li>
+						<li class="size__item">48</li>
+						<li class="size__item">49</li>
+						<li class="size__item">50</li>
+					</ul>
+					<ul>
+						<li class="size__item">51</li>
+						<li class="size__item">52</li>
+						<li class="size__item">53</li>
+						<li class="size__item">54</li>
+					</ul>
+					<ul>
+						<li class="size__item">55</li>
+						<li class="size__item">56</li>
+						<li class="size__item">57</li>
+						<li class="size__item">58</li>
+					</ul>
+					<ul>
+						<li class="size__item">59</li>
+						<li class="size__item">60</li>
+						<li class="size__item">61</li>
+						<li class="size__item">62</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+
+		<div class="howsize__result">Ваш результат: <span>17</span></div>
+
+	</div>
+
+	<div id="callback" class="popup bg--dark">
+
+		<h3 class="popup__title">Обратный звонок</h3>
+
+		<label class="sa-input__box">
+			<input class="sa-input js-sa-input phone-mask" type="phone">
+			<span class="sa-input__placeholder">Введите Ваш номер телефона</span>
+		</label>
+
+		<label class="sa-input__box">
+			<input class="sa-input js-sa-input" type="text">
+			<span class="sa-input__placeholder">Введите Ваше имя</span>
+		</label>
+
+		<button class="btn">Заказать звонок</button>
+
+		<p class="popup__desc">Наш менеджер свяжется с Вами <br> в ближайшее время и ответит на все вопросы</p>
+
+	</div>
 
 </div>
