@@ -60,12 +60,14 @@ $(document).ready(function () {
 		slideMargin: 0
 	});
 	//Section slider
-	$('.addition__slider').bxSlider({
+	$('.product-slider').bxSlider({
 		slideWidth: true,
 		minSlides: 4,
 		maxSlides: 4,
 		responsive: true,
 		touchEnabled: true,
+		nextText: '<i class="fa fa-long-arrow-right"></i>',
+		prevText: '<i class="fa fa-long-arrow-left"></i>',
 		// pager: true,
 		// pagerSelector: '.addition__slider_count',
 		pagerType: 'short'

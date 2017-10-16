@@ -21,6 +21,7 @@
     "jquery.nicescroll": "^3.7.6",
     "slick-carousel": "slick.js#^1.8.1",
     "bxslider-4": "bxSlider#^4.2.12",
-    "fancybox": "fancyBox#^3.1.25"
+    "fancybox": "fancyBox#^3.1.25",
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }

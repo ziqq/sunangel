@@ -3,20 +3,31 @@
 	border: none
 	background: #fff
 	position: relative
-	left: 65px
-	.img
-		position: relative
-		left: -60px
-	.bx-prev, .bx-next
-		background: none
-		&::after
-			content: '\f117'
-			font-family: FontAwesome
-			font-size: 22px
-			position: absolute
-			top: 0
-			left: 0
-			color: #000
+
+.slider__wrap
+	.bx-wrapper
+		.bx-controls-direction
+			a
+				text-indent: initial
+				top: auto
+				margin-top: 10px
+				width: auto
+				height: auto
+		.bx-prev, .bx-next
+			background: none
+			width: auto
+			height: auto
+			.fa
+				font-size: 18px
+				color: $color-text-lighten
+.product
+	.bx-wrapper
+		left: 65px
+		.img
+			position: relative
+			left: -60px
+		.bx-prev, .bx-next
+			display: none
 
 //fancybox
 .fancybox-slide
