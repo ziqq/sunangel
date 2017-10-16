@@ -3,7 +3,15 @@ $(document).ready(function () {
 	//Partials
 	//=include partials/header.js
 	//=include partials/filter.js
-	
+
+	$('.js-checkbox-title').click(function (){
+		$(this).addClass('is-active');			
+	});
+
+	$('.js-filter-showmore').click(function (){
+		$(this).parent('.filter-item__list').find('.checkbox__title').removeClass('hidden');
+	});
+
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup').niceScroll({
 			cursorcolor: '#ee8b76',

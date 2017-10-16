@@ -1,14 +1,18 @@
 .filter
 	position: fixed
 	top: 0
-	left: 0
+	width: 1350px
 	right: 0
 	bottom: 0
 	z-index: 999
 	background-color: $color-bg-dark-lighten
 	overflow-y: auto
-	transform: translateX(-250%)
+	transform: translateX(250%)
+	z-index: 999
 	+tr(.5s)
+	+r(1350)
+		right: 0
+		width: 100%
 	&.is-open
 		transform: translateX(0)
 	&__inner
@@ -84,57 +88,88 @@
 		// +my-scroll
 
 .filter-item
+	//filter-item__title
 	&__title
 		display: block
 		margin-bottom: 25px
 		font-family: encore-200
 		font-size: rem(18)
 		color: $color-brown
+	//filter-item__part
 	&__part
-		display: block
-		margin-bottom: 15px
-		padding-left: 35px
-		position: relative
-		cursor: pointer
-		.text
-			+tr(.35s)
+		// display: block
+		// margin-bottom: 15px
+		// padding-left: 35px
+		// position: relative
+		// cursor: pointer
+		// .text
+		// 	+tr(.35s)
+		// 	&:hover
+		// 		color: $color-accent
+		// 		& ~	.check
+		// 			border-color: $color-border-bg--dark
+		// input
+		// 	display: none
+		// 	&:checked
+		// 		+ .check
+		// 			border-color: $color-border-bg--dark
+		// 			&::after
+		// 				display: block
+		// .check
+		// 	width: 22px
+		// 	height: 22px
+		// 	+br(50%)
+		// 	border: 1px solid $color-text-btn
+		// 	background-color: $color-input-bg--dark
+		// 	position: absolute
+		// 	top: 1px
+		// 	left: 0
+		// 	&::after
+		// 		content: ''
+		// 		display: none
+		// 		width: 10px
+		// 		height: 10px
+		// 		+br(50%)
+		// 		background-color: $color-brown-lighten
+		// 		position: absolute
+		// 		top: 50%
+		// 		left: 50%
+		// 		transform: translate(-50%, -50%)
+	//filter-item__item
+	&__item
+		&_showmore
+			display: inline-block
+			padding-right: 25px
+			position: relative
+			&::before
+				content: '\f107'
+				font-family: FontAwesome
+				display: block
+				position: absolute
+				top: 0
+				right: 0
 			&:hover
-				color: $color-accent
-				& ~	.check
-					border-color: $color-border-bg--dark
-		input
-			display: none
-			&:checked
-				+ .check
-					border-color: $color-border-bg--dark
-					&::after
-						display: block
-		.check
-			width: 22px
-			height: 22px
-			+br(50%)
-			border: 1px solid $color-text-btn
-			background-color: $color-input-bg--dark
-			position: absolute
-			top: 1px
-			left: 0
+				color: $color-brown
+	//filter-item__dropdown
+	&__dropdown
+		display: none
+		margin-top: 15px
+		.checkbox
+			padding-left: 27px
+			position: relative
 			&::after
 				content: ''
-				display: none
+				display: block
 				width: 10px
-				height: 10px
-				+br(50%)
-				background-color: $color-brown-lighten
+				height: 40px
+				border-bottom: 1px solid $color-text-btn
+				border-left: 1px solid $color-text-btn
 				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
-		&_showmore
-			padding-left: 61px
-	&__dropdown
-		display: block
-		margin-top: 15px
-		.filter-item__part
-			padding-left: 27px
+				top: -28px
+				left: -25px
+			&:first-child
+				&::after
+					height: 15px
+					top: -3px
 			span
 				left: -7px

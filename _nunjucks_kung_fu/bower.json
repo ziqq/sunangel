@@ -20,6 +20,7 @@
     "jquery.maskedinput": "^1.4.1",
     "jquery.nicescroll": "^3.7.6",
     "slick-carousel": "slick.js#^1.8.1",
-    "bxslider-4": "bxSlider#^4.2.12"
+    "bxslider-4": "bxSlider#^4.2.12",
+    "fancybox": "fancyBox#^3.1.25"
   }
 }

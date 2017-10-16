@@ -1,24 +1,14 @@
 	//Filter
-
-	// let flTop = $('.filter__top');
-	// let flBottom = $('.filter__bottom');
-	// let flContent = $('.filter__content');
-
-	// function fl(){
-	// 	flContent.css({
-	// 	paddingTop : flTop.height(),
-	// 	paddingBottom : flBottom.height()
-	// });
-	// }fl();
-	// $(window).resize(fl());
 	
 
 	$('.js-filter-open').click(function (){
 		$('.filter').addClass('is-open');
+		$('body').addClass('is-fixed-bg');
 	});
 
 	$('.js-filter-close').click(function (){
 		$('.filter').removeClass('is-open');
+		$('body').removeClass('is-fixed-bg');
 	});
 
 	
