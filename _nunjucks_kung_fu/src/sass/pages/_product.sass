@@ -177,6 +177,8 @@
 		border-bottom: 1px dashed $color-border
 		&:last-child
 			margin-right: 0
+			&::after
+				display: none
 		&::after
 			content: '\f107'
 			font-family: FontAwesome
@@ -259,12 +261,49 @@
 //addition
 .product-addition, .product-similar
 	margin-bottom: 100px
-	.h2
-		display: block
-		margin-bottom: 50px
-		text-align: center
 	//addiion__slider
 	&__slider
 		+clr
 		.product-item
 			width: 300px
+
+//advantages
+.advantages
+	padding: 230px 0 90px
+	text-align: center
+	background-color: #333
+	&__text
+		font-size: rem(16)
+		color: $color-brown 
+		+r(320)
+			font-size: rem(13)
+	&__item
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			top: -20px
+			transform: translate(-50%, -100%)
+		&_cart
+			&::before
+				+s(cart)
+		&_dilevery
+			&::before
+				+s(dilevery)
+		&_service
+			&::before
+				+s(service)
+		&_quality
+			&::before
+				+s(quality)
+
+//recently
+.recently
+	margin-bottom: 100px
+	text-align: center
+	&__item
+		img
+			@extend %i
+			margin: 0 auto

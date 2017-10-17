@@ -7,3 +7,5 @@ PageList:
   ready: 50
 - file: catalog.html
   ready: 50
+- file: 404.html
+  ready: 50

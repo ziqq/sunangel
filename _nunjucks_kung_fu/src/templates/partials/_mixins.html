@@ -2,8 +2,8 @@
 <svg class="icon icon-{{i}} {{class}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
 
-{% macro img(w, h) %}
-<img src="http://via.placeholder.com/{{w}}x{{h}}" alt="alt">
+{% macro img(w, h, class) %}
+<img class="{{class}}" src="http://via.placeholder.com/{{w}}x{{h}}" alt="alt">
 {% endmacro %}
 
 {% macro breadcrumbs() %}

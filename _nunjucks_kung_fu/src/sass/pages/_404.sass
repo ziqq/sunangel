@@ -1,0 +1,54 @@
+.error
+	padding: 60px 0 80px
+	text-align: center
+	&__title
+		margin-bottom: 80px
+		color: #474747
+		font-family: encore-50, sans-serif
+		font-size: rem(48)
+		letter-spacing: 1px
+	&__img
+		position: relative
+		margin-bottom: 50px
+		+r(480)
+			overflow: hidden
+		img
+			margin: 0 auto 0 39%
+			+r(1024)
+				margin-left: 37%
+			+r(768)
+				margin-left: 33%
+			+r(480)
+				margin-left: 25.5%
+	&__num
+		color: $color-brown
+		font-family: encore-hl, sans-serif
+		font-size: rem(166)
+		line-height: 26.13px
+		position: absolute
+		bottom: 29%
+		+r(375)
+			font-size: rem(118)
+		&_left
+			left: 36.5%
+			+r(1024)
+				left: 35%
+			+r(768)
+				left: 30%
+			+r(480)
+				left: 19%
+		&_right
+			right: 34.5%
+			+r(1024)
+				right: 31.5%
+			+r(768)
+				right: 25%
+			+r(480)
+				right: 20%
+	&__desc
+		color: #606060
+	&__link
+		color: $color-accent
+		&:hover
+			text-decoration: underline
+			color: $color-accent

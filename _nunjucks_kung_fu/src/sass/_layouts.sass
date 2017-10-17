@@ -115,4 +115,36 @@
 		+span(2)
 		margin-right: 0	
 
-	
+//advantages
+.advantages__item
+	+span(3)
+	&:last-child
+		margin-right: 0
+	+r(480)
+		+span(6)
+		margin-bottom: 170px
+		&:last-child
+			margin-right: gutter()
+			margin-bottom: 0
+		&:nth-child(2n)
+			margin-right: 0
+		&:nth-child(3)
+			margin-bottom: 0
+
+//recently
+.recently
+	&__item
+		+span(3)
+		&:last-child
+			margin-right: 0
+		+r(480)
+			+span(6)
+			margin-bottom: 30px
+			&:last-child
+				margin-right: gutter()
+			&:nth-child(2n)
+				margin-right: 0
+		+r(425)
+			width: 100%
+			&:nth-child(2n)
+				margin-right: gutter()

@@ -1,0 +1,25 @@
+---
+title: Страница не найдена
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+<main class="main">
+	<div class="container">{{mixin.breadcrumbs()}}</div>
+	<section class="error">
+		<div class="container">
+			<h1 class="h1 error__title">{{title}}</h1>
+			<div class="error__img">
+				<span class="error__num error__num_left">4</span>
+				<img src="img/general/404.png" alt="Страница не найдена">
+				<span class="error__num error__num_right">4</span>
+			</div>
+			<p class="error__desc">Запрашиваемого товара не найдено. <br> Вы можете выбрать среди 45 000 ювелирных изделий в <a href="/catalog.html" class="error__link">нашем каталоге</a></p>
+		</div>
+	</section>
+</main>
+{% include "partials/_footer.html" %}
+
+{% endblock %}

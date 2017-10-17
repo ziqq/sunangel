@@ -119,6 +119,16 @@ img ,.img-responsive
 		+r(320)
 			transform: translateX(271px)
 
+.section-title
+	display: block
+	margin-bottom: 50px
+	text-align: center
+	font-size: rem(36)
+	+r(480)
+		font-size: rem(32)
+	+r(320)
+		font-size: rem(27)
+
 .bg--dark
 	background-color: $color-bg-darken
 	// background-color: $color-bg-dark
@@ -221,7 +231,7 @@ img ,.img-responsive
 		+tr(.35s)
 		&::after
 			content: ''
-			+vc
+			+vy
 			left: 8px
 			+s(add-to-card)
 		&:hover

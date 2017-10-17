@@ -7,11 +7,35 @@ title: Index page
 
 {% include "partials/_header.html" %}	
 
+{% macro product() %}
+<div class="product-item">
+	<div class="product-item__img">
+		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt"></a>
+	</div>
+	<div class="product-item__other">
+		<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+		<div class="product-item__price">
+			58684444 <i class="rub">a</i>
+			<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+			<span class="product-item__price_sale">-100%</span>
+		</div>
+		<div class="product-item__button">
+			<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+			<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+
 <main class="main">
 	<div class="container">
 		{{mixin.breadcrumbs()}}
-		<!-- begin product -->
-		<section class="product">
+	</div>
+
+	<!-- begin product -->
+	<section class="product">
+		<div class="container">
 			<div class="product__inner">
 				<div class="product-img">
 					<div class="product-slider_big">
@@ -135,179 +159,77 @@ title: Index page
 					</ul>
 				</div>
 			</div>
-		</section>
-		<!-- end product -->
-		<!-- begin addition -->
-		<section class="product-addition">
-			<div class="container">
-				<h2 class="h2">Дополниет свой образ</h2>
-				<div class="slider__wrap">
-					<div class="product-addition__slider product-slider">
+		</div>
+	</section>
+	<!-- end product -->
 
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
+	<!-- begin addition -->
+	<section class="product-addition">
+		<div class="container">
+			<h2 class="h2 section-title">Дополниет свой образ</h2>
+			<div class="slider__wrap">
+				<div class="product-addition__slider product-slider">					
 
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
+					{{product()}}
+					{{product()}}
+					{{product()}}
+					{{product()}}
 
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
-
-					</div>
 				</div>
 			</div>
-		</section>
-		<!-- end addition -->
+		</div>
+	</section>
+	<!-- end addition -->
 
-		<!-- begin similar -->
-		<section class="product-similar">
-			<div class="container">
-				<h2 class="h2">Похожие товары</h2>
-				<div class="slider__wrap">
-					<div class="product-similar__slider product-slider">
+	<!-- begin similar -->
+	<section class="product-similar">
+		<div class="container">
+			<h2 class="h2 section-title">Похожие товары</h2>
+			<div class="slider__wrap">
+				<div class="product-similar__slider product-slider">
 
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
+					{{product()}}
+					{{product()}}
+					{{product()}}
+					{{product()}}
 
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-item">
-							<div class="product-item__img">
-								<img src="img/catalog/thumbs/1.png" alt="alt">
-							</div>
-							<div class="product-item__other">
-								<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-								<div class="product-item__price">
-									58684444 <i class="rub">a</i>
-									<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-									<span class="product-item__price_sale">-100%</span>
-								</div>
-								<div class="product-item__button">
-									<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-									<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-								</div>
-							</div>
-						</div>
-
-					</div>
 				</div>
 			</div>
-		</section>
-		<!-- end similar -->
+		</div>
+	</section>
+	<!-- end similar -->
 
-	</div>
+	<!-- begin recently -->
+	<section class="recently">
+		<div class="container">
+			<h2 class="h2 section-title">Недавно просмотренные</h2>
+			<div class="recently__item"><a href="#" class="recently__link">{{mixin.img(200, 200)}}</a></div>
+			<div class="recently__item"><a href="#" class="recently__link">{{mixin.img(200, 200)}}</a></div>
+			<div class="recently__item"><a href="#" class="recently__link">{{mixin.img(200, 200)}}</a></div>
+			<div class="recently__item"><a href="#" class="recently__link">{{mixin.img(200, 200)}}</a></div>
+		</div>
+	</section>
+	<!-- end recently -->
+
+	<!-- begin advantages -->
+	<section class="advantages">
+		<div class="container">
+			<div class="advantages__item advantages__item_cart">
+				<span class="advantages__text">Скидка 5% при оплате <br> банковской картой онлайн</span>
+			</div>
+			<div class="advantages__item advantages__item_dilevery">
+				<span class="advantages__text">Бесплатная доставка <br> лично в руки</span>
+			</div>
+			<div class="advantages__item advantages__item_service">
+				<span class="advantages__text">Пожизненное <br> сервисное обслуживание</span>
+			</div>
+			<div class="advantages__item advantages__item_quality">
+				<span class="advantages__text">Гарантия <br> качества изделий</span>
+			</div>
+		</div>
+	</section>
+	<!-- end advantages -->
+
 </main>
 
 
