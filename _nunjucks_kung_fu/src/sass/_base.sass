@@ -6,7 +6,7 @@
 //mixins
 =my-scroll
 	+scrollbar
-		width: 5px
+		width: 4px
 	+scrollbar-track
 	+scrollbar-thumb
 		background-color: $color-brown
@@ -346,6 +346,8 @@ img ,.img-responsive
 				border-color: $color-border-bg--dark
 				&::after
 					display: block
+				&::before
+					display: block
 	.text
 		+tr(.35s)
 	.check
@@ -372,17 +374,48 @@ img ,.img-responsive
 
 	//checkbox_sq
 	&_sq
-		text-decoration: underline
 		.check
-			+br(0)
+			+br(3px)
 			&::after
-				left 8px
-				top 4px
-				width 3px
-				height 8px
-				border solid $color-brown-lighten
-				border-width 0 2px 2px 0
-				transform rotate(45deg)
+				display: none !important
+			&::before
+				display: none
+				content: '✔'
+				color: $color-brown-lighten
+				position: absolute
+				left: 4px
+				top: -1px
+	//checkbox_color
+	&_color
+		display: inline-block
+		padding-left: 45px
+		padding-bottom: 25px
+		.check
+			background-color: transparent
+			width: 25px
+			height: 25px
+			border: none
+			top: 0
+			&::after
+				display: none !important
+				// content: ''
+				// width: 35px
+				// height: 35px
+				// +br(50%)
+				// background-color: transparent
+				// border: 1px solid $color-border-bg--dark
+				// position: absolute
+				// top: 50%
+				// left: 50%
+				// transform: translate(-50%, -50%)
+			&::before
+				display: none
+				content: '✔'
+				color: $color-brown-lighten
+				position: absolute
+				left: 6px
+				top: 1px
+
 
 //Loading
 .loading

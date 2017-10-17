@@ -4,26 +4,26 @@ $(document).ready(function () {
 	//=include partials/header.js
 	//=include partials/filter.js
 
-	$('.js-checkbox-title').click(function (){
-		$(this).addClass('is-active');			
-	});
-
-	$('.js-filter-showmore').click(function (){
-		$(this).parent('.filter-item__list').find('.checkbox__title').removeClass('hidden');
-	});
-
 	$(window).on("load",function(){
-		$('.city-dropdown, .mobile-menu, .popup').niceScroll({
-			cursorcolor: '#ee8b76',
+		$('.city-dropdown, .mobile-menu, .popup, .filter__content').niceScroll({
+			cursorcolor: '#baab82',
 			horizrailenabled: false,
 			autohidemode: false,
 			boxzoom: false,
 			"verge": "500",
-			cursorwidth: '3px',
+			cursorwidth: '4px',
 			cursorborder: 'none',
 			cursorborderradius:'0'
 		});
 	});
+
+	$('.city-dropdown, .mobile-menu, .popup, .filter__content').mouseover(function() {
+		$(this).getNiceScroll().resize();
+	});
+
+	if($(window).width <= 768 ){
+		$('.filter-item__wrap').remove();
+	}
 	
 
 	//Mask

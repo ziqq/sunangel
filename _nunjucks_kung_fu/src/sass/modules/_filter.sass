@@ -13,10 +13,15 @@
 	+r(1350)
 		right: 0
 		width: 100%
+	+r(1024)
+		height: 100vh
 	&.is-open
 		transform: translateX(0)
 	&__inner
 		padding: 0 250px 0 95px
+		+clr
+		+r(1024)
+			padding-right: 150px
 	&__close
 		width: 52px
 		height: 52px
@@ -70,10 +75,15 @@
 		line-height: 185px
 		position: relative
 		right: -120px
+		+r(1024)
+			font-size: rem(58)
+			line-height: 125px
 	&__action
 		display: inline-block
 		vertical-align: middle
 		line-height: 185px
+		+r(1024)
+			line-height: 125px
 	&__btn
 		vertical-align: middle
 		margin-right: 45px
@@ -84,10 +94,12 @@
 		bottom: 185px
 		left: 0
 		right: 0
-		overflow-y: auto
+		overflow: auto
 		// +my-scroll
 
 .filter-item
+	&__wrap
+		+clr
 	//filter-item__title
 	&__title
 		display: block
@@ -173,3 +185,6 @@
 					top: -3px
 			span
 				left: -7px
+	&__list
+		&_color
+			width: 150px

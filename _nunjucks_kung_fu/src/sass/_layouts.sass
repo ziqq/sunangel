@@ -29,8 +29,16 @@
 //Filter
 .filter-item
 	+span(4)
-	&:last-child
+	margin-bottom: 30px
+	+clr
+	&:nth-child(3n)
 		margin-right: 0
+	+r(768)
+		+span(6)
+		&:nth-child(2n)
+			margin-right: 0
+		&:nth-child(3n)
+			margin-right: gutter()
 
 //Footer
 .footer-item
