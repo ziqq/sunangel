@@ -1,0 +1,215 @@
+.basket
+	//tab
+	.tab
+		display: inline-block
+		padding: 15px 50px 8px
+		margin: 0 20px
+		color: $color-text-light
+		font-family: oswald-300, sans-serif
+		font-size: rem(16)
+		text-transform: uppercase
+		letter-spacing: 1.2px
+		color: $color-brown
+		letter-spacing: 1.2px
+		cursor: pointer
+		border: 1px solid transparent
+		position: relative
+		+tr(.35s)
+		&::after
+			display: block
+			content: '\f178'
+			font-family: FontAwesome
+			font-size: 16px
+			color: $color-brown
+			position: absolute
+			top: 17px
+			left: 15px
+			+tr(.35s)
+		&::before
+			display: none
+			content: ''
+			height: 1px
+			width: 100%
+			background-color: #FFF
+			position: absolute
+			left: 0
+			bottom: -2px
+		&:hover
+			color: $color-accent
+			&::after
+				left: 20px
+				color: $color-accent
+
+		&.is-active
+			color: $color-accent
+			border: 1px solid $color-border
+			border-bottom-color: transparent
+			&::after
+				display: none
+			&::before
+				display: block
+
+		//tab__wrap
+		&__wrap
+			margin-bottom: 35px
+			text-align: center
+			border-bottom: 1px solid $color-border
+
+		//tab__content
+		&__content
+			padding-left: 100px
+
+		//tab-item
+		&-item
+			margin-bottom: 70px
+			&__top
+				padding-bottom: 50px
+				border-bottom: 1px solid $color-border
+				+clr
+			//tab-item__bottom
+			&__bottom
+				padding-top: 50px
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+	//basket__main
+	&__main
+		float: left
+		width: calc(100% - 360px)
+		margin-right: 60px
+
+	//basket__asside
+	&__asside
+		float: right
+		width: 300px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		&_link
+			display: inline-block
+			margin: 0 auto
+			margin-top: 25px
+			text-align: center
+			font-size: rem(14)
+			color: rgba($color-text, .7)
+			border-bottom: 1px solid rgba($color-text, .7)
+
+	//basket.product-item	
+	.product-item
+		float: none
+		width: 100%
+		border: 1px solid $color-border
+		&__button
+			opacity: 1
+
+	//basket .price
+	.price
+		color: $color-accent
+		font-family: oswald-300, sans-serif
+		font-size: rem(18)
+		&__old
+			margin-right: 20px
+			color: $color-text-light
+			font-family: oswald-300, sans-serif
+			font-size: rem(14)
+			text-decoration: line-through
+
+
+//basket-item
+.basket-item
+	margin-bottom: 30px
+	display: flex
+	align-items: center
+	+clr
+	//basket-item__img
+	&__img
+		margin-right: 30px
+		width: 102px
+		height: 102px
+		img
+			@extend %i
+	//basket-item__title
+	&__title
+		color: $color-text
+		font-family: encore-300, sans-serif
+		font-size: rem(16)
+		max-width: 250px
+
+	//basket-item__articul
+	&__articul
+		display: block
+		color: $color-text-light
+
+	//basket-item__price
+	&__price
+		margin: 0 45px 0 auto
+
+	//basket-item .size
+	.size
+		margin-bottom: 0
+		margin-left: auto
+		&__title
+			margin-right: 10px
+			color: $color-text
+			font-family: oswald-300, sans-serif
+			font-size: rem(16)
+		//basket-item .size .extra-item
+		.extra-item
+			position: relative
+			padding-right: 12px
+			&::after
+				content: '\f107'
+				display: block
+				font-family: FontAwesome
+				font-size: 14px
+				color: $color-text-light
+				position: absolute
+				top: 1px
+				right: 0
+
+//promokod
+.promokod
+	display: flex
+	align-content: center
+	justify-content: space-between
+	flex-wrap: wrap
+	&__text
+		padding-bottom: 15px
+		width: 65.5%
+		text-align: center
+		color: $color-text-light
+		font-family: encore-100, sans-serif
+		font-size: rem(22)
+	&__box
+		display: flex
+	.sa-input
+		padding: 15px 15px 10px
+		max-width: 150px
+		&__box
+			margin-right: 20px
+			&.is-focus
+				.sa-input__placeholder
+					top: 0
+		&__placeholder
+			top: 18px
+			font-size: rem(16)
+
+//itog
+.itog
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: -27px
+		left: -60px
+		+s(price-border)
+	&__text
+		color: #474747
+		font-family: encore-100, sans-serif
+		font-size: rem(28)
+	&__num
+		color: $color-accent
+		font-family: oswald-500, sans-serif
+		font-size: rem(18)

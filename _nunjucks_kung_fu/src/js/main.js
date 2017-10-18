@@ -3,6 +3,7 @@ $(document).ready(function () {
 	//Partials
 	//=include partials/header.js
 	//=include partials/filter.js
+	//=include partials/basket.js
 
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup, .filter__content').niceScroll({

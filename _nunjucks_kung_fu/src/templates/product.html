@@ -1,11 +1,6 @@
 ---
 title: Index page
 ---
-{% extends "layouts/_layout.html" %}
-
-{% block content %}
-
-{% include "partials/_header.html" %}	
 
 {% macro product() %}
 <div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
@@ -27,6 +22,12 @@ title: Index page
 	</div>
 </div>
 {% endmacro %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
 
 
 <main class="main">

@@ -1,0 +1,141 @@
+---
+title: Корзина
+---
+
+{% macro basketitem() %}
+<div class="basket-item">
+	<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
+	<div class="basket-item__title">Золотая подвеска с минеральным стеклом и фианитами<span class="basket-item__articul">Артикул 035077</span></div>
+	<div class="basket-item__price price">
+		<span class="price__old">14990</span>
+		<span class="price__new">12990</span>
+	</div>
+	<span class="sa-close">{{mixin.icon('close')}}</span>
+</div>
+{% endmacro %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+
+<div class="container">{{mixin.breadcrumbsbasket()}}</div>
+
+<div class="container">
+
+	<h1 class="page-title">{{title}}</h1>
+
+	<div class="basket">
+
+		<div class="tab__wrap">
+			<span class="tab js-basket-tab is-active">1 Корзина</span>
+			<span class="tab js-basket-tab">2 Выбор способа оплаты</span>
+			<span class="tab js-basket-tab">3 Адрес доставки</span>        
+		</div>
+
+		<div class="tab__content">
+			<div class="tab-item tab-item_card js-basket-tab-content">
+				<div class="tab-item__top">
+					<div class="basket__main">
+						{{basketitem()}}
+						{{basketitem()}}
+						{{basketitem()}}
+						<div class="basket-item">
+							<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
+							<div class="basket-item__title">blahhhhhhbalalblahhhhhhblaa<span class="basket-item__articul">Артикул 035077</span></div>
+							<div class="size">
+								<span class="size__title">18.5</span>
+								<div class="extra-item js-extra-item">
+									изменить
+									<div class="extra-item__dropdown bg--dark">
+										<ul class="size__list">
+											<ul>
+												<li class="size__item">16</li>
+												<li class="size__item">16.5</li>
+												<li class="size__item">17</li>
+												<li class="size__item">17.5</li>
+											</ul>
+											<ul>
+												<li class="size__item">18</li>
+												<li class="size__item">18.5</li>
+												<li class="size__item">19</li>
+												<li class="size__item">19.5</li>
+											</ul>
+											<ul>
+												<li class="size__item">20</li>
+												<li class="size__item">20.5</li>
+												<li class="size__item">21</li>
+												<li class="size__item">21.5</li>
+											</ul>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="basket-item__price price">
+								<span class="price__old">14990</span>
+								<span class="price__new">12990</span>
+							</div>
+							<span class="sa-close">{{mixin.icon('close')}}</span>
+						</div>
+					</div>
+
+					<div class="basket__asside">
+						<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+							<div class="product-item__img">
+								<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"></a>
+							</div>
+							<div class="product-item__other">
+								<h6 class="product-item__title" itemprop="name"><a href="#">Салфетка, возвращающая блеск для золотых изделий</a></h6>
+								<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+									<meta itemprop="priceCurrency" content="RUB" />
+									<span itemprop="price">58684444 <i class="rub">a</i></span>
+								</div>
+								<div class="product-item__button">
+									<a href="#" class="btn btn_transparent btn_add" title="Добавить в корзину">Добавить к заказу</a>
+									<a href="#" class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</a>
+								</div>
+							</div>
+						</div>
+						<a class="basket__asside_link" href="#">Все средства по уходу</a>
+					</div>
+				</div>
+
+				<div class="tab-item__bottom">
+					<div class="promokod">
+						<span class="promokod__text">
+							Я знаю промокод
+						</span>
+						<div class="promokod__box">
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите код</span>
+							</label>
+							<button class="promokod__btn btn btn_gray">Применить</button>
+						</div>
+					</div>
+					<div class="itog">
+						<span class="itog__text">Итоговая сумма: </span>
+						<span class="itog__num">8115490 <i class="rub">a</i></span>
+					</div>
+					<button class="btn btn_trans">Перейти к выбору способа оплаты</button>
+				</div>
+
+			</div>
+
+			<div class="tab-item tab-item_pay js-basket-tab-content">Содержимое 2</div>
+
+			<div class="tab-item tab-item_delivery js-basket-tab-content">Содержимое 3</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+{% include "partials/_footer.html" %}
+
+{% endblock %}
