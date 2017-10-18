@@ -1,5 +1,9 @@
 	//Filter
 
+	$('.js-filter-sorting').click(function(){
+		$('.js-filter-sorting').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
 	
 	$('.js-filter-open').click(function (){
 		$('.filter').addClass('is-open');

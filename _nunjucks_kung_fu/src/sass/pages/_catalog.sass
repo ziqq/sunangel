@@ -14,7 +14,8 @@
 		vertical-align: middle
 		position: relative
 		padding: 0 20px
-		+tr(.35)
+		position: relative
+		+tr(.35s)
 		&::after
 			content: '\f107'
 			font-family: FontAwesome
@@ -34,6 +35,15 @@
 				padding-left: 0
 		+r(480)
 			padding-left: 0
+	//filter-sm__dropdown
+	&__dropdown
+		text-align: left
+		position: absolute
+		top: 40px
+		left: 20px
+		width: 100%
+		background-color: #fff
+		z-index: 99
 
 	&__btn
 		display: inline-block
@@ -47,12 +57,13 @@
 			display: inline-block
 			vertical-align: middle
 			position: absolute
-			top: 6px
+			top: 7px
 			right: 0
-			+s(filtr__btn)
+			+s(filtr-btn)
 		span
 			+r(480)
 				display: none
+
 
 .sorting
 	&__wrap
@@ -124,10 +135,10 @@
 		.product-item__button
 			opacity: 1
 	+r(768)
-		padding: 15px
+		padding: 14px
 		border: 1px solid $color-brown-lighten
 	+r(480)
-		padding: 10px 50px 30px 50px
+		padding: 20px 30px
 	+r(375)
 		padding: 15px 15px 30px
 	&__img

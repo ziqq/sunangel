@@ -8,20 +8,21 @@ title: Index page
 {% include "partials/_header.html" %}	
 
 {% macro product() %}
-<div class="product-item">
+<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
 	<div class="product-item__img">
-		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt"></a>
+		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"></a>
 	</div>
 	<div class="product-item__other">
-		<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-		<div class="product-item__price">
-			58684444 <i class="rub">a</i>
-			<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+		<h6 class="product-item__title" itemprop="name"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+		<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<meta itemprop="priceCurrency" content="RUB" />
+			<span itemprop="price">58684444 <i class="rub">a</i></span>
+			<span class="product-item__price_old">88532 <i class="rub" itemprop="priceCurrency">a</i></span>
 			<span class="product-item__price_sale">-100%</span>
 		</div>
 		<div class="product-item__button">
-			<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-			<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+			<a href="#" class="btn btn_add" title="Добавить в корзину">Добавить в корзину</a>
+			<a href="#" class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</a>
 		</div>
 	</div>
 </div>
@@ -168,12 +169,17 @@ title: Index page
 		<div class="container">
 			<h2 class="h2 section-title">Дополниет свой образ</h2>
 			<div class="slider__wrap">
-				<div class="product-addition__slider product-slider">					
+				<div class="product-addition__slider product-slider js-product-slider">
 
 					{{product()}}
 					{{product()}}
 					{{product()}}
 					{{product()}}
+					{{product()}}
+					{{product()}}
+					{{product()}}
+
+					<div class="product-slider__nav"></div>
 
 				</div>
 			</div>
@@ -186,12 +192,17 @@ title: Index page
 		<div class="container">
 			<h2 class="h2 section-title">Похожие товары</h2>
 			<div class="slider__wrap">
-				<div class="product-similar__slider product-slider">
+				<div class="product-similar__slider product-slider js-product-slider">
 
 					{{product()}}
 					{{product()}}
 					{{product()}}
 					{{product()}}
+					{{product()}}
+					{{product()}}
+					{{product()}}
+
+					<div class="product-slider__nav"></div>
 
 				</div>
 			</div>

@@ -60,18 +60,53 @@ $(document).ready(function () {
 		slideMargin: 0
 	});
 	//Section slider
-	$('.product-slider').bxSlider({
-		slideWidth: true,
-		minSlides: 4,
-		maxSlides: 4,
-		responsive: true,
-		touchEnabled: true,
-		nextText: '<i class="fa fa-long-arrow-right"></i>',
-		prevText: '<i class="fa fa-long-arrow-left"></i>',
-		// pager: true,
-		// pagerSelector: '.addition__slider_count',
-		pagerType: 'short'
-	});
+	if($('.js-product-slider').length){
+		$('.js-product-slider').each(function(){
+			$(this).slick({
+			autoplay: true,
+			autoplaySpeed: 10000,
+			speed: 5000,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: true,
+
+			customPaging: function (slider, i)
+			{
+				return i + 1;
+			},
+			dots:true,
+			appendDots:('.js-product-slider'),
+
+			responsive: [{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4
+				}
+
+			},{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 3
+				}
+
+			},{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1
+				}
+
+			},{
+				breakpoint: 425,
+				settings: {
+					slidesToShow: 1
+				}
+
+			}],
+		});
+		})
+		
+	}
 
 	$('.js-extra-item').click(function (){
 		$('.js-extra-item').removeClass('is-visible');

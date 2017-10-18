@@ -93,7 +93,7 @@
 		&:nth-child(3n)
 			margin-right: 0
 	+r(480)
-		width: 100%
+		width: 300px
 		margin-bottom: 30px
 		&:nth-child(3n)
 			margin-right: gutter()
@@ -102,9 +102,13 @@
 .product
 	&-img
 		+span(6)
+		+r(480)
+			width: 100%
 	&-text
 		+span(6)
 		margin-right: 0
+		+r(480)
+			width: 100%	
 
 .product-desc__item
 	+span(5)
@@ -114,6 +118,22 @@
 	&:nth-child(3)
 		+span(2)
 		margin-right: 0	
+	+r(768)
+		width: 100%
+		margin-right: gutter()
+		margin-bottom: 30px
+		&:nth-child(2)
+			+span(6)
+		&:nth-child(3)
+			+span(6)
+			margin-right: 0	
+	+r(480)
+		&:nth-child(2)
+			+span(8)
+		&:nth-child(3)
+			+span(4)
+			margin-right: 0	
+
 
 //advantages
 .advantages__item

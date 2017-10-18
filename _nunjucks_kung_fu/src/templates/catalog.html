@@ -7,6 +7,26 @@ title: Подвески со знаками зодиака
 
 {% include "partials/_header.html" %}
 
+{% macro product() %}
+<div class="product-item">
+	<div class="product-item__img">
+		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt"></a>
+	</div>
+	<div class="product-item__other">
+		<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+		<div class="product-item__price">
+			58684444 <i class="rub">a</i>
+			<span class="product-item__price_old">88532 <i class="rub">a</i></span>
+			<span class="product-item__price_sale">-100%</span>
+		</div>
+		<div class="product-item__button">
+			<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+			<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
 <main class="main">
 	<div class="container">
 
@@ -21,25 +41,37 @@ title: Подвески со знаками зодиака
 				<li class="filter-sm__item">
 					Вид украшения
 					<ul class="filter-sm__dropdown">
-						<li class="filter-sm__dropdown-item is-active"></li>
+					{% import "data/data.html" as filterItem %}
+					{% for item in filterItem.filter %}
+						<li class="filter-sm__dropdown-item">{{item.view}}</li>
+					{% endfor %}
 					</ul>
 				</li>
 				<li class="filter-sm__item">
 					Метал
 					<ul class="filter-sm__dropdown">
-						<li class="filter-sm__dropdown-item"></li>
+					{% import "data/data.html" as filterItem %}
+					{% for item in filterItem.filter %}
+						<li class="filter-sm__dropdown-item">{{item.metal}}</li>
+					{% endfor %}
 					</ul>
 				</li>
 				<li class="filter-sm__item">
 					Вставка
 					<ul class="filter-sm__dropdown">
-						<li class="filter-sm__dropdown-item"></li>
+					{% import "data/data.html" as filterItem %}
+					{% for item in filterItem.filter %}
+						<li class="filter-sm__dropdown-item">{{item.insert}}</li>
+					{% endfor %}
 					</ul>
 				</li>
 				<li class="filter-sm__item">
 					Бренд
 					<ul class="filter-sm__dropdown">
-						<li class="filter-sm__dropdown-item"></li>
+					{% import "data/data.html" as filterItem %}
+					{% for item in filterItem.filter %}
+						<li class="filter-sm__dropdown-item">{{item.brand}}</li>
+					{% endfor %}
 					</ul>
 				</li>
 			</ul>
@@ -48,10 +80,10 @@ title: Подвески со знаками зодиака
 
 		<div class="sorting__wrap">
 			<ul class="sorting">
-				<li class=" sorting__item sorting__item_title">Сортировать по:</li>
-				<li class="sorting__item">по популярности</li>
-				<li class="sorting__item is-active">возрастанию цены</li>
-				<li class="sorting__item"> убыванию цены</li>
+				<li class=" sorting__item sorting__item_title js-filter-sorting">Сортировать по:</li>
+				<li class="sorting__item js-filter-sorting">по популярности</li>
+				<li class="sorting__item js-filter-sorting is-active">возрастанию цены</li>
+				<li class="sorting__item js-filter-sorting"> убыванию цены</li>
 			</ul>
 		</div>
 
@@ -60,23 +92,10 @@ title: Подвески со знаками зодиака
 	<section class="catalog">
 		<div class="container">
 
-			<div class="product-item">
-				<div class="product-item__img">
-					<img src="img/catalog/thumbs/1.png" alt="alt">
-				</div>
-				<div class="product-item__other">
-					<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-					<div class="product-item__price">
-						58684444 <i class="rub">a</i>
-						<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-						<span class="product-item__price_sale">-100%</span>
-					</div>
-					<div class="product-item__button">
-						<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-						<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-					</div>
-				</div>
-			</div>
+			{{product()}}
+			{{product()}}
+			{{product()}}
+			{{product()}}
 
 		</div>
 

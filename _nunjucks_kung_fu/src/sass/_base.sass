@@ -246,16 +246,21 @@ img ,.img-responsive
 		border-radius: 3px
 		border: 1px solid $color-brown-lighten
 		background-color: #fff
+		position: relative
 		+tr(.35s)
 		&:hover
 			border-color: $color-accent
 			.icon
 				fill: $color-accent
 		.icon
-			margin-top: 4px
 			width: 20px
 			height: 20px
 			fill: $color-brown 
+			position: absolute
+			left: 50%
+			top: 50%
+			margin-top: -10px
+			margin-left: -10px
 
 	//btn_next
 	&_next
