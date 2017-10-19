@@ -94,8 +94,9 @@ title: Index page
 								<span class="product-item__price_old">88532 <i class="rub">a</i></span>
 								<span class="product-item__price_sale">-88%</span>
 							</div>
-							<div class="product-item__button">
-								<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
+							<div class="product-item__button js-buy-button">
+								<a href="#" class="btn btn_add" title="Добавить в корзину">Добавить в корзину</a>
+								<!-- <a href="#" class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</a> -->
 							</div>
 
 						</div>
@@ -169,8 +170,8 @@ title: Index page
 	<section class="product-addition">
 		<div class="container">
 			<h2 class="h2 section-title">Дополниет свой образ</h2>
-			<div class="slider__wrap">
-				<div class="product-addition__slider product-slider js-product-slider">
+			<div class="slider__wrap product-slider">
+				<div class="addition-slider js-product-slider">
 
 					{{product()}}
 					{{product()}}
@@ -179,10 +180,9 @@ title: Index page
 					{{product()}}
 					{{product()}}
 					{{product()}}
-
-					<div class="product-slider__nav"></div>
 
 				</div>
+				<div class="addition-slider__dots"></div>
 			</div>
 		</div>
 	</section>
@@ -192,8 +192,8 @@ title: Index page
 	<section class="product-similar">
 		<div class="container">
 			<h2 class="h2 section-title">Похожие товары</h2>
-			<div class="slider__wrap">
-				<div class="product-similar__slider product-slider js-product-slider">
+			<div class="slider__wrap product-slider ">
+				<div class="imilar-slider js-product-slider">
 
 					{{product()}}
 					{{product()}}
@@ -202,10 +202,9 @@ title: Index page
 					{{product()}}
 					{{product()}}
 					{{product()}}
-
-					<div class="product-slider__nav"></div>
 
 				</div>
+				<div class="similar-slider__dots"></div>
 			</div>
 		</div>
 	</section>

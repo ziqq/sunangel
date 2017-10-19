@@ -20,6 +20,11 @@
 		//product-text__action
 		&__action
 			margin-bottom: 30px
+			+r(480)
+				display: flex
+				align-items: center
+				justify-content: space-between
+				flex-wrap: wrap
 		.product-item
 			//product-item__price
 			&__price
@@ -34,6 +39,11 @@
 				+r(480)
 					width: 50%
 					margin-right: 23px
+				+r(425)
+					margin: 0
+				+r(375)
+					width: 100%
+					margin-bottom: 30px
 			//product-item__button
 			&__button
 				opacity: 1
@@ -42,6 +52,10 @@
 					padding: 16px 25px 15px 45px
 					&::after
 						left: 15px
+					+r(425)
+						padding: 13px 15px 13px 30px
+						&::after
+							left: 8px
 			//product-item__price
 			&__price
 				text-align: left
@@ -62,6 +76,8 @@
 					margin-bottom: 33px
 					&::after
 						display: none
+				+r(425)
+					font-size: rem(18)
 				&_old
 					margin-left: 12px
 					font-family: oswald-300, sans-serif
@@ -101,6 +117,8 @@
 	font-family: encore-100, sans-serif
 	+clr
 	//product-desc__title
+	+r(480)
+		margin-bottom: 30px
 	&__title
 		display: block
 		margin-bottom: 30px
@@ -108,6 +126,8 @@
 		color: $color-brown
 		text-transform: uppercase
 		letter-spacing: 0.5px
+		+r(480)
+			margin-bottom: 15px
 	//product-desc__text
 	&__text
 		display: block
@@ -122,11 +142,12 @@
 			tr
 				height: 30px
 			td
+			+r(480)
+				font-size: rem(14)
 
 //extra
 .extra
 	+r(480)
-		text-align: center
 	&-item
 		display: inline-block
 		padding: 0 20px 0 30px
@@ -146,21 +167,33 @@
 			left: 0
 		+r(1024)
 			padding-right: 5px
+		+r(480)
+			padding-left: 20px
+		+r(375)
+			font-size: rem(13)
 		&_credit
 			padding-left: 25px
 			&::before
 				content: '%'
 				color: $color-accent
+			+r(480)
+				padding-left: 18px
 		&_fav
 			&::before
 				content: ''
 				top: 2px
 				+s('favorite')
+			+r(375)
+				&::before
+					top: 0
 		&_gift
 			&::before
 				content: ''
 				top: 5px
 				+s('gift')
+			+r(375)
+				&::before
+					top: 2px
 		&.is-visible
 			.extra-item__dropdown
 				display: block
@@ -252,6 +285,7 @@
 
 //product-slider
 .product-slider
+	position: relative
 	&__item
 		img
 		margin: 0 auto
@@ -285,10 +319,20 @@
 		margin-bottom: 15px
 		&:nth-child(2n)
 			margin-right: 0
+		+r(375)
+			&:nth-child(2n)
+				margin-right: 15px
+		+r(375)
+			margin-right: 10px
+			&:nth-child(2n)
+				margin-right: 10px
+
 
 //addition
 .product-addition, .product-similar
 	margin-bottom: 130px
+	+r(480)
+		margin-bottom: 80px
 	//addiion__slider
 	&__slider
 		+clr

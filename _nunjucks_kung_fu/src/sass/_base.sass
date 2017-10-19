@@ -24,6 +24,7 @@ body
 	color: $color-text
 	line-height: 1.5
 	overflow-x: hidden
+	z-index: 1
 	+my-scroll
 	&.is-fixed
 		position: fixed
@@ -89,7 +90,7 @@ p
 
 %i
 	display: block
-	max-width: 100%
+	width: 100%
 	height: auto
 
 img ,.img-responsive
@@ -538,6 +539,8 @@ img ,.img-responsive
 			font-size: 13px
 			+r(425)
 				padding: 0 10px
+			+r(375)
+				padding: 0 8px
 		&_back
 			margin-right: 65px
 			+r(480)

@@ -147,7 +147,7 @@
 		$('.header__top-line').wrapInner('<div class="container"></div>').insertBefore('.wrapper');
 		$('<div class="mobile-items bg--dark">').appendTo('.header__top-line .container');
 		$('.mobile-search').clone().appendTo('.mobile-items');
-		$('.user-enter').clone().appendTo('.hidden_');
+		$('.user-enter').insertAfter('.mobile-menu');
 	}
 
 	//Search
@@ -162,13 +162,15 @@
 	});
 
 	//Auth Close
-	$('.js-auth--open').click(function (){
-		$('.user-enter').addClass('is-open');
-		$('body').addClass('is-fixed');
-	});
-	$('.js-auth--close').click(function (){
+	if($(window).width() <= 480 ){
+		$('.js-auth--open').click(function (){
+			$('.user-enter').addClass('is-open');
+			$('body').addClass('is-fixed-bg');
+		});
+	}
+	$('.js-close').click(function (){
 		$('.user-enter').removeClass('is-open');
-		$('body').removeClass('is-fixed');
+		$('body').removeClass('is-fixed-bg');
 	});
 
 	//Authentification
