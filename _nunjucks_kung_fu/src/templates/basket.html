@@ -7,8 +7,8 @@ title: Корзина
 	<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
 	<div class="basket-item__title">Золотая подвеска с минеральным стеклом и фианитами<span class="basket-item__articul">Артикул 035077</span></div>
 	<div class="basket-item__price price">
-		<span class="price__old">14990</span>
-		<span class="price__new">12990</span>
+		<span class="price__old">14990 <i class="rub">a</i></span>
+		<span class="price__new">12990 <i class="rub">a</i></span>
 	</div>
 	<span class="sa-close">{{mixin.icon('close')}}</span>
 </div>
@@ -24,14 +24,14 @@ title: Корзина
 
 <div class="container">
 
-	<h1 class="page-title">{{title}}</h1>
+	<h1 class="page-title js-page-title">{{title}}</h1>
 
 	<div class="basket">
 
 		<div class="tab__wrap">
-			<span class="tab js-basket-tab is-active">1 Корзина</span>
-			<span class="tab js-basket-tab">2 Выбор способа оплаты</span>
-			<span class="tab js-basket-tab">3 Адрес доставки</span>        
+			<span class="tab tab_card js-basket-tab  js-basket-card is-active"><span>1 Корзина</span> {{mixin.icon('card')}}</span>
+			<span class="tab js-basket-tab js-basket-pay"><span>2 Выбор способа оплаты</span> {{mixin.icon('pay-method')}}</span>
+			<span class="tab js-basket-tab js-basket-adress"><span>3 Адрес доставки</span> {{mixin.icon('address')}}</span>        
 		</div>
 
 		<div class="tab__content">
@@ -73,8 +73,8 @@ title: Корзина
 								</div>
 							</div>
 							<div class="basket-item__price price">
-								<span class="price__old">14990</span>
-								<span class="price__new">12990</span>
+								<span class="price__old">14990 <i class="rub">a</i></span>
+								<span class="price__new">12990 <i class="rub">a</i></span>
 							</div>
 							<span class="sa-close">{{mixin.icon('close')}}</span>
 						</div>
@@ -118,17 +118,85 @@ title: Корзина
 						<span class="itog__text">Итоговая сумма: </span>
 						<span class="itog__num">8115490 <i class="rub">a</i></span>
 					</div>
-					<button class="btn btn_trans">Перейти к выбору способа оплаты</button>
+					<button class="btn btn_trans js-choice-payment">Перейти к выбору способа оплаты</button>
 				</div>
 
 			</div>
 
-			<div class="tab-item tab-item_pay js-basket-tab-content">Содержимое 2</div>
+			<div class="tab-item tab-item_pay js-basket-tab-content">
+				<div class="tab-item__top">
+					
+					<div class="pay-item__wrap">
+						<div class="pay-item">
+							<h3 class="pay-item__title">Полная <br> предоплата</h3>
+							<div class="pay-item__desc">
+								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставк: <span>бесплатно</span></span> <span class="pay-item__sale">скидка<span class="product-item__price_sale">-100%</span></span>
+							</div>
+							<div class="pay-item__sum">Сейчас надо заплатить: <span>81498 <i class="rub">a</i></span></div>
+							<div class="pay-item__button">
+								<label class="btn btn_check">										
+									<input type="checkbox">
+									<span class="box">Выбрать</span>
+								</label>
+							</div>
+						</div>
+						<div class="pay-item">
+							<h3 class="pay-item__title">Оплата при <br> получении товара</h3>
+							<div class="pay-item__desc"> 
+								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставк: <span>бесплатно</span></span> <span class="pay-item__sale">скидка<span class="product-item__price_sale">-100%</span></span>
+							</div>
+							<div class="pay-item__sum">Вы должны будите отдать курьеру наличными: <span>81498 <i class="rub">a</i></span></div>
+							<div class="pay-item__button"> 
+								<label class="btn btn_check">										
+									<input type="checkbox">
+									<span class="box">Выбрать</span>
+								</label> 
+							</div>
+						</div>
+						<div class="pay-item">
+							<h3 class="pay-item__title">Купить <br> в кредит</h3>
+							<div class="pay-item__desc"> 
+								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставк: <span>бесплатно</span></span> <span class="pay-item__sale">скидка<span class="product-item__price_sale">-100%</span></span>
+							</div>
+							<div class="pay-item__sum">В месяц: <span>81498 <i class="rub">a</i></span></div>
+							<div class="pay-item__button"> 
+								<label class="btn btn_check">										
+									<input type="checkbox">
+									<span class="box">Выбрать</span>
+								</label> 
+							</div>
+						</div>
+					</div>
+				</div>
 
-			<div class="tab-item tab-item_delivery js-basket-tab-content">Содержимое 3</div>
+			</div>
+
+			<div class="tab-item__bottom">
+				<div class="promokod">
+					<span class="promokod__text">
+						Я знаю промокод
+					</span>
+					<div class="promokod__box">
+						<label class="sa-input__box">
+							<input class="sa-input js-sa-input" type="text">
+							<span class="sa-input__placeholder">Введите код</span>
+						</label>
+						<button class="promokod__btn btn btn_gray">Применить</button>
+					</div>
+				</div>
+				<div class="itog">
+					<span class="itog__text">Итоговая сумма: </span>
+					<span class="itog__num">8115490 <i class="rub">a</i></span>
+				</div>
+				<button class="btn btn_trans js-address">Перейти к адресу доставки</button>
+			</div>
+
 		</div>
 
+		<div class="tab-item tab-item_delivery js-basket-tab-content">Содержимое 3</div>
 	</div>
+
+</div>
 
 </div>
 
