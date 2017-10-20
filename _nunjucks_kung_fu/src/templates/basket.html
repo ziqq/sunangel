@@ -31,7 +31,7 @@ title: Корзина
 		<div class="tab__wrap">
 			<span class="tab tab_card js-basket-tab  js-basket-card is-active"><span>1 Корзина</span> {{mixin.icon('card')}}</span>
 			<span class="tab js-basket-tab js-basket-pay"><span>2 Выбор способа оплаты</span> {{mixin.icon('pay-method')}}</span>
-			<span class="tab js-basket-tab js-basket-adress"><span>3 Адрес доставки</span> {{mixin.icon('address')}}</span>        
+			<span class="tab js-basket-tab js-basket-adress"><span>3 Адрес Доставкаи</span> {{mixin.icon('address')}}</span>        
 		</div>
 
 		<div class="tab__content">
@@ -130,7 +130,7 @@ title: Корзина
 						<div class="pay-item">
 							<h3 class="pay-item__title">Полная <br> предоплата</h3>
 							<div class="pay-item__desc">
-								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставк: <span>бесплатно</span></span> <span class="pay-item__sale">скидка<span class="product-item__price_sale">-100%</span></span>
+								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставка: <span>бесплатно</span></span> <span class="pay-item__sale">скидка: <span class="product-item__price_sale">-88%</span></span>
 							</div>
 							<div class="pay-item__sum">Сейчас надо заплатить: <span>81498 <i class="rub">a</i></span></div>
 							<div class="pay-item__button">
@@ -143,9 +143,9 @@ title: Корзина
 						<div class="pay-item">
 							<h3 class="pay-item__title">Оплата при <br> получении товара</h3>
 							<div class="pay-item__desc"> 
-								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставк: <span>бесплатно</span></span> <span class="pay-item__sale">скидка<span class="product-item__price_sale">-100%</span></span>
+								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставка: <span>бесплатно</span></span> <span class="pay-item__sale">скидка: <span class="product-item__price_sale">-100%</span></span>
 							</div>
-							<div class="pay-item__sum">Вы должны будите отдать курьеру наличными: <span>81498 <i class="rub">a</i></span></div>
+							<div class="pay-item__sum">Вы должны будите отдать <br> курьеру наличными: <span>81498 <i class="rub">a</i></span></div>
 							<div class="pay-item__button"> 
 								<label class="btn btn_check">										
 									<input type="checkbox">
@@ -156,7 +156,7 @@ title: Корзина
 						<div class="pay-item">
 							<h3 class="pay-item__title">Купить <br> в кредит</h3>
 							<div class="pay-item__desc"> 
-								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставк: <span>бесплатно</span></span> <span class="pay-item__sale">скидка<span class="product-item__price_sale">-100%</span></span>
+								<span class="pay-item__itog">Итоговая сумма: <span>81 490 <i class="rub">a</i></span></span> <span class="pay-item__delivery">Доставка: <span>бесплатно</span></span> <span class="pay-item__sale">скидка: <span class="product-item__price_sale">-70%</span></span>
 							</div>
 							<div class="pay-item__sum">В месяц: <span>81498 <i class="rub">a</i></span></div>
 							<div class="pay-item__button"> 
@@ -168,6 +168,90 @@ title: Корзина
 						</div>
 					</div>
 				</div>
+
+				<div class="tab-item__bottom">
+					<div class="promokod">
+						<span class="promokod__text">
+							Я знаю промокод
+						</span>
+						<div class="promokod__box">
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите код</span>
+							</label>
+							<button class="promokod__btn btn btn_gray">Применить</button>
+						</div>
+					</div>
+					<div class="itog">
+						<span class="itog__text">Итоговая сумма: </span>
+						<span class="itog__num">8115490 <i class="rub">a</i></span>
+					</div>
+					<button class="btn btn_trans js-address">Перейти к адресу Доставкаи</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="tab-item tab-item_delivery js-basket-tab-content">
+			<div class="tab-item__top">
+
+				<form class="form-delivery">
+
+					<div class="form-delivery__inner">
+						<div class="form-delivery__left">
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Ваше имя</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Вашу фамилию</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Ваш пол</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите номер телефона</span>
+							</label>
+						</div>
+						<div class="form-delivery__right">
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Ваш email</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите город доставки</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите улицу</span>
+							</label>
+
+							<div class="sa-input__box_05">
+								<label class="sa-input__box">
+									<input class="sa-input js-sa-input" type="text">
+									<span class="sa-input__placeholder">Введите дом</span>
+								</label>
+
+								<label class="sa-input__box">
+									<input class="sa-input js-sa-input" type="text">
+									<span class="sa-input__placeholder">Введите квартиру</span>
+								</label>
+							</div>
+						</div>
+						<textarea class="form-delivery__textarea" placeholder="Комментарий к заказу"></textarea>
+					</div>			
+
+				</form>
 
 			</div>
 
@@ -185,15 +269,12 @@ title: Корзина
 					</div>
 				</div>
 				<div class="itog">
-					<span class="itog__text">Итоговая сумма: </span>
+					<span class="itog__text">Сумма к оплате: </span>
 					<span class="itog__num">8115490 <i class="rub">a</i></span>
 				</div>
-				<button class="btn btn_trans js-address">Перейти к адресу доставки</button>
+				<button class="btn btn_checkout ">Оформить заказ</button>
 			</div>
-
 		</div>
-
-		<div class="tab-item tab-item_delivery js-basket-tab-content">Содержимое 3</div>
 	</div>
 
 </div>

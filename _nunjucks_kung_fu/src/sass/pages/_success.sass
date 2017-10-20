@@ -1,0 +1,22 @@
+.success
+	padding-bottom: 80px
+	text-align: center
+	&__img
+		position: relative
+		margin: 0 auto 50px
+		width: 269px
+		height: 250px
+		img
+			@extend %i
+	&__desc
+		color: #606060
+	&__link
+		display: block
+		margin-top: 30px
+		color: $color-accent
+		&:hover
+			text-decoration: underline
+			color: $color-accent
+	.page-title
+		+r(480)
+			font-size: rem(32)

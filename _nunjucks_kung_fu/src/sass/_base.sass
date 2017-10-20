@@ -315,6 +315,25 @@ img ,.img-responsive
 			&::after
 				right: 20px
 
+	//btn_chexkout
+	&_checkout
+		position: relative
+		background-color: $color-brown-lighten
+		&::after
+			content: '✔'
+			color: $color-brown
+			font-size: 16px
+			position: absolute
+			top: 12px
+			right: 16px
+			+tr(.35s)
+		&:hover
+			background-color: $color-brown
+			color: #fff
+			&::after
+				color: #fff
+
+
 	//btn_cheack
 	&_check
 		display: block

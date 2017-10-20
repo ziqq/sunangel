@@ -9,10 +9,6 @@ $('.js-choice-payment').click(function (){
 	$('.js-basket-tab').removeClass('is-active').eq($(this).index() - 1).addClass("is-active");
 	$(".js-basket-tab-content").hide().eq($(this).index() - 1).show();
 	$('.page-title').replaceWith('<h1 class="page-title">Оплата</h1>');
-	// $('.tab-item_card').hide();
-	// $('.tab-item_pay').show();
-	// $('.js-basket-tab').removeClass('is-active');
-	// $('.tab_card').addClass('is-active');
 });
 
 $('.js-address').click(function (){

@@ -45,14 +45,14 @@
 			&::before
 				bottom: -2px
 		+r(768)
-			padding: 12px 32px 6px
+			padding: 12px 25px 6px
 			font-size: rem(15)
 			&::after
 				top: 11px
-				left: 10px
+				left: 0
 			&:hover
 				&::after
-					left: 15px
+					left: 10px
 		+r(480)
 			&::after
 				display: none
@@ -91,11 +91,8 @@
 			text-align: center
 			border-bottom: 1px solid $color-border
 
-		//tab__content
-		// &__content
-		// 	padding-left: 100px
-		// 	+r(1024)
-		// 		padding-left: 0
+			+r(480)
+				padding-left: 0
 
 		//tab-item
 		&-item
@@ -117,7 +114,7 @@
 					flex-wrap: wrap
 				+r(425)
 					padding-top: 20px
-				.btn_trans
+				.btn_trans, .btn_checkout
 					+r(1024)
 						margin: 30px auto 0
 					+r(320)
@@ -324,6 +321,7 @@
 //pay-item
 .pay-item
 	width: 300px
+	margin-bottom: 35px
 	padding: 50px 35px 30px
 	display: flex
 	flex-direction: column
@@ -335,6 +333,7 @@
 		display: flex
 		justify-content: space-around
 		align-items: stretch
+		flex-wrap: wrap
 	//pay-item__title
 	&__title
 		margin-bottom: 35px
@@ -345,10 +344,11 @@
 	&__desc
 		color: $color-text-light
 		font-family: encore-300, sans-serif
-		font-size: rem(14)
+		font-size: rem(15)
 	//pay-item__itog
 	&__itog
-		margin-bottom: 20px
+		display: block
+		margin-bottom: 15px
 		span
 			color: $color-text
 			font-family: oswald-300, sans-serif
@@ -356,16 +356,22 @@
 	//pay-item__delivery
 	&__delivery
 		display: block
-		margin-bottom: 20px
+		margin-bottom: 15px
 		span
 			color: $color-text
 			font-family: encore-600, sans-serif
 	//pay-item__sale
 	&__sale
+		position: relative
+		left: -35px
 		display: block
-		margin-bottom: 20px
+		margin-bottom: 15px
+		.product-item__price_sale
+			top: 0
+			right: -10px
 	//pay-item__sum
 	&__sum
+		margin: auto auto 15px
 		color: $color-text-light
 		font-size: rem(15)
 		span
@@ -373,3 +379,52 @@
 			color: $color-accent
 			font-family: oswald-500, sans-serif
 			font-size: rem(24)
+
+//form-delivery
+.form-delivery
+	//form-delivery__inner
+	&__inner
+		display: flex
+		flex-wrap: wrap
+	//form-delivery__left
+	&__left
+		width: 45%
+		margin: 0 auto
+		+r(480)
+			width: 100%
+	//form-delivery__right
+	&__right
+		width: 45%
+		margin: 0 auto
+		+r(480)
+			width: 100%
+	&__textarea
+		width: 95%
+		margin: auto
+		min-height: 155px
+		padding: 20px 25px
+		border: 1px solid $color-border
+		resize: none
+		color: $color-text-light
+		font-size: rem(18)
+		+placeholder
+			font-family: encore-300, sans-serif
+			font-size: rem(18)
+			color: $color-text-light
+			letter-spacing: 0.33px
+		+r(480)
+			width: 100%
+	.sa-input__box
+		margin-bottom: 25px
+		&_05
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			.sa-input__box
+				width: 45%
+				margin-bottom: 0
+				margin-top: 0
+				+r(480)
+					margin-bottom: 25px
+				+r(320)
+					width: 100%

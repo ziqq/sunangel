@@ -1,0 +1,24 @@
+---
+title: Завершение оформления заказа
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+<main class="main">
+	<div class="container">{{mixin.breadcrumbssuccess()}}</div>
+	<section class="success">
+		<div class="container">
+			<h1 class="page-title">{{title}}</h1>
+			<div class="success__img">
+				<img src="img/general/order-success.png" alt="Завершение оформления заказа">
+			</div>
+			<p class="success__desc">Ваш заказ <span>№ 77914</span> успешно оформлен <br> и совсем скоро будет бережно упакован и отправлен по адресу.</p>
+			<a href="/catalog.html" class="success__link">Перейти на главную</a>
+		</div>
+	</section>
+</main>
+{% include "partials/_footer.html" %}
+
+{% endblock %}
