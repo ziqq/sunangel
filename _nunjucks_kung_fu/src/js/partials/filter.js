@@ -1,5 +1,10 @@
 	//Filter
 
+	$('.js-filter-sm-item').click(function (){
+		$('.js-filter-sm-item').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+
 	$('.js-filter-sorting').click(function(){
 		$('.js-filter-sorting').removeClass('is-active');
 		$(this).addClass('is-active');

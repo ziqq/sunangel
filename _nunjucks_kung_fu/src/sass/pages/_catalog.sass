@@ -1,4 +1,5 @@
 .filter-sm
+	//filter-sm__wrap
 	&__wrap
 		text-align: center
 		position: relative
@@ -9,12 +10,20 @@
 			text-align: left
 		+r(480)
 			text-align: left
+
+	//filter-sm__item
 	&__item
 		display: inline-block
 		vertical-align: middle
 		position: relative
 		padding: 0 20px
 		position: relative
+		cursor: pointer
+		
+		&.is-active
+			.filter-sm__inner
+				display: block
+
 		+tr(.35s)
 		&::after
 			content: '\f107'
@@ -37,14 +46,37 @@
 			padding-left: 0
 	//filter-sm__dropdown
 	&__dropdown
-		text-align: left
 		position: absolute
 		top: 40px
 		left: 20px
 		width: 100%
+		min-width: 170px
 		background-color: #fff
 		z-index: 99
+		box-shadow: 0 0px 30px 1px rgba(#000, .5)
+		+beforearr(#fff, t, 12, 6)
+		&::before
+			left: 15px
+			margin-left: 0
 
+	//filter-sm__inner
+	&__inner
+		display: none
+		text-align: left
+		max-height: 200px
+		overflow: hidden
+		//filter-sm__dropdown-item
+		&-item
+			padding: 5px 10px
+			cursor: pointer
+			color: $color-text
+			white-space: nowrap
+			+text-overflow
+			&:hover
+				background-color: $color-brown-lighten
+
+	
+	//filter-sm__btn
 	&__btn
 		display: inline-block
 		vertical-align: middle
@@ -64,8 +96,9 @@
 			+r(480)
 				display: none
 
-
+//sorting
 .sorting
+	//sorting__wrap
 	&__wrap
 		margin-bottom: 70px
 		text-align: center
@@ -74,6 +107,7 @@
 		+clr
 		+r(480)
 			margin-bottom: 5px
+	//sorting__item
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -100,10 +134,12 @@
 				position: absolute
 				top: 1px
 				right: -15px	
+		//sorting__item_title
 		&_title
 			color: $color-text
 			+r(480)
 				display: block
+	//sorting__btn
 	&__btn
 		display: inline-block
 		vertical-align: middle

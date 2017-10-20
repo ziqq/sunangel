@@ -38,41 +38,49 @@ title: Подвески со знаками зодиака
 
 		<div class="filter-sm__wrap">
 			<ul class="filter-sm">
-				<li class="filter-sm__item">
+				<li class="filter-sm__item js-filter-sm-item">
 					Вид украшения
-					<ul class="filter-sm__dropdown">
-					{% import "data/data.html" as filterItem %}
-					{% for item in filterItem.filter %}
-						<li class="filter-sm__dropdown-item">{{item.view}}</li>
-					{% endfor %}
-					</ul>
+					<div class="filter-sm__dropdown">
+						<ul class="filter-sm__inner">
+						{% import "data/data.html" as filterItem %}
+						{% for item in filterItem.filter %}
+							<li class="filter-sm__inner-item">{{item.view}}</li>
+						{% endfor %}
+						</ul>
+					</div>
 				</li>
-				<li class="filter-sm__item">
+				<li class="filter-sm__item js-filter-sm-item">
 					Метал
-					<ul class="filter-sm__dropdown">
+				<div class="filter-sm__dropdown">
+					<ul class="filter-sm__inner">
 					{% import "data/data.html" as filterItem %}
 					{% for item in filterItem.filter %}
-						<li class="filter-sm__dropdown-item">{{item.metal}}</li>
+						<li class="filter-sm__inner-item">{{item.metal}}</li>
 					{% endfor %}
 					</ul>
+				</div>
 				</li>
-				<li class="filter-sm__item">
+				<li class="filter-sm__item js-filter-sm-item">
 					Вставка
-					<ul class="filter-sm__dropdown">
-					{% import "data/data.html" as filterItem %}
-					{% for item in filterItem.filter %}
-						<li class="filter-sm__dropdown-item">{{item.insert}}</li>
-					{% endfor %}
-					</ul>
+					<div class="filter-sm__dropdown">
+						<ul class="filter-sm__inner">
+						{% import "data/data.html" as filterItem %}
+						{% for item in filterItem.filter %}
+							<li class="filter-sm__inner-item">{{item.insert}}</li>
+						{% endfor %}
+						</ul>
+					</div>
 				</li>
-				<li class="filter-sm__item">
+				<li class="filter-sm__item js-filter-sm-item">
 					Бренд
-					<ul class="filter-sm__dropdown">
-					{% import "data/data.html" as filterItem %}
-					{% for item in filterItem.filter %}
-						<li class="filter-sm__dropdown-item">{{item.brand}}</li>
-					{% endfor %}
-					</ul>
+					<div class="filter-sm__dropdown">
+						<ul class="filter-sm__inner">
+						{% import "data/data.html" as filterItem %}
+						{% for item in filterItem.filter %}
+							<li class="filter-sm__inner-item">{{item.brand}}</li>
+						{% endfor %}
+						</ul>
+					</div>
 				</li>
 			</ul>
 			<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>

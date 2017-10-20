@@ -6,7 +6,7 @@ $(document).ready(function () {
 	//=include partials/basket.js
 
 	$(window).on("load",function(){
-		$('.city-dropdown, .mobile-menu, .popup, .filter__content').niceScroll({
+		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__dropdown').niceScroll({
 			cursorcolor: '#baab82',
 			horizrailenabled: false,
 			autohidemode: false,
@@ -18,7 +18,7 @@ $(document).ready(function () {
 		});
 	});
 
-	$('.city-dropdown, .mobile-menu, .popup, .filter__content').mouseover(function() {
+	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__dropdown').mouseover(function() {
 		$(this).getNiceScroll().resize();
 	});
 
@@ -131,7 +131,22 @@ $(document).ready(function () {
 	});
 
 	//Popup
-	$('.js-popup').fancybox();
+	if($('.js-fancybox').length){
+		$('.js-fancybox').fancybox({
+
+			beforeShow: function() {
+				$("body").css({
+					'overflow-y': 'hidden'
+				});
+			},
+			afterClose: function() {
+				$("body").css({
+					'overflow-y': 'visible'
+				});
+			}
+	});
+	}
+	
 
 	// $(document).on('afterLoad.fb', function( e, instance, slide ) {
 	// 	slide.$slide.niceScroll({cursorcolor:"#FFF"});
