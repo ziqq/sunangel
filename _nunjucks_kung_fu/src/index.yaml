@@ -13,6 +13,8 @@ PageList:
   ready: 50
 - file: contacts.html
   ready: 50
+- file: news.html
+  ready: 50
 - file: success.html
   ready: 50
 - file: 404.html

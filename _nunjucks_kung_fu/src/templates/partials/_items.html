@@ -43,3 +43,19 @@
 	</div>
 </div>
 {% endmacro %}
+
+{% macro newsitem(mod) %}
+<div class="news-item {{mod}}">
+	<div class="news-item__img">
+		{{mixin.img(700, 400)}}
+	</div>
+	<div class="news-item__text">
+		<div class="news-item__info">
+			<span class="news-item__comments">Коментарии</span>
+			<span class="news-item__date">25 сентября 2017</span>
+		</div>
+		<h4 class="news-item__title"><a href="#">Ксения Сухинова: «Главное – делать мир вокруг таким, каким ты его видишь»</a></h4>
+		<a href="#" class="news-item__more">Подробнее</a>
+	</div>			
+</div>
+{% endmacro %}

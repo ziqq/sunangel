@@ -131,7 +131,6 @@
 		&:nth-child(3)
 			+span(full)
 
-
 //advantages
 .advantages__item
 	+span(3)
@@ -161,5 +160,34 @@
 				margin-right: 0
 		+r(320)
 			width: 100%
+			&:nth-child(2n)
+				margin-right: gutter()
+
+//news-item
+.news-item
+	+span(6)
+	&:last-child
+		margin-right: 0
+	+r(480)
+		+span(full)
+		&:last-child
+			margin-right: gutter()
+	//news-item_small
+	&_small
+		+span(3)
+		&:last-child
+			margin-right: 0
+		+r(768)
+			+span(4)
+			&:nth-child(3n)
+				margin-right: 0
+		+r(480)
+			+span(6)
+			&:nth-child(3n)
+				margin-right: gutter()			
+			&:nth-child(2n)
+				margin-right: 0
+		+r(375)
+			+span(full)		
 			&:nth-child(2n)
 				margin-right: gutter()

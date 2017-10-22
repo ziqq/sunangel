@@ -6,8 +6,10 @@ title: Завершение оформления заказа
 {% block content %}
 
 {% include "partials/_header.html" %}
+<!-- begin main -->
 <main class="main">
 	<div class="container">{{mixin.breadcrumbssuccess()}}</div>
+	<!-- begin success -->
 	<section class="success">
 		<div class="container">
 			<h1 class="page-title">{{title}}</h1>
@@ -18,7 +20,9 @@ title: Завершение оформления заказа
 			<a href="/catalog.html" class="success__link">Перейти на главную</a>
 		</div>
 	</section>
+	<!-- end success -->
 </main>
+<!-- end main -->
 {% include "partials/_footer.html" %}
 
 {% endblock %}

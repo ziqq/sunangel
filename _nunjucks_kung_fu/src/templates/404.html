@@ -6,8 +6,10 @@ title: Страница не найдена
 {% block content %}
 
 {% include "partials/_header.html" %}
+<!-- begin main -->
 <main class="main">
 	<div class="container">{{mixin.breadcrumbs()}}</div>
+	<!-- begin error -->
 	<section class="error">
 		<div class="container">
 			<h1 class="page-title">{{title}}</h1>
@@ -19,7 +21,9 @@ title: Страница не найдена
 			<p class="error__desc">Запрашиваемого товара не найдено. <br> Вы можете выбрать среди 45 000 ювелирных изделий в <a href="/catalog.html" class="error__link">нашем каталоге</a></p>
 		</div>
 	</section>
+	<!-- end error -->
 </main>
+<!-- end main -->
 {% include "partials/_footer.html" %}
 
 {% endblock %}

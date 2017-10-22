@@ -156,6 +156,12 @@ $(document).ready(function () {
 		$('.map__text').removeClass('is-close');
 	});
 
+	//about nav
+	$('.about-nav__item').click(function (){
+		$('.about-nav__item').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+
 	
 
 	//Partials
