@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-	//Partials
-	//=include partials/header.js
-	//=include partials/filter.js
-	//=include partials/basket.js
-
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__dropdown').niceScroll({
 			cursorcolor: '#baab82',
@@ -45,13 +40,15 @@ $(document).ready(function () {
 	
 
 	//equalheights
-	if($('..product-item__title').length){
-		function heightses() {
-			$('.product-item__title').height('auto').equalHeights();
-		}heightses();
-		$(window).resize(function() {
-			heightses();
-		});
+	function heightses() {
+		$('.product-item__title').height('auto').equalHeights();
+	}
+	$(window).resize(function() {
+		heightses();
+	});
+
+	if($('.product-item__title').length){
+		heightses();
 	}
 	
 
@@ -148,6 +145,70 @@ $(document).ready(function () {
 	}
 
 	$('img').on('dragstart', function(event) { event.preventDefault(); });
+
+	
+
+	//map-text close
+	$('.js-map-text-close').click(function (){
+		$('.map__text').addClass('is-close');
+	});
+	$('.js-map-shops').click(function (){
+		$('.map__text').removeClass('is-close');
+	});
+
+	
+
+	//Partials
+	//=include partials/header.js
+	//=include partials/filter.js
+	//=include partials/basket.js
+
+
+	//Map
+	if ($('#map').length){
+		ymaps.ready(init);
+		var myMap,
+		myPlacemark1,
+		myPlacemark2,
+		myPin;
+
+		function init(){
+			myMap = new ymaps.Map("map", {
+				center: [52.01662042, 47.81215808],
+				zoom: 14
+			});
+
+			myMap.behaviors.disable(['scrollZoom']);
+
+			myMap.controls
+				.remove('searchControl')
+				.remove('trafficControl')
+				.remove('typeSelector')
+				.add( 'routeEditor');
+
+			myPin = new ymaps.GeoObjectCollection({}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/general/map-pin.svg',
+				iconImageSize: [30, 42],
+				iconImageOffset: [-3, -42]
+			});
+
+			myPlacemark1 = new ymaps.Placemark([52.02289564, 47.82915305], {
+				balloonContentHeader: '<span class="map-pin__title"> Тц, ГринХаус, Салон Sunangel</span>',
+				balloonContentBody: '<span class="map-shop__place">ул. Трнавская, 24</span><span class="map-shop__time"><i class="fa fa-clock-o"></i>10:00 — 22:00</span><span class="map-shop__phone"><i class="fa fa-phone-square"></i><a href="tel:">+7 (999) 000-00-00</a></span>',
+				hintContent: 'Sunangel'
+			});
+
+			myPlacemark2 = new ymaps.Placemark([52.01096799, 47.79694039], {
+				balloonContentHeader: '<span class="map-pin__title"> Тц, Оранж, Салон Sunangel</span>',
+				balloonContentBody: '<span class="map-shop__place">ул. Волжская, 100</span><span class="map-shop__time"><i class="fa fa-clock-o"></i>9:00 — 21:00</span><span class="map-shop__phone"><i class="fa fa-phone-square"></i><a href="tel:">+7 (999) 000-00-00</a></span>',
+				hintContent: 'Sunangel'
+			});
+
+			myPin.add(myPlacemark1).add(myPlacemark2);
+			myMap.geoObjects.add(myPin);
+		}
+	}
 
 
 });

@@ -2,18 +2,6 @@
 title: Корзина
 ---
 
-{% macro basketitem() %}
-<div class="basket-item">
-	<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
-	<div class="basket-item__title">Золотая подвеска с минеральным стеклом и фианитами<span class="basket-item__articul">Артикул 035077</span></div>
-	<div class="basket-item__price price">
-		<span class="price__old">14990 <i class="rub">a</i></span>
-		<span class="price__new">12990 <i class="rub">a</i></span>
-	</div>
-	<span class="sa-close">{{mixin.icon('close')}}</span>
-</div>
-{% endmacro %}
-
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
@@ -29,18 +17,18 @@ title: Корзина
 	<div class="basket">
 
 		<div class="tab__wrap">
-			<span class="tab tab_card js-basket-tab  js-basket-card is-active"><span>1 Корзина</span> {{mixin.icon('card')}}</span>
-			<span class="tab js-basket-tab js-basket-pay"><span>2 Выбор способа оплаты</span> {{mixin.icon('pay-method')}}</span>
-			<span class="tab js-basket-tab js-basket-adress"><span>3 Адрес Доставкаи</span> {{mixin.icon('address')}}</span>        
+			<span class="tab tab_card js-tab  js-basket-card is-active"><span>1 Корзина</span> {{mixin.icon('card')}}</span>
+			<span class="tab js-tab js-basket-pay"><span>2 Выбор способа оплаты</span> {{mixin.icon('pay-method')}}</span>
+			<span class="tab js-tab js-basket-adress"><span>3 Адрес Доставкаи</span> {{mixin.icon('address')}}</span>        
 		</div>
 
 		<div class="tab__content">
-			<div class="tab-item tab-item_card js-basket-tab-content">
+			<div class="tab-item tab-item_card js-tab-content">
 				<div class="tab-item__top">
 					<div class="basket__main">
-						{{basketitem()}}
-						{{basketitem()}}
-						{{basketitem()}}
+						{{item.basketitem()}}
+						{{item.basketitem()}}
+						{{item.basketitem()}}
 						<div class="basket-item">
 							<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
 							<div class="basket-item__title">blahhhhhhbalalblahhhhhhblaa<span class="basket-item__articul">Артикул 035077</span></div>
@@ -123,7 +111,7 @@ title: Корзина
 
 			</div>
 
-			<div class="tab-item tab-item_pay js-basket-tab-content">
+			<div class="tab-item tab-item_pay js-tab-content">
 				<div class="tab-item__top">
 					
 					<div class="pay-item__wrap">
@@ -192,7 +180,7 @@ title: Корзина
 
 		</div>
 
-		<div class="tab-item tab-item_delivery js-basket-tab-content">
+		<div class="tab-item tab-item_delivery js-tab-content">
 			<div class="tab-item__top">
 
 				<form class="form-delivery">
@@ -215,14 +203,14 @@ title: Корзина
 							</label>
 
 							<label class="sa-input__box">
-								<input class="sa-input js-sa-input" type="text">
+								<input class="sa-input js-sa-input phone-mask" type="tel">
 								<span class="sa-input__placeholder">Введите номер телефона</span>
 							</label>
 						</div>
 						<div class="form-delivery__right">
 
 							<label class="sa-input__box">
-								<input class="sa-input js-sa-input" type="text">
+								<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 								<span class="sa-input__placeholder">Введите Ваш email</span>
 							</label>
 
@@ -238,12 +226,12 @@ title: Корзина
 
 							<div class="sa-input__box_05">
 								<label class="sa-input__box">
-									<input class="sa-input js-sa-input" type="text">
+									<input class="sa-input js-sa-input" type="number">
 									<span class="sa-input__placeholder">Введите дом</span>
 								</label>
 
 								<label class="sa-input__box">
-									<input class="sa-input js-sa-input" type="text">
+									<input class="sa-input js-sa-input" type="number">
 									<span class="sa-input__placeholder">Введите квартиру</span>
 								</label>
 							</div>

@@ -7,26 +7,6 @@ title: Подвески со знаками зодиака
 
 {% include "partials/_header.html" %}
 
-{% macro product() %}
-<div class="product-item">
-	<div class="product-item__img">
-		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt"></a>
-	</div>
-	<div class="product-item__other">
-		<h6 class="product-item__title"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
-		<div class="product-item__price">
-			58684444 <i class="rub">a</i>
-			<span class="product-item__price_old">88532 <i class="rub">a</i></span>
-			<span class="product-item__price_sale">-100%</span>
-		</div>
-		<div class="product-item__button">
-			<button class="btn btn_add" title="Добавить в корзину">Добавить в корзину</button>
-			<button class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</button>
-		</div>
-	</div>
-</div>
-{% endmacro %}
-
 <main class="main">
 	<div class="container">
 
@@ -100,10 +80,10 @@ title: Подвески со знаками зодиака
 	<section class="catalog">
 		<div class="container">
 
-			{{product()}}
-			{{product()}}
-			{{product()}}
-			{{product()}}
+			{{item.product()}}
+			{{item.product()}}
+			{{item.product()}}
+			{{item.product()}}
 
 		</div>
 

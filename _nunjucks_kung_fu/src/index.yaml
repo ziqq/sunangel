@@ -7,6 +7,8 @@ PageList:
   ready: 50
 - file: catalog.html
   ready: 50
+- file: lk.html
+  ready: 50
 - file: basket.html
   ready: 50
 - file: contacts.html

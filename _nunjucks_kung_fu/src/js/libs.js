@@ -6,4 +6,4 @@
 //=include ../../bower_components/fancybox/dist/jquery.fancybox.js
 //=include ../../bower_components/equalheights/equalheights.js
 //=include ../../bower_components/jquery.maskedinput/src/jquery.maskedinput.js
-//=include ../libs/svg4everybody.min.js
+//=include ../../bower_components/svg4everybody/dist/svg4everybody.js

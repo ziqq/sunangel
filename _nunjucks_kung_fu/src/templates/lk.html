@@ -1,0 +1,194 @@
+---
+title: Личный кабинет
+---
+
+{% macro lkitemac() %}
+<div class="lk-item">
+	<div class="lk-item__title">
+		<div class="lk-item__order">Заказ № 77914 от 21.07.2017</div>
+		<span class="lk-item__status">Статус: Звонок (КЦ)</span>
+		<span class="lk-item__coast">Стоимость:  <span class="lk-item__sum"> 87 790 <span class="rub">a</span></span></span>
+	</div>
+	<div class="lk-item__content">
+
+		<div class="lk__main">
+			{{item.lkitem()}}
+			{{item.lkitem()}}
+			{{item.lkitem()}}
+			<div class="basket-item">
+				<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
+				<a href="#" class="basket-item__title">blahhhhhhbalalblahhhhhhblaa<span class="basket-item__articul">Артикул 035077</span></a>
+				<div class="size">
+					<span class="size__title">размер: &nbsp; 18.5</span>
+				</div>
+				<div class="basket-item__price price">
+					<span class="price__old">14990 <i class="rub">a</i></span>
+					<span class="price__new">12990 <i class="rub">a</i></span>
+				</div>
+			</div>
+		</div>
+		<div class="lk-item__bottom">
+			<div class="lk-item__delivery">
+				<span>Доставка:</span>
+				<p>Акишево (Наро-Фоминский), Московская обл., бигерево, д. 45, кв. 46. Гремов Михаил, +7 909 001-02-11, adwirtup@gmail.com</p>
+			</div>
+			<div class="lk-item__itog">Стоимость: <span class="lk-item__sum"> 87 790 <span class="rub">a</span></span></div>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+
+<div class="container">{{mixin.breadcrumbslk(избранное)}}</div>
+
+<div class="container">
+
+	<h1 class="page-title">{{title}}</h1>
+
+	<div class="lk">
+
+		<div class="tab__wrap">
+			<span class="tab tab_card js-tab is-active"><span>История заказов</span> {{mixin.icon('history-order')}}</span>
+			<span class="tab js-tab"><span>Избранное</span> {{mixin.icon('favorite')}}</span>
+			<span class="tab js-tab"><span>Мои данные</span> {{mixin.icon('personal-data')}}</span>        
+		</div>
+
+		<div class="tab__content">
+
+			<div class="tab-item js-tab-content">
+
+				<div class="lk__head-line">
+					<h2 class="h2">История заказов</h2>
+				</div>
+
+				<div class="lk-item__wrap">
+					{{lkitemac()}}
+					{{lkitemac()}}
+					{{lkitemac()}}
+					{{lkitemac()}}
+				</div>
+
+			</div>
+
+			<div class="tab-item js-tab-content">
+
+				<div class="lk-item__wrap">
+
+					<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+						<div class="product-item__img">
+							<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"></a>
+						</div>
+						<div class="product-item__other">
+							<h6 class="product-item__title" itemprop="name"><a href="#">Золотая подвеска «Знак зодиака Водолей»Золотая подвеска «Знак зодиака Водолей»</a></h6>
+							<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="RUB" />
+								<span itemprop="price">58684444 <i class="rub">a</i></span>
+								<span class="product-item__price_old">88532 <i class="rub" itemprop="priceCurrency">a</i></span>
+								<span class="product-item__price_sale">-100%</span>
+							</div>
+							<div class="product-item__button">
+								<a href="#" class="btn btn_add" title="Добавить в корзину">Добавить в корзину</a>
+								<a href="#" class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</a>
+							</div>
+						</div>
+					</div>
+					{{item.product()}}
+					{{item.product()}}
+					{{item.product()}}
+					{{item.product()}}
+					{{item.product()}}
+				</div>
+
+			</div>
+
+			<div class="tab-item js-tab-content">
+
+				<form class="form-my-data">
+
+					<div class="form-delivery__inner">
+						<div class="form-delivery__left">
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Ваше имя</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Вашу фамилию</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите Ваш пол</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input phone-mask" type="tel">
+								<span class="sa-input__placeholder">Введите номер телефона</span>
+							</label>
+						</div>
+						<div class="form-delivery__right">
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+								<span class="sa-input__placeholder">Введите Ваш email</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите город доставки</span>
+							</label>
+
+							<label class="sa-input__box">
+								<input class="sa-input js-sa-input" type="text">
+								<span class="sa-input__placeholder">Введите улицу</span>
+							</label>
+
+							<div class="sa-input__box_05">
+								<label class="sa-input__box">
+									<input class="sa-input js-sa-input" type="number">
+									<span class="sa-input__placeholder">Введите дом</span>
+								</label>
+
+								<label class="sa-input__box">
+									<input class="sa-input js-sa-input" type="number">
+									<span class="sa-input__placeholder">Введите квартиру</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-my-data__buttons">
+							<button class="btn btn_checkout">Сохранить</button>
+						</div>
+						
+					</div>			
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="seo-text catalog__seo-text">
+	<div class="container">
+		<h2 class="seo-text__title">Золотые украшения Sanangel</h2>
+		<p class="seo-text__desc">Символы зодиакального круга всегда наделялись охранной силой для своего обладателя. Выбери оригинальную подвеску со своим знаком зодиака и не расставайся с ней. Самые модные, яркие и оригинальные драгоценности из благородных металлов, инкрустированные россыпью сияющих камней, только у нас!</p>
+		<p class="seo-text__desc">Символы зодиакального круга всегда наделялись охранной силой для своего обладателя. Выбери оригинальную подвеску со своим знаком зодиака и не расставайся с ней. Самые модные, яркие и оригинальные драгоценности из благородных металлов, инкрустированные россыпью сияющих камней, только у нас!</p>
+		<p class="seo-text__desc">Символы зодиакального круга всегда наделялись охранной силой для своего обладателя. Выбери оригинальную подвеску со своим знаком зодиака и не расставайся с ней. Самые модные, яркие и оригинальные драгоценности из благородных металлов, инкрустированные россыпью сияющих камней, только у нас!</p>
+		<div class="seo-text__readnext btn_next">Далее</div>
+	</div>
+</section>	
+
+
+
+
+
+{% include "partials/_footer.html" %}
+
+{% endblock %}

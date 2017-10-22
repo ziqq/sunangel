@@ -1,0 +1,127 @@
+.lk
+	&__head-line
+		margin-bottom: 40px
+		text-align: center
+	.h2
+		font-family: encore-100, sans-serif
+		font-size: rem(30)
+		color: #474747
+	&__main
+		padding: 30px
+		background-color: $color-bg--lk
+	.tab
+		&::after
+			display: none !important
+		&__wrap
+			padding-left: 0 !important
+
+	.seo-text
+		margin-top: 50px
+	//lk .basket-item
+	.basket-item
+		text-align: center
+		&__img
+			+r(425)
+				margin: 0 auto 15px
+		&__title
+			margin: 0 auto
+		.size
+			+r(320)
+				width: 100%
+				margin-right: 0
+
+.lk-item
+	color: $color-text
+	font-size: rem(16)
+	background-color: #FFF
+	cursor: pointer
+	+tr(.5s)
+	&:hover
+		background-color: $color-bg--lk
+		.lk-item__order
+			color: $color-accent
+	&:last-child
+		margin-bottom: 0
+	//lk-item__title
+	&__title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 30px 75px 30px 30px
+		+r(480)
+			flex-wrap: wrap
+			padding: 15px
+
+	//lk-item__order
+	&__order
+		position: relative
+		+tr(.5s)
+		&::after
+			content: '\f107'
+			font-size: 16px
+			font-family: FontAwesome
+			position: absolute
+			right: -15px
+	//lk-item__status
+	&__status	
+		+r(480)
+			margin-left: auto
+		+r(425)
+			width: 100%
+	//lk-item__sum
+	&__sum
+		font-family: oswald-300, sans-serif
+		font-size: rem(16)
+		color: $color-accent
+	//lk-item__content
+	&__content
+		background-color: $color-bg--lk
+	//lk-item__bottom
+	&__bottom
+		display: flex
+		padding: 30px 75px 30px 30px
+		position: relative
+		&::before
+			content: ''
+			display: block
+			height: 1px
+			background-color: $color-border
+			position: absolute
+			top: 0
+			left: 30px
+			right: 30px
+		+r(480)
+			flex-wrap: wrap
+			padding: 30px
+	//lk-item__bottom
+	&__delivery
+		display: flex
+		span
+			display: inline-block
+			margin-right: 40px
+			margin-left: 35px
+			color: #474747
+			font-size: rem(16)
+			+r(480)
+				margin-left: 0
+		p
+			max-width: 400px
+			color: $color-text-lighten
+			font-size: rem(15)
+			+r(768)
+				max-width: 325px
+				font-size: rem(14)
+	//lk-item__sum
+	&__sum
+		margin-left: auto
+	//lk-item__sum
+	&__itog
+		margin-left: auto
+		+r(480)
+			margin-top: 30px
+
+.form-my-data
+	&__buttons
+		width: 100%
+		margin-top: 30px
+		text-align: center

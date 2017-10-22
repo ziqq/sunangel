@@ -154,3 +154,37 @@
 				transform: rotate(45deg) translate(-1px, 0px)
 			&:after
 				transform: rotate(-45deg) translate(6px, -7px)
+
+
+//about-nav
+.about-nav
+	text-align: center
+	//about-nav__list
+	&__list
+		margin: 0
+		padding: 0
+		list-style-type: none
+	//about-nav__item
+	&__item
+		display: inline-block
+		vertical-align: middle
+		padding: 10px 30px
+		&.is-active
+			border: 1px solid $color-border
+			border-bottom: none
+			border-radius: 4px 4px 0 0
+			.about-nav__link
+				color: $color-accent
+		+r(480)
+			padding: 10px 13px
+		+r(375)
+			padding: 5px
+		+r(320)
+			padding: 5px 3px
+	//about-nav__link
+	&__link
+		color: $color-text
+		font-size: rem(16)
+		+tr(.35s)
+		&:hover
+			color: $color-accent

@@ -1,0 +1,45 @@
+{% import "partials/_mixins.html" as mixin %}
+
+{% macro product() %}
+<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+	<div class="product-item__img">
+		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"></a>
+	</div>
+	<div class="product-item__other">
+		<h6 class="product-item__title" itemprop="name"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+		<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<meta itemprop="priceCurrency" content="RUB" />
+			<span itemprop="price">58684444 <i class="rub">a</i></span>
+			<span class="product-item__price_old">88532 <i class="rub" itemprop="priceCurrency">a</i></span>
+			<span class="product-item__price_sale">-100%</span>
+		</div>
+		<div class="product-item__button">
+			<a href="#" class="btn btn_add" title="Добавить в корзину">Добавить в корзину</a>
+			<a href="#" class="btn_fav" title="Добавить в избранное">{{mixin.icon('favorite')}}</a>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro basketitem() %}
+<div class="basket-item">
+	<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
+	<a href="#" class="basket-item__title">Золотая подвеска с минеральным стеклом и фианитами<span class="basket-item__articul">Артикул 035077</span></a>
+	<div class="basket-item__price price">
+		<span class="price__old">14990 <i class="rub">a</i></span>
+		<span class="price__new">12990 <i class="rub">a</i></span>
+	</div>
+	<span class="sa-close">{{mixin.icon('close')}}</span>
+</div>
+{% endmacro %}
+
+{% macro lkitem() %}
+<div class="basket-item">
+	<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
+	<a href="#" class="basket-item__title">Золотая подвеска с минеральным стеклом и фианитами<span class="basket-item__articul">Артикул 035077</span></a>
+	<div class="basket-item__price price">
+		<span class="price__old">14990 <i class="rub">a</i></span>
+		<span class="price__new">12990 <i class="rub">a</i></span>
+	</div>
+</div>
+{% endmacro %}

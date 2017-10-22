@@ -1,4 +1,4 @@
-.basket
+.basket, .lk
 	//tab
 	.tab
 		display: inline-block
@@ -87,7 +87,7 @@
 		//tab__wrap
 		&__wrap
 			margin-bottom: 35px
-			padding-left: 58px
+			padding-left: 67px
 			text-align: center
 			border-bottom: 1px solid $color-border
 
@@ -120,6 +120,19 @@
 					+r(320)
 						padding: 15px 40px 15px 15px
 
+	//basket .price, lk .price
+	.price
+		color: $color-accent
+		font-family: oswald-300, sans-serif
+		font-size: rem(18)
+		&__old
+			margin-right: 20px
+			color: $color-text-light
+			font-family: oswald-300, sans-serif
+			font-size: rem(14)
+			text-decoration: line-through
+
+.basket
 	//basket__main
 	&__main
 		float: left
@@ -176,6 +189,8 @@
 	display: flex
 	align-items: center
 	+clr
+	&:last-child
+		margin-bottom: 0
 	+r(480)
 		flex-wrap: wrap
 		padding-bottom: 20px
@@ -193,10 +208,13 @@
 			@extend %i
 	//basket-item__title
 	&__title
+		display: block
 		color: $color-text
 		font-family: encore-300, sans-serif
 		font-size: rem(16)
 		max-width: 250px
+		&:hover
+			color: $color-accent
 		+r(375)
 			max-width: 240px
 		+r(320)
@@ -381,7 +399,7 @@
 			font-size: rem(24)
 
 //form-delivery
-.form-delivery
+.form-delivery, .form-my-data
 	//form-delivery__inner
 	&__inner
 		display: flex

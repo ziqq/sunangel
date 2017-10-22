@@ -68,7 +68,7 @@ a
 	color: rgba($color-text, .7)
 	text-decoration: none
 	+tr(.35s)
-	&:hover
+	&:hover, &:active
 		color: $color-brown
 		text-decoration: none
 
@@ -87,6 +87,7 @@ p
 	letter-spacing: 1px
 	+r(480)
 		margin: 10px 0 35px
+		font-size: rem(32)
 
 %i
 	display: block
@@ -315,6 +316,22 @@ img ,.img-responsive
 			&::after
 				right: 20px
 
+	//btn_shops
+	&_shops
+		min-width: auto
+		position: absolute
+		left: 87px
+		padding: 5px 8px
+		top: 11px
+		font-size: 12px
+		z-index: 999
+		transition: background-color .15s ease-out,border-color .15s ease-out,opacity .15s ease-out
+		cursor: pointer
+		box-shadow: 0 1px 2px 1px rgba(0,0,0,.15), 0 2px 5px -3px rgba(0,0,0,.15)
+		border: 1px solid transparent
+		border-radius: 3px
+		background-color: #fff
+
 	//btn_chexkout
 	&_checkout
 		position: relative
@@ -399,6 +416,15 @@ img ,.img-responsive
 	100%
 		transform: rotate(360deg)
 
+//Input customization
+input[type='number']
+	-moz-appearance: textfield
+
+input
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button
+		-webkit-appearance: none
+		margin: 0
 
 //Custom Input
 .sa-input
