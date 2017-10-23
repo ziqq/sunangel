@@ -69,52 +69,96 @@ $(document).ready(function () {
 	}
 	//Section slider
 	if($('.js-product-slider').length){
-		$('.js-product-slider').each(function(){
-			$(this).slick({
-				autoplay: true,
-				autoplaySpeed: 2000,
-				speed: 2000,
-				infinite: true,
-				slidesToShow: 4,
-				slidesToScroll: 1,
-				arrows: true,
+		$('.js-product-slider').slick({
+			autoplay: true,
+			autoplaySpeed: 2000,
+			speed: 2000,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: true,
 
-				customPaging: function (slider, i)
-				{
-					return i + 1;
-				},
-				dots:true,
-				appendDots:('.product-slider .addition-slider__dots, .product-slider .similar-slider__dots'),
+			customPaging: function (slider, i)
+			{
+				return i + 1;
+			},
+			dots:true,
+			appendDots:('.addition-slider__dots, .similar-slider__dots'),
 
-				responsive: [{
-					breakpoint: 1024,
-					settings: {
-						slidesToShow: 4
-					}
+			responsive: [{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4
+				}
 
-				},
-				{
-					breakpoint: 767,
-					settings: {
-						slidesToShow: 3
-					}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 3
+				}
 
-				},{
-					breakpoint: 481,
-					settings: {
-						slidesToShow: 1
-					}
+			},{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1
+				}
 
-				},{
-					breakpoint: 425,
-					settings: {
-						slidesToShow: 1
-					}
+			},{
+				breakpoint: 425,
+				settings: {
+					slidesToShow: 1
+				}
 
-				}],
-			});
-		})
-		
+			}],
+		});		
+	}	
+	//News Slider
+	if($('.js-news-slider').length){
+		$('.js-news-slider').slick({
+			autoplay: true,
+			autoplaySpeed: 2000,
+			speed: 2000,
+			infinite: true,
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			arrows: true,
+			variableWidth: true,
+
+			customPaging: function (slider, i)
+			{
+				return i + 1;
+			},
+			dots:true,
+			appendDots:('.news-i__slider .news-i__slider_dots'),
+
+			responsive: [{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2
+				}
+
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2
+				}
+
+			},{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1,
+				}
+
+			},{
+				breakpoint: 425,
+				settings: {
+					slidesToShow: 1
+				}
+
+			}],
+		});		
 	}	
 
 	$('.js-extra-item').click(function (){
@@ -188,10 +232,10 @@ $(document).ready(function () {
 			myMap.behaviors.disable(['scrollZoom']);
 
 			myMap.controls
-				.remove('searchControl')
-				.remove('trafficControl')
-				.remove('typeSelector')
-				.add( 'routeEditor');
+			.remove('searchControl')
+			.remove('trafficControl')
+			.remove('typeSelector')
+			.add( 'routeEditor');
 
 			myPin = new ymaps.GeoObjectCollection({}, {
 				iconLayout: 'default#image',
