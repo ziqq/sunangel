@@ -1,5 +1,5 @@
 <!-- begin filtr -->
-<div class="filter">
+<div class="filter js-filter">
 	<div class="filter__top">
 		<div class="filter__inner">
 			<h2 class="filter__title">Фильтр</h2>
@@ -36,27 +36,27 @@
 									<span class="text">Подвески</span>
 									<span class="check"></span>
 								</label>
-								<label class="filter__checkbox checkbox hidden">
+								<label class="filter__checkbox checkbox">
 									<input type="checkbox">
 									<span class="text">Подвески</span>
 									<span class="check"></span>
 								</label>
-								<label class="filter__checkbox checkbox hidden">
+								<label class="filter__checkbox checkbox">
 									<input type="checkbox">
 									<span class="text">Подвески</span>
 									<span class="check"></span>
 								</label>
-								<label class="filter__checkbox checkbox hidden">
+								<label class="filter__checkbox checkbox">
 									<input type="checkbox">
 									<span class="text">Подвески</span>
 									<span class="check"></span>
 								</label>
-								<label class="filter__checkbox checkbox hidden">
+								<label class="filter__checkbox checkbox">
 									<input type="checkbox">
 									<span class="text">Подвески</span>
 									<span class="check"></span>
 								</label>
-								<label class="filter__checkbox checkbox hidden">
+								<label class="filter__checkbox checkbox">
 									<input type="checkbox">
 									<span class="text">Подвески</span>
 									<span class="check"></span>
@@ -67,7 +67,7 @@
 						{% import "data/data.html" as filterItem %}
 
 						{% for item in filterItem.filter %}
-						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title  {{item.class}}">
 							<input type="checkbox">
 							<span class="text">{{item.view}}</span>
 							<span class="check"></span>
@@ -148,58 +148,61 @@
 				</div>
 			</div>
 
-			<div class="filter-item">
-				<span class="filter-item__title">Тематика</span>
-				<div class="filter-item__list">
-
-
-					{% import "data/data.html" as filterItem %}
-
-					{% for item in filterItem.filter %}
-					<label class="filter__checkbox checkbox checkbox_sq checkbox__title js-checkbox-title {{item.class}}">
-						<input type="checkbox">
-						<span class="text">{{item.theme}}</span>
-						<span class="check"></span>
-					</label>
-					{% endfor %}
-
-					<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+			
+			<div class="filter-item__wrap">
+				<div class="filter-item">
+					<span class="filter-item__title">Тематика</span>
+					<div class="filter-item__list">
+				
+				
+						{% import "data/data.html" as filterItem %}
+				
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox_sq checkbox__title js-checkbox-title {{item.class}}">
+							<input type="checkbox">
+							<span class="text">{{item.theme}}</span>
+							<span class="check"></span>
+						</label>
+						{% endfor %}
+				
+						<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+					</div>
 				</div>
-			</div>
-
-			<div class="filter-item">
-				<span class="filter-item__title">Для кого</span>
-				<div class="filter-item__list">
-
-
-					{% import "data/data.html" as filterItem %}
-
-					{% for item in filterItem.filter %}
-					<label class="filter__checkbox checkbox checkbox checkbox__title js-checkbox-title {{item.class}}">
-						<input type="checkbox">
-						<span class="text">{{item.for}}</span>
-						<span class="check"></span>
-					</label>
-					{% endfor %}
-
-					<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+				
+				<div class="filter-item">
+					<span class="filter-item__title">Для кого</span>
+					<div class="filter-item__list">
+				
+				
+						{% import "data/data.html" as filterItem %}
+				
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox checkbox__title js-checkbox-title {{item.class}}">
+							<input type="checkbox">
+							<span class="text">{{item.for}}</span>
+							<span class="check"></span>
+						</label>
+						{% endfor %}
+				
+						<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+					</div>
 				</div>
-			</div>
-
-			<div class="filter-item">
-				<span class="filter-item__title">Цвет вставки</span>
-				<div class="filter-item__list filter-item__list_color">
-
-
-					{% import "data/data.html" as filterItem %}
-					
-					{% for item in filterItem.filter %}
-					<label class="filter__checkbox checkbox checkbox checkbox_color checkbox__title js-checkbox-title">
-						<input type="checkbox">
-						<span class="check check_color" style="background-color: {{item.color}}"></span>
-					</label>
-					{% endfor %}
-
+				
+				<div class="filter-item">
+					<span class="filter-item__title">Цвет вставки</span>
+					<div class="filter-item__list filter-item__list_color">
+				
+				
+						{% import "data/data.html" as filterItem %}
+						
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox checkbox_color checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="check check_color" style="background-color: {{item.color}}"></span>
+						</label>
+						{% endfor %}
+				
+					</div>
 				</div>
 			</div>
 

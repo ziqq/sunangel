@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$(window).on("load",function(){
-		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__dropdown').niceScroll({
+		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner').niceScroll({
 			cursorcolor: '#baab82',
 			horizrailenabled: false,
 			autohidemode: false,
@@ -13,7 +13,7 @@ $(document).ready(function () {
 		});
 	});
 
-	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__dropdown').mouseover(function() {
+	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner').mouseover(function() {
 		$(this).getNiceScroll().resize();
 	});
 
@@ -130,6 +130,7 @@ $(document).ready(function () {
 	//Popup
 	if($('.js-fancybox').length){
 		$('.js-fancybox').fancybox({
+			touch: false,
 
 			beforeShow: function() {
 				$("body").css({

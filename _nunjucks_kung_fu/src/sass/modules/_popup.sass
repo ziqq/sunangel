@@ -25,9 +25,14 @@
 
 //howsize
 .popup
-	min-width: 320px
+	min-width: 319px
 	width: 460px
 	+my-scroll
+	+r(425)
+		width: 95%
+		padding: 30px 10px
+	+r(320)
+		min-width: 315px
 	&__title
 		margin-bottom: 30px
 		color: $color-text
@@ -63,6 +68,14 @@
 				color: $color-text	
 				&:hover
 					color: #fff
+			+r(480)
+				left: 45px
+				&::before
+					left: auto
+					right: 19px
+			+r(375)
+				&::before
+					right: 60px
 
 .howsize
 	&__result
