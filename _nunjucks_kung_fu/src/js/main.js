@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$(window).on("load",function(){
-		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner').niceScroll({
+		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').niceScroll({
 			cursorcolor: '#baab82',
 			horizrailenabled: false,
 			autohidemode: false,
@@ -13,7 +13,7 @@ $(document).ready(function () {
 		});
 	});
 
-	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner').mouseover(function() {
+	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').mouseover(function() {
 		$(this).getNiceScroll().resize();
 	});
 

@@ -118,6 +118,7 @@
 		$('body').toggleClass('is-fixed');
 		if($(window).width() <= 480 ){
 			$('.header__top-line').toggleClass('is-menu-open');
+			$('.js-filter-open').toggleClass('is-menu-open');
 		}
 		return false
 	});
@@ -128,6 +129,7 @@
 		$('.wrapper').removeClass('is-menu-open');
 		$('.js-mobile-menu-btn').removeClass('on');
 		$('.header__top-line').removeClass('is-menu-open');
+		$('.js-filter-open').removeClass('is-menu-open');
 		$('body').removeClass('is-fixed');
 		return false
 	});
@@ -136,6 +138,7 @@
 		$('.wrapper').removeClass('is-menu-open');
 		$('.js-mobile-menu-btn').removeClass('on');
 		$('.header__top-line').removeClass('is-menu-open');
+		$('.js-filter-open').removeClass('is-menu-open');
 		$('body').removeClass('is-fixed');
 		event.stopPropagation();
 	});
@@ -175,24 +178,24 @@
 
 	//Authentification
 
-	if($(window).width() <= 480){
-		$('.auth__tab_phone').click(function() {
-			$('.auth__tab_email').removeClass('is-active');
-			$(this).addClass('is-active');
-			$('.auth__content .auth__phone').css('display' , 'block');
-			$('.auth__content .auth__email').css('display' , 'none');
-		});
-		$('.auth__tab_email').click(function() {
-			$('.auth__tab_phone').removeClass('is-active');
-			$(this).addClass('is-active');
-			$('.auth__content .auth__email').css('display' , 'block');
-			$('.auth__content .auth__phone').css('display' , 'none');
-		});
-	}else{
+	// if($(window).width() <= 480){
+	// 	$('.auth__tab_phone').click(function() {
+	// 		$('.auth__tab_email').removeClass('is-active');
+	// 		$(this).addClass('is-active');
+	// 		$('.auth__content .auth__phone').css('display' , 'block');
+	// 		$('.auth__content .auth__email').css('display' , 'none');
+	// 	});
+	// 	$('.auth__tab_email').click(function() {
+	// 		$('.auth__tab_phone').removeClass('is-active');
+	// 		$(this).addClass('is-active');
+	// 		$('.auth__content .auth__email').css('display' , 'block');
+	// 		$('.auth__content .auth__phone').css('display' , 'none');
+	// 	});
+	// }else{
+	// }
 		$(".auth__item").not(":first").hide();
 		$(".auth__tab").click(function() {
 			$('.auth__tab').removeClass('is-active');
 			$(this).addClass('is-active');
 			$(".auth__item").hide().eq($(this).index()).fadeIn();
 		}).eq(0).addClass("is-active");
-	}

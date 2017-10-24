@@ -282,6 +282,8 @@
 		&::before
 			top: -11px
 			margin-left: -11px
+		.sa-close
+			display: block !important
 	&__title
 		margin-bottom: 40px
 		padding-top: 30px
@@ -345,8 +347,10 @@
 	.action
 		+rmin(481)
 			&__dropdown
-				left: 50%
+				left: -15px
 				transform: translateX(-50%)
+				&::before
+					left: 55.7%
 		+r(1200)
 			left: auto
 			transform: translateX(12%)
@@ -442,6 +446,8 @@
 				transform: translateX(7%)
 				&::before
 					right: 33px
+			.nicescroll-rails
+				left: 456px !important
 	&__img
 		margin-bottom: 40px
 		img
@@ -451,6 +457,9 @@
 		font-size: rem(14)
 		line-height: 1.3
 		color: $color-brown
+	&__inner
+		max-height: 400px
+		overflow-y: auto
 	
 
 //Cart
@@ -467,6 +476,11 @@
 				transform: translateX(8%)
 				&::before
 					right: 12px
+			.nicescroll-rails
+				left: 456px !important
+	&__inner
+		max-height: 400px
+		overflow-y: auto
 
 	&__link
 		position: relative

@@ -331,6 +331,7 @@
 		position: absolute
 		top: 1px
 		right: 0
+		+tr(.35s)
 		&::after
 			content: ''
 			display: inline-block
@@ -356,3 +357,8 @@
 			color: #fff
 			&::after
 				display: none
+			&.is-menu-open				
+				+r(1200)
+					left: 320px
+				+r(320)
+					left: 271px

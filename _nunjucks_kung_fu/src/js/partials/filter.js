@@ -13,7 +13,8 @@
 	$('.js-filter-open').click(function (){
 		$('.filter').addClass('is-open');
 		$('body').addClass('is-fixed-bg');
-		return false;
+		return false
+
 	});
 
 	$('.js-filter-close').click(function (){
