@@ -1,0 +1,10 @@
+<!-- begin main-slider -->
+<div class="slider__wrap main-slider hidden_sm">
+	<div class="slider js-slider">
+		{% for i in range(0, 15) -%}
+			{{item.slideritem()}}
+		{%- endfor %}﻿
+	</div>
+	<div class="slider__dots"></div>
+</div>
+<!-- end main-slider -->

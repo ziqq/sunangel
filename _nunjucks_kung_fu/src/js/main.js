@@ -1,4 +1,10 @@
-$(document).ready(function () {
+$(document).ready(function () {	
+
+	//Partials
+	//=include partials/header.js
+	//=include partials/slider.js
+	//=include partials/filter.js
+	//=include partials/basket.js
 
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').niceScroll({
@@ -57,110 +63,6 @@ $(document).ready(function () {
 		$('.seo-text__desc').slideDown('450');
 	});
 
-
-	//Product Slider
-	if($('.product-slider_big').length){
-		$('.product-slider_big').bxSlider({
-			pagerCustom : '.product-slider_small',
-			responsive: true,
-			touchEnabled: true,
-			slideMargin: 0
-		});
-	}
-	//Section slider
-	if($('.js-product-slider').length){
-		$('.js-product-slider').slick({
-			autoplay: true,
-			autoplaySpeed: 2000,
-			speed: 2000,
-			infinite: true,
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			arrows: true,
-
-			customPaging: function (slider, i)
-			{
-				return i + 1;
-			},
-			dots:true,
-			appendDots:('.addition-slider__dots, .similar-slider__dots'),
-
-			responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 4
-				}
-
-			},
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 3
-				}
-
-			},{
-				breakpoint: 481,
-				settings: {
-					slidesToShow: 1
-				}
-
-			},{
-				breakpoint: 425,
-				settings: {
-					slidesToShow: 1
-				}
-
-			}],
-		});		
-	}	
-	//News Slider
-	if($('.js-news-slider').length){
-		$('.js-news-slider').slick({
-			autoplay: true,
-			autoplaySpeed: 2000,
-			speed: 2000,
-			infinite: true,
-			slidesToShow: 2,
-			slidesToScroll: 1,
-			arrows: true,
-			variableWidth: true,
-
-			customPaging: function (slider, i)
-			{
-				return i + 1;
-			},
-			dots:true,
-			appendDots:('.news-i__slider .news-i__slider_dots'),
-
-			responsive: [{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2
-				}
-
-			},
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 2
-				}
-
-			},{
-				breakpoint: 481,
-				settings: {
-					slidesToShow: 1,
-				}
-
-			},{
-				breakpoint: 425,
-				settings: {
-					slidesToShow: 1
-				}
-
-			}],
-		});		
-	}	
-
 	$('.js-extra-item').click(function (){
 		$('.js-extra-item').removeClass('is-visible');
 		$(this).addClass('is-visible')
@@ -206,13 +108,6 @@ $(document).ready(function () {
 		$('.about-nav__item').removeClass('is-active');
 		$(this).addClass('is-active');
 	});
-
-	
-
-	//Partials
-	//=include partials/header.js
-	//=include partials/filter.js
-	//=include partials/basket.js
 
 
 	//Map

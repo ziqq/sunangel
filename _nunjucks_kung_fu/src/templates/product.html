@@ -149,19 +149,15 @@ title: Index page
 	<section class="product-addition">
 		<div class="container">
 			<h2 class="h2 section-title">Дополниет свой образ</h2>
-			<div class="slider__wrap product-slider addition-slider">
-				<div class="js-product-slider">
-
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-
+			<div class="slider__wrap slider-addition">
+				<div class="slider js-addition-slider">
+				
+					{% for i in range(0, 15) -%}
+						{{item.product()}}
+					{%- endfor %}
+				
 				</div>
-				<div class="addition-slider__dots"></div>
+				<div class="slider__dots"></div>
 			</div>
 		</div>
 	</section>
@@ -171,20 +167,15 @@ title: Index page
 	<section class="product-similar">
 		<div class="container">
 			<h2 class="h2 section-title">Похожие товары</h2>
-			<div class="slider__wrap product-slider similar-slider">
-				<div class="js-product-slider">
+			<div class="slider__wrap slider-similar">
+				<div class="slider js-similar-slider">
+				
+					{% for i in range(0, 15) -%}
+						{{item.product()}}
+					{%- endfor %}
 
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-					{{item.product()}}
-
-				</div>
-				<div class="similar-slider__dots"></div>
+				</div>				
+				<div class="slider__dots"></div>
 			</div>
 		</div>
 	</section>
