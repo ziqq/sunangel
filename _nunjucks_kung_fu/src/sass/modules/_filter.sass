@@ -250,13 +250,20 @@
 	&__wrap
 		text-align: center
 		position: relative
-		padding-bottom: 15px
+		padding: 15px 0
 		border-bottom: 1px solid $color-border
+		background-color: #fff
+		z-index: 999
 		+clr
 		+r(768)
 			text-align: left
 		+r(480)
 			text-align: left
+		&.is-fixed
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
 
 	//filter-sm__item
 	&__item
@@ -327,9 +334,10 @@
 	&__btn
 		display: inline-block
 		vertical-align: middle
+		margin-right: 10px
 		padding-right: 30px
 		position: absolute
-		top: 1px
+		top: 15px
 		right: 0
 		+tr(.35s)
 		&::after

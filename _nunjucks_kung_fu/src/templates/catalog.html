@@ -16,68 +16,74 @@ title: Подвески со знаками зодиака
 		<div class="page-title">
 			<h1 class="h1">{{title}}</h1>
 		</div>
+
+	</div>
+
 		<!-- begin filter-sm -->
 		<div class="filter-sm__wrap">
-			<ul class="filter-sm">
-				<li class="filter-sm__item js-filter-sm-item">
-					Вид украшения
-					<div class="filter-sm__dropdown">
-						<ul class="filter-sm__inner">
-							{% import "data/data.html" as filterItem %}
-							{% for item in filterItem.filter %}
-							<li class="filter-sm__inner-item">{{item.view}}</li>
-							{% endfor %}
-						</ul>
-					</div>
-				</li>
-				<li class="filter-sm__item js-filter-sm-item">
-					Метал
-					<div class="filter-sm__dropdown">
-						<ul class="filter-sm__inner">
-							{% import "data/data.html" as filterItem %}
-							{% for item in filterItem.filter %}
-							<li class="filter-sm__inner-item">{{item.metal}}</li>
-							{% endfor %}
-						</ul>
-					</div>
-				</li>
-				<li class="filter-sm__item js-filter-sm-item">
-					Вставка
-					<div class="filter-sm__dropdown">
-						<ul class="filter-sm__inner">
-							{% import "data/data.html" as filterItem %}
-							{% for item in filterItem.filter %}
-							<li class="filter-sm__inner-item">{{item.insert}}</li>
-							{% endfor %}
-						</ul>
-					</div>
-				</li>
-				<li class="filter-sm__item js-filter-sm-item">
-					Бренд
-					<div class="filter-sm__dropdown">
-						<ul class="filter-sm__inner">
-							{% import "data/data.html" as filterItem %}
-							{% for item in filterItem.filter %}
-							<li class="filter-sm__inner-item">{{item.brand}}</li>
-							{% endfor %}
-						</ul>
-					</div>
-				</li>
-			</ul>
-			<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>
+			<div class="container">
+				<ul class="filter-sm">
+					<li class="filter-sm__item js-filter-sm-item">
+						Вид украшения
+						<div class="filter-sm__dropdown">
+							<ul class="filter-sm__inner">
+								{% import "data/data.html" as filterItem %}
+								{% for item in filterItem.filter %}
+								<li class="filter-sm__inner-item">{{item.view}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="filter-sm__item js-filter-sm-item">
+						Метал
+						<div class="filter-sm__dropdown">
+							<ul class="filter-sm__inner">
+								{% import "data/data.html" as filterItem %}
+								{% for item in filterItem.filter %}
+								<li class="filter-sm__inner-item">{{item.metal}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="filter-sm__item js-filter-sm-item">
+						Вставка
+						<div class="filter-sm__dropdown">
+							<ul class="filter-sm__inner">
+								{% import "data/data.html" as filterItem %}
+								{% for item in filterItem.filter %}
+								<li class="filter-sm__inner-item">{{item.insert}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="filter-sm__item js-filter-sm-item">
+						Бренд
+						<div class="filter-sm__dropdown">
+							<ul class="filter-sm__inner">
+								{% import "data/data.html" as filterItem %}
+								{% for item in filterItem.filter %}
+								<li class="filter-sm__inner-item">{{item.brand}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>
+			</div>
 		</div>
 		<!-- end filter-sm -->
 		<!-- begin sorting -->
 		<div class="sorting__wrap">
-			<ul class="sorting">
-				<li class=" sorting__item sorting__item_title js-filter-sorting">Сортировать по:</li>
-				<li class="sorting__item js-filter-sorting">по популярности</li>
-				<li class="sorting__item js-filter-sorting is-active">возрастанию цены</li>
-				<li class="sorting__item js-filter-sorting"> убыванию цены</li>
-			</ul>
+			<div class="container">
+				<ul class="sorting">
+					<li class=" sorting__item sorting__item_title js-filter-sorting">Сортировать по:</li>
+					<li class="sorting__item js-filter-sorting">по популярности</li>
+					<li class="sorting__item js-filter-sorting is-active">возрастанию цены</li>
+					<li class="sorting__item js-filter-sorting"> убыванию цены</li>
+				</ul>
+			</div>
 		</div>
 		<!-- end sorting -->
-	</div>
 	
 	<!-- begin catalog -->
 	<section class="catalog">

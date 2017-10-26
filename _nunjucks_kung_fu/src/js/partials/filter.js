@@ -1,8 +1,27 @@
 	//Filter
 
+	var	fSmWrap = $('.filter-sm__wrap');
+	var	fSmWrapOffset = $('.filter-sm__wrap').offset().top;
+	var fSmWrapClone = $('<div class="filter-sm--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
+	$(window).scroll(function (){
+		var winScrollTop = $(this).scrollTop();
+		if(winScrollTop >= fSmWrapOffset){
+			fSmWrap.addClass('is-fixed');
+			fSmWrapClone.show();
+		}else{
+			fSmWrap.removeClass('is-fixed');
+			fSmWrapClone.hide();
+		}
+	});
+
 	$('.js-filter-sm-item').click(function (){
 		$('.js-filter-sm-item').removeClass('is-active');
 		$(this).addClass('is-active');
+	});
+	$(document).click(function(event) {
+		if ($(event.target).closest('.js-filter-sm-item').length) return;
+		$('.js-filter-sm-item').removeClass('is-active');
+		event.stopPropagation();
 	});
 
 	$('.js-filter-sorting').click(function(){
