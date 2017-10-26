@@ -76,17 +76,17 @@ $(document).ready(function () {
 	//Popup
 	if($('.js-fancybox').length){
 		$('.js-fancybox').fancybox({
-			touch: false,
-
-			beforeShow: function() {
-				$("body").css({
-					'overflow-y': 'hidden'
-				});
-			},
-			afterClose: function() {
-				$("body").css({
-					'overflow-y': 'visible'
-				});
+			autoSize:!1,
+			fitToView:!1,
+			width:"100%",
+			height:"auto",
+			margin:0,
+			padding:0,
+			closeSpeed:0,
+			helpers:{
+				overlay:{
+					locked:!1
+				}
 			}
 		});
 	}

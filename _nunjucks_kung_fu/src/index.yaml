@@ -9,6 +9,7 @@ PageList:
   desc: Карточка товара
 - file: catalog.html
   ready: 50
+  desc: Каталог
 - file: lk.html
   desc: Личный кабинет
   ready: 50
