@@ -1,32 +1,32 @@
-ProjectTitle: SUNANGEL
+Projectdesc: SUNANGEL
 
 PageList:
 - file: home.html
   ready: 50
-  title: Главная
+  desc: Главная
 - file: product.html
   ready: 50
-  title: Карточка товара
+  desc: Карточка товара
 - file: catalog.html
   ready: 50
 - file: lk.html
-  title: Личный кабинет
+  desc: Личный кабинет
   ready: 50
 - file: basket.html
-  title: Корзина
+  desc: Корзина
   ready: 50
 - file: contacts.html
-  title: Контакты
+  desc: Контакты
   ready: 50
 - file: news.html
-  title: Новости
+  desc: Новости
   ready: 50
 - file: news-item.html
-  title: Новость
+  desc: Новость
   ready: 50
 - file: success.html
-  title: Завершение заказа
+  desc: Завершение заказа
   ready: 50
 - file: 404.html
   ready: 50
-  title: Страница ошибки
+  desc: Страница ошибки

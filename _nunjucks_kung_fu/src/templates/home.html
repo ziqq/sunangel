@@ -15,25 +15,25 @@ title: Index page
 	<section class="home">
 		<div class="container">
 
-<div class="product-item__wrap">
-	{% for i in range(0, 3) -%}
-	<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
-		<div class="product-item__img">
-			<a href="#"><!-- <img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"> -->{{mixin.img(340, 340)}}</a>
-		</div>
-		<div class="product-item__other">
-			<h3 class="product-item__title" itemprop="name"><a href="#">Подвески <br> и кулоны</a></h3>
-			<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<meta itemprop="priceCurrency" content="RUB" />
-				<span itemprop="price">от 8790 <i class="rub">a</i></span>
+			<div class="product-item__wrap">
+				{% for i in range(0, 3) -%}
+				<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+					<div class="product-item__img">
+						<a href="#"><!-- <img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"> -->{{mixin.img(340, 340)}}</a>
+					</div>
+					<div class="product-item__other">
+						<h3 class="product-item__title" itemprop="name"><a href="#">Подвески <br> и кулоны</a></h3>
+						<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+							<meta itemprop="priceCurrency" content="RUB" />
+							<span itemprop="price">от 8790 <i class="rub">a</i></span>
+						</div>
+						<div class="product-item__button">
+							<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+						</div>
+					</div>
+				</div>
+				{%- endfor %}
 			</div>
-			<div class="product-item__button">
-				<a href="#" class="slider__link btn btn_trans">Смотреть</a>
-			</div>
-		</div>
-	</div>
-	{%- endfor %}
-</div>
 
 			<div class="home-item__wrap">
 				<div class="home-item__wrap_left" style="background-image: url(img/general/weding.png)">
