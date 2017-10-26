@@ -1,2 +1,168 @@
+//home
+.home
+	padding: 20px 0 50px
+	+r(480)
+		padding-top: 0
+	.product-item
+		padding: 50px
+		+tr(.35s)
+		+span(4)
+		&:hover
+			background-color: $color-bg--lk
+			border-color: transparent
+		&:nth-child(3n)
+			margin-right: 0
+		+r(768)
+			+span(6)
+			border: none
+			&:nth-child(2n)
+				margin-right: 0
+			&:nth-child(3n)
+			margin-right: gutter()
+		+r(480)
+			padding-bottom: 0
+			margin: 0 auto
+			&:nth-child(2n)
+				margin: 0 auto
+			&:nth-child(3n)
+				margin: 0 auto
+		&__wrap
+			margin-bottom: 40px
+			+r(480)
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				align-items: center
+				align-content: center
+		&__title
+			color: $color-text
+			font-family: encore-50, sans-serif
+			font-size: rem(28)
+			text-transform: uppercase
+			letter-spacing: 2.17px
+		&__button
+			opacity: 1
+			text-align: center
+	.slider__link
+		left: auto
+		&::after
+			transform: translateY(-38%)
+
+//home-item
+.home-item
+	padding: 25px
+	text-align: center
+	+r(375)
+		padding: 25px 0
+	//home-item__wrap
+	&__wrap
+		display: flex
+		+r(768)
+			flex-wrap: wrap
+		&_left
+			display: flex
+			width: 56%
+			align-items: flex-end
+			padding: 350px 25px 25px
+			text-align: center
+			margin-right: 2%
+			background-color: #f2f6ff
+			background-position: top left
+			background-repeat: no-repeat
+			+r(768)
+				width: 100%
+				margin-right: 0
+			+r(480)
+				flex-wrap: wrap
+			+r(320)
+				padding: 320px 0 25px
+			.home-item
+				width: 50%
+				display: flex
+				flex-direction: column
+				position: relative
+				&:nth-child(2)
+					&::before
+						content: '. . . . .'
+						display: block
+						position: absolute
+						top: 16%
+						left: -33px
+						+rotate(90)
+				+r(480)
+					width: 100%
+					&:nth-child(2)
+						border-top: 1px solid $color-border
+						&::before
+							display: none
+
+				&__title
+					margin-bottom: 40px
+				&__desc
+					margin-bottom: 63px
+				.btn
+					&::after
+						right: 80px
+					&:hover
+						&::after
+							right: 70px
+					+r(1024)							
+						&::after
+							right: 55px
+						&:hover
+							&::after
+								right: 65px
+
+		&_right
+			display: flex
+			flex-direction: column
+			width: 42%
+			padding: 25px
+			text-align: center
+			background-color: #f5f5f5
+			+r(768)
+				width: 70%
+				margin: 30px auto
+			+r(480)
+				width: 100%
+			+r(320)
+				padding: 25px 0
+			.home-item
+				display: flex
+				align-items: center
+				&:nth-child(2n)
+					flex-direction: row-reverse
+				&__desc
+					span
+						color: $color-text
+						font-family: encore-100, sans-serif
+						font-size: rem(24)
+						+r(375)
+							font-size: rem(20)
+				.btn
+					&::after
+						transform: translateY(-41%)
+	//home-item__title
+	&__title
+		color: $color-text
+		font-family: encore-100, sans-serif
+		font-size: rem(36)
+		text-transform: uppercase
+		letter-spacing: 2.61px
+	//home-item__subtitle
+	&__subtitle
+		display: block
+		margin-bottom: 15px
+		color: $color-accent
+		font-family: encore-50, sans-serif
+		font-size: rem(24)
+	//home-item__desc
+	&__desc
+		display: block
+		color: #6c6c6c
+		font-size: rem(15)
+	//home-item__img
+
+//brands
 .brands
 	padding: 30px 0 50px

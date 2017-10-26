@@ -4,33 +4,96 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{% include "partials/_header.html" %}
 
-		{% include "partials/_slider.html" %}
+{% include "partials/_header.html" %}
+<!-- begin main -->
+<main class="main">
 
-		<!-- begin brands -->
-		<section class="brands">
-			<div class="container">
+	{% include "partials/_slider.html" %}
 
-				<div class="slider__wrap slider-brands">
-					<div class="slider js-slider-brands">
-						{% import "data/data.html" as brandItem %}
-						{% for brand in brandItem.brand %}
-						<div class="slider-brands__item">
-							<div class="slider-brands__img">
-								<img src="{{brand.img}}" alt="{{brand.alt}}">
-							</div>
-						</div>						
-						{% endfor %}
-					</div>
-					<div class="slider__dots"></div>
-				</div>
+	<!-- begin home -->
+	<section class="home">
+		<div class="container">
 
+<div class="product-item__wrap">
+	{% for i in range(0, 3) -%}
+	<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+		<div class="product-item__img">
+			<a href="#"><!-- <img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"> -->{{mixin.img(340, 340)}}</a>
+		</div>
+		<div class="product-item__other">
+			<h3 class="product-item__title" itemprop="name"><a href="#">Подвески <br> и кулоны</a></h3>
+			<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<meta itemprop="priceCurrency" content="RUB" />
+				<span itemprop="price">от 8790 <i class="rub">a</i></span>
 			</div>
-		</section>
-		<!-- end brands -->
+			<div class="product-item__button">
+				<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+			</div>
+		</div>
+	</div>
+	{%- endfor %}
+</div>
 
-	{% include "partials/_footer.html" %}
+			<div class="home-item__wrap">
+				<div class="home-item__wrap_left" style="background-image: url(img/general/weding.png)">
+					<div class="home-item">
+						<h3 class="h3 home-item__title">Свадебные <br> украшения</h3>
+						<h4 class="h3 home-item__subtitle">Обручальные кольца</h4>
+						<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+					</div>
+					<div class="home-item">
+						<p class="home-item__desc">Более 2000 моделей обручальных колец из серебра и золота различных оттенков на Ваш выбор!</p>
+						<h4 class="h3 home-item__subtitle">Кольца для помолвки</h4>
+						<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+					</div>
+				</div>
+				<div class="home-item__wrap_right">					
+					<h3 class="h3 home-item__title">Украшения</h3>
+					{% for i in range(0, 3) -%}
+					<div class="home-item">
+						<div class="home-item__img">{{mixin.img(250, 200)}}</div>
+						<div class="home-item__desc">
+							<span>С брилиантами</span>
+							<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+						</div>
+						
+					</div>
+					{%- endfor %}
+				</div>
+			</div>
+
+		</div>	
+	</section>
+	<!-- end home -->
+
+	<!-- begin brands -->
+	<section class="brands">
+		<div class="container">
+
+			<div class="slider__wrap slider-brands">
+				<div class="slider js-slider-brands">
+					{% import "data/data.html" as brandItem %}
+					{% for brand in brandItem.brand %}
+					<div class="slider-brands__item">
+						<div class="slider-brands__img">
+							<img src="{{brand.img}}" alt="{{brand.alt}}">
+						</div>
+					</div>						
+					{% endfor %}
+				</div>
+				<div class="slider__dots"></div>
+			</div>
+
+		</div>
+	</section>
+	<!-- end brands -->
+
+
+
+</main>
+<!-- end main -->
+
+{% include "partials/_footer.html" %}
 
 {% endblock %}

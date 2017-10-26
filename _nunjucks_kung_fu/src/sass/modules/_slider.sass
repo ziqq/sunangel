@@ -68,8 +68,15 @@
 	&__desc
 		margin-bottom: 40px
 		color: $color-text
+		position: relative
+		&::after
+			content: '. . . . .'
+			display: block
+			+vx
+			bottom: -35px
 		+r(1024)
 			margin-bottom: 10px
+			display: none
 		+r(768)
 			font-size: rem(15)
 	//slider__link
