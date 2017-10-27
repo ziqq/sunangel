@@ -4,7 +4,6 @@
 	width: 1350px
 	right: 0
 	bottom: 0
-	z-index: 999
 	background-color: $color-bg-dark-lighten
 	overflow-y: auto
 	transform: translateX(250%)
@@ -25,7 +24,6 @@
 			padding: 0 0 0 100px
 		+r(480)
 			padding-left: 30px
-
 	//filter__close
 	&__close
 		width: 52px
@@ -160,46 +158,6 @@
 		font-family: encore-200
 		font-size: rem(18)
 		color: $color-brown
-	//filter-item__part
-	&__part
-		// display: block
-		// margin-bottom: 15px
-		// padding-left: 35px
-		// position: relative
-		// cursor: pointer
-		// .text
-		// 	+tr(.35s)
-		// 	&:hover
-		// 		color: $color-accent
-		// 		& ~	.check
-		// 			border-color: $color-border-bg--dark
-		// input
-		// 	display: none
-		// 	&:checked
-		// 		+ .check
-		// 			border-color: $color-border-bg--dark
-		// 			&::after
-		// 				display: block
-		// .check
-		// 	width: 22px
-		// 	height: 22px
-		// 	+br(50%)
-		// 	border: 1px solid $color-text-btn
-		// 	background-color: $color-input-bg--dark
-		// 	position: absolute
-		// 	top: 1px
-		// 	left: 0
-		// 	&::after
-		// 		content: ''
-		// 		display: none
-		// 		width: 10px
-		// 		height: 10px
-		// 		+br(50%)
-		// 		background-color: $color-brown-lighten
-		// 		position: absolute
-		// 		top: 50%
-		// 		left: 50%
-		// 		transform: translate(-50%, -50%)
 	//filter-item__item
 	&__item
 		&_showmore
@@ -264,14 +222,12 @@
 			top: 0
 			left: 0
 			width: 100%
-
 	//filter-sm__item
 	&__item
 		display: inline-block
 		vertical-align: middle
 		position: relative
 		padding: 0 20px
-		position: relative
 		cursor: pointer
 		
 		&.is-active
@@ -313,7 +269,6 @@
 		&::before
 			left: 15px
 			margin-left: 0
-
 	//filter-sm__inner
 	&__inner
 		text-align: left
@@ -328,8 +283,6 @@
 			+text-overflow
 			&:hover
 				background-color: $color-brown-lighten
-
-	
 	//filter-sm__btn
 	&__btn
 		display: inline-block
