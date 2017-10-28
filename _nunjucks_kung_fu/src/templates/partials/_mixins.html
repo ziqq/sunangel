@@ -1,5 +1,5 @@
 {% macro icon(i, class) %}
-<svg class="icon icon-{{i}} {{class}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+<svg class="icon icon-{{i}} {{class}}"><use xlink:href="#{{i}}"></use></svg>
 {% endmacro %}
 
 {% macro img(w, h, class) %}

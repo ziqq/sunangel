@@ -1,22 +1,5 @@
 	//Filter
 
-	if($('.filter-sm__wrap').lenght){
-		var	fSmWrap = $('.filter-sm__wrap');
-		var	fSmWrapOffset = $('.filter-sm__wrap').offset().top;
-		var fSmWrapClone = $('<div class="filter-sm--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
-		$(window).scroll(function (){
-			var winScrollTop = $(this).scrollTop();
-			if(winScrollTop >= fSmWrapOffset){
-				fSmWrap.addClass('is-fixed');
-				fSmWrapClone.show();
-			}else{
-				fSmWrap.removeClass('is-fixed');
-				fSmWrapClone.hide();
-			}
-		});
-	}
-
-
 	$('.js-filter-sm-item').click(function (){
 		$('.js-filter-sm-item').removeClass('is-active');
 		$(this).addClass('is-active');
@@ -64,18 +47,38 @@
 		$('.js-filter-open').html('фильтр').appendTo('.block-move');
 	}
 
-	var target = $('.footer');
-	var targetPos = target.offset().top;
-	var winHeight = $(window).height();
-	var scrollToElem = targetPos - winHeight;
-	$(window).scroll(function(){
-		var winScrollTop = $(this).scrollTop();
-		if(winScrollTop > scrollToElem){
-			$('.js-filter-open').css({
-				backgroundColor: '#fff',
-				color          : '#222222'
-			});
-		}else{
-			$('.js-filter-open').removeAttr('style');
-		}
-	});
+	function filterBtnColor (){
+		var target = $('.footer');
+		var targetPos = target.offset().top;
+		var winHeight = $(window).height();
+		var scrollToElem = targetPos - winHeight;
+		$(window).scroll(function(){
+			var winScrollTop = $(this).scrollTop();
+			if(winScrollTop > scrollToElem){
+				$('.js-filter-open').css({
+					backgroundColor: '#fff',
+					color          : '#222222'
+				});
+			}else{
+				$('.js-filter-open').removeAttr('style');
+			}
+		});
+	}filterBtnColor();
+
+	function filterSm (){
+		var sorting = $('.sorting__wrap ');
+		var	fSmWrap = $('.filter-sm__wrap');
+		var	fSmWrapOffset = $('.filter-sm__wrap').offset();
+		var fSmWrapClone = $('<div class="filter-sm--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
+		$(window).scroll(function (){
+			var winScrollTop = $(this).scrollTop();
+			if(winScrollTop >= fSmWrapOffset.top){
+				fSmWrap.addClass('is-fixed');
+				fSmWrapClone.show();
+			}else{
+				fSmWrap.removeClass('is-fixed');
+				fSmWrapClone.hide();
+			}
+		});
+	}filterSm();
+	

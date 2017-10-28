@@ -19,11 +19,12 @@
     "jquery": "2.1.4",
     "jquery.maskedinput": "^1.4.1",
     "jquery.nicescroll": "^3.7.6",
-    "slick-carousel": "slick.js#^1.8.1",
+    "slick-carousel": "^1.8.1",
     "bxslider-4": "bxSlider#^4.2.12",
     "fancybox": "fancyBox#^3.1.25",
     "font-awesome": "fontawesome#^4.7.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "equalheights": "equalHeights#*"
   }
 }

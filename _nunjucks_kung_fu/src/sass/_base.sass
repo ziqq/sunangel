@@ -100,11 +100,11 @@ img ,.img-responsive
 	font-style: normal
 
 .hidden
-	display: none
+	display: none !important
 
 .hidden_sm
 	+r(480)
-		display: none
+		display: none !important
 
 .wrapper
 	position: relative
@@ -149,12 +149,22 @@ img ,.img-responsive
 			color: $color-text
 	// p
 	// 	color: $color-text-bg-dark
-	.btn
-		color: $color-text-btn
-		background-color: $color-brown
-		&:hover
-			color: $color-text-btn
-			background-color: $color-brown-lighten
+	// .btn
+	// 	color: $color-text-btn
+	// 	background-color: $color-brown
+	// 	&:hover
+	// 		color: $color-text-btn
+	// 		background-color: $color-brown-lighten
+	// 	&_int
+	// 		color: $color-text
+	// 		background-color: transparent
+	// 		&:hover
+	// 			color: $color-text-lighten
+	// 			background-color: transparent		
+	// 	&_popup
+	// 		background-color: transparent
+	// 		&:hover
+	// 			background-color: transparent
 
 	.fa, .phone
 		color: rgba(#fff, .75)
@@ -251,7 +261,6 @@ img ,.img-responsive
 			+s(add-to-card)
 		&:hover
 			color: $color-accent
-
 	//btn FAVORITE
 	&_fav
 		display: inline-block
@@ -276,7 +285,6 @@ img ,.img-responsive
 			top: 50%
 			margin-top: -10px
 			margin-left: -10px
-
 	//btn_transparent
 	&_transparent
 		padding: 14px 15px 14px 31px
@@ -287,7 +295,6 @@ img ,.img-responsive
 		&:hover
 			border-color: $color-brown
 			background-color: transparent
-
 	//btn_gray
 	&_gray
 		min-width: auto
@@ -298,7 +305,6 @@ img ,.img-responsive
 		letter-spacing: 1.5px
 		&:hover
 			background-color: darken($color-border, 10%)
-
 	//btn_trans
 	&_trans
 		position: relative
@@ -313,7 +319,6 @@ img ,.img-responsive
 		&:hover
 			&::after
 				right: 20px
-
 	//btn_shops
 	&_shops
 		min-width: auto
@@ -329,7 +334,6 @@ img ,.img-responsive
 		border: 1px solid transparent
 		border-radius: 3px
 		background-color: #fff
-
 	//btn_chexkout
 	&_checkout
 		position: relative
@@ -347,8 +351,6 @@ img ,.img-responsive
 			color: #fff
 			&::after
 				color: #fff
-
-
 	//btn_cheack
 	&_check
 		display: block
@@ -385,7 +387,40 @@ img ,.img-responsive
 				top: -2px
 				right: 50px
 				display: none
-
+	//btn_int
+	&_int
+		padding: 15px 0
+		font-size: rem(13)
+		color: $color-text
+		border: 0
+		background-color: transparent
+		position: relative
+		&::before
+			content: '\f00d'
+			font-family: FontAwesome
+			font-size: 18px
+			color: $color-accent
+			+vy
+			left: 15px
+	//btn_basket-in
+	&_popup
+		padding: 8px 20px
+		background-color: transparent
+		+br(0)
+		&:hover
+			background-color: transparent
+		&-basket
+			border: 1px solid $color-accent
+			color: $color-accent
+			&:hover
+				color: $color-accent
+				box-shadow: inset 0 0 10px 1px rgba($color-accent, .7)
+		&-next
+			border: 1px solid $color-text-light
+			color: $color-text-light
+			&:hover
+				color: $color-text-light
+				box-shadow: inset 0 0 10px 1px rgba($color-text-light, .7)
 	//btn_next
 	&_next
 		display: inline-block
@@ -546,16 +581,6 @@ input
 			top: 0
 			&::after
 				display: none !important
-				// content: ''
-				// width: 35px
-				// height: 35px
-				// +br(50%)
-				// background-color: transparent
-				// border: 1px solid $color-border-bg--dark
-				// position: absolute
-				// top: 50%
-				// left: 50%
-				// transform: translate(-50%, -50%)
 			&::before
 				display: none
 				content: '✔'

@@ -19,13 +19,9 @@ gulp.task('js', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('js:partials', function () {
-    gulp.src(config.src.js + '/partials/**/*.js')
-        .pipe(include())
-        .on('error', function(){notify("Javascript include error");})
-        //.pipe(uglify())
-        .pipe(babel())
-        .pipe(gulp.dest(config.dest.js+'/'))
+gulp.task('js:assets', function () {
+    gulp.src(config.src.jsAssets + '/**/*')
+        .pipe(gulp.dest(config.dest.jsAssets + '/'))
         .pipe(reload({stream: true}));
 });
 
@@ -42,7 +38,7 @@ gulp.task('js:libs', function() {
 gulp.task('js:all', function(js) {
     runSequence(
             'js:libs',
-            'js:partials',
+            'js:assets',
             'js',
             js
         );
@@ -51,5 +47,5 @@ gulp.task('js:all', function(js) {
 gulp.task('js:watch', function() {
     gulp.watch(config.src.js + '/main.js', ['js']);
     gulp.watch(config.src.js + '/libs.js', ['js:libs']);
-    gulp.watch(config.src.js + '/partials/**/*.js', ['js:partials']);
+    gulp.watch(config.src.jsAssets + '/**/*', ['js:assets']);
 });

@@ -23,8 +23,9 @@ title: Подвески со знаками зодиака
 		<div class="filter-sm__wrap">
 			<div class="container">
 				<ul class="filter-sm">
-					<li class="filter-sm__item js-filter-sm-item">
+					<li class="filter-sm__item js-filter-sm-item is-checked"">
 						Вид украшения
+						<span class="filter-sm__reset"></span>
 						<div class="filter-sm__dropdown">
 							<ul class="filter-sm__inner">
 								{% import "data/data.html" as filterItem %}
@@ -34,8 +35,9 @@ title: Подвески со знаками зодиака
 							</ul>
 						</div>
 					</li>
-					<li class="filter-sm__item js-filter-sm-item">
+					<li class="filter-sm__item js-filter-sm-item is-checked">
 						Метал
+						<span class="filter-sm__reset"></span>
 						<div class="filter-sm__dropdown">
 							<ul class="filter-sm__inner">
 								{% import "data/data.html" as filterItem %}
@@ -47,6 +49,7 @@ title: Подвески со знаками зодиака
 					</li>
 					<li class="filter-sm__item js-filter-sm-item">
 						Вставка
+						<span class="filter-sm__reset"></span>
 						<div class="filter-sm__dropdown">
 							<ul class="filter-sm__inner">
 								{% import "data/data.html" as filterItem %}
@@ -58,6 +61,7 @@ title: Подвески со знаками зодиака
 					</li>
 					<li class="filter-sm__item js-filter-sm-item">
 						Бренд
+						<span class="filter-sm__reset"></span>
 						<div class="filter-sm__dropdown">
 							<ul class="filter-sm__inner">
 								{% import "data/data.html" as filterItem %}
@@ -67,8 +71,11 @@ title: Подвески со знаками зодиака
 							</ul>
 						</div>
 					</li>
+					<li class="filter-sm__item">
+						<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>
+					</li>
 				</ul>
-				<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>
+				
 			</div>
 		</div>
 		<!-- end filter-sm -->
@@ -88,19 +95,11 @@ title: Подвески со знаками зодиака
 	<!-- begin catalog -->
 	<section class="catalog">
 		<div class="container">
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
-			{{item.product()}}
+
+			{% for i in range(0, 8) -%}
+				{{item.product()}}
+			{%- endfor%}
+
 		</div>
 
 		<div class="container">
@@ -134,7 +133,228 @@ title: Подвески со знаками зодиака
 
 	
 
-	{% include "partials/_filter.html" %}
+	<!-- begin filtr -->
+<div class="filter js-filter">
+	<div class="filter__top">
+		<div class="filter__inner">
+			<h2 class="filter__title">Фильтр</h2>
+			<span class="sa-close filter__close js-filter-close">{{mixin.icon('close')}}</span>
+		</div>			
+	</div>
+
+	<div class="filter__content">
+		<div class="filter__inner filter__content_inner">
+
+			<div class="filter-item__wrap">
+				<div class="filter-item">
+					<span class="filter-item__title">Вид украшения</span>
+					<div class="filter-item__list">
+
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="text">Подвески</span>
+							<span class="check"></span>
+
+							<div class="filter-item__dropdown checkbox__dropdown js-checkbox-dropdown">
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Подвески</span>
+									<span class="check"></span>
+								</label>
+							</div>
+						</label>
+
+						{% import "data/data.html" as filterItem %}
+
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title  {{item.class}}">
+							<input type="checkbox">
+							<span class="text">{{item.view}}</span>
+							<span class="check"></span>
+						</label>
+						{% endfor %}
+
+						<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+					</div>
+				</div>
+
+				<div class="filter-item">
+					<span class="filter-item__title">Металл</span>
+					<div class="filter-item__list">
+
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="text">Золото	</span>
+							<span class="check"></span>
+
+							<div class="filter-item__dropdown checkbox__dropdown js-checkbox-dropdown">
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Белое золото</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Красное золото</span>
+									<span class="check"></span>
+								</label>
+								<label class="filter__checkbox checkbox">
+									<input type="checkbox">
+									<span class="text">Комбинированное золото</span>
+									<span class="check"></span>
+								</label>
+							</div>
+						</label>
+
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="text">Серебро</span>
+							<span class="check"></span>
+						</label>
+
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="text">Паладий</span>
+							<span class="check"></span>
+						</label>
+
+						<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="text">Платина</span>
+							<span class="check"></span>
+						</label>
+
+						<!-- <span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span> -->
+					</div>
+				</div>
+
+				<div class="filter-item">
+					<span class="filter-item__title">Вставка</span>
+					<div class="filter-item__list">
+
+
+						{% import "data/data.html" as filterItem %}
+
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox_sq checkbox__title js-checkbox-title {{item.class}}">
+							<input type="checkbox">
+							<span class="text">{{item.insert}}</span>
+							<span class="check"></span>
+						</label>
+						{% endfor %}
+
+						<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="filter-item__wrap">
+				<div class="filter-item">
+					<span class="filter-item__title">Тематика</span>
+					<div class="filter-item__list">
+				
+				
+						{% import "data/data.html" as filterItem %}
+				
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox_sq checkbox__title js-checkbox-title {{item.class}}">
+							<input type="checkbox">
+							<span class="text">{{item.theme}}</span>
+							<span class="check"></span>
+						</label>
+						{% endfor %}
+				
+						<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+					</div>
+				</div>
+				
+				<div class="filter-item">
+					<span class="filter-item__title">Для кого</span>
+					<div class="filter-item__list">
+				
+				
+						{% import "data/data.html" as filterItem %}
+				
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox checkbox__title js-checkbox-title {{item.class}}">
+							<input type="checkbox">
+							<span class="text">{{item.for}}</span>
+							<span class="check"></span>
+						</label>
+						{% endfor %}
+				
+						<span class="filter__checkbox checkbox filter-item__item_showmore js-filter-showmore">Показать еще</span>
+					</div>
+				</div>
+				
+				<div class="filter-item">
+					<span class="filter-item__title">Цвет вставки</span>
+					<div class="filter-item__list filter-item__list_color">
+				
+				
+						{% import "data/data.html" as filterItem %}
+						
+						{% for item in filterItem.filter %}
+						<label class="filter__checkbox checkbox checkbox checkbox_color checkbox__title js-checkbox-title">
+							<input type="checkbox">
+							<span class="check check_color" style="background-color: {{item.color}}"></span>
+						</label>
+						{% endfor %}
+				
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="filter__bottom">
+		<div class="filter__inner">
+			<div class="filter__action">
+				<button class="btn filter__btn">Применить</button>
+				<button class="btn btn_reset filter__reset">Сбросить фильтры</button>
+			</div>
+			<h3 class="filter__logo">sunangel</h3>
+		</div>
+	</div>	
+</div>
+<!-- end filtr -->
 
 </main>
 <!-- end main -->

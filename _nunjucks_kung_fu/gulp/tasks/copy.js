@@ -29,8 +29,6 @@ gulp.task('copy:img', function() {
 });
 
 gulp.task('copy', [
-    'sprite:png',
-    'sprite:svg',
     'copy:img',
     // 'copy:rootfiles',
     'copy:libs',

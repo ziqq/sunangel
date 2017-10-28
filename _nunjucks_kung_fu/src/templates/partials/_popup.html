@@ -95,23 +95,67 @@
 	<!-- end popup-callback -->
 
 	<!-- begin popup-promocode -->
-	<div id="promocode" class="popup bg--dark promocode">
+	<div id="promocode" class="popup popup_lg bg--dark promocode">
 
 		<h3 class="popup__title"> <span>Промокод</span> <br> в подарок</h3>
 
 		<div class="popup__img"><img src="img/general/promocode.png" alt="Промокод"></div>
-		<span class="popup__number">500 <span>рублей</span></span>
+		<span class="popup__number">500 <span class="rub">a</span></span>
 
-		<label class="sa-input__box">
-			<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-			<span class="sa-input__placeholder">Введите Ваш email</span>
-			<p class="popup__desc">Промокод на 500 рублей будет выслан на Ваш почтовый ящик</p>
-		</label>
+		<div class="promocode__inner">
+			<label class="sa-input__box">
+				<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+				<span class="sa-input__placeholder">Введите Ваш email</span>
+				<p class="popup__desc">Промокод на 500 рублей будет выслан на Ваш почтовый ящик</p>
+			</label>
 
-		<button class="btn btn_check">получить</button>
 
-		<p class="popup__desc">Наш менеджер свяжется с Вами <br> в ближайшее время и ответит на все вопросы</p>
+
+			<div class="popup__buttons">
+				<button class="btn btn_checkout">получить</button>
+				<button class="btn btn_int js-popup--close">мне не интересно</button>
+			</div>
+		</div>
 	</div>
 	<!-- end popup-promocode -->
 
+	<!-- begin popup-sale -->
+	<div id="sale" class="popup popup_lg bg--dark sale">
+
+		<h3 class="popup__title"> <span>Закрытая</span> <br>распродажа</h3>
+
+		<div class="popup__inner">
+			<div class="popup__img"><img src="img/general/popup-sale.png" alt="Распродажа"></div>
+			<div class="promocode__inner">
+				<p class="popup__desc">Воспользуйтесь <br> скидкой по приглошению  <br> от 01.1217 до 20.0118</p>
+				<div class="popup__buttons">
+					<button class="btn btn_trans">Узнать подробности</button>
+					<button class="btn btn_int js-popup--close">мне не интересно</button>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<!-- end popup-sale -->
+
+	<!-- begin basket-in -->
+	<div id="basket-in" class="popup popup_lg bg--dark basket-in">
+
+		<h3 class="popup__title">Товар добавлен в корзину</h3>
+		<div class="popup__buttons">
+			<a href="/basket.html" class="btn btn_popup btn_popup-basket">Перейти в корзину</a>
+			<a href="javascript:void(0);" class="btn btn_popup btn_popup-next js-popup--close">Продолжить покупки</a>
+		</div>		
+	</div>
+	<!-- end basket-in -->
+
+	<!-- begin favorite-in -->
+	<div id="favorite-in" class="popup popup_lg bg--dark favorite-in">
+
+		<h3 class="popup__title">Товар добавлен в избранное</h3>
+		<div class="popup__buttons">
+			<a href="/basket.html" class="btn btn_popup btn_popup-basket">Перейти в избранное</a>
+			<a href="javascript:void(0);" class="btn btn_popup btn_popup-next js-popup--close">Продолжить покупки</a>
+		</div>		
+	</div>
+	<!-- end favorite-in -->
 </div>

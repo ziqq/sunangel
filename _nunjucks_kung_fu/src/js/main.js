@@ -3,8 +3,8 @@ $(document).ready(function () {
 	//Partials
 	//=include partials/header.js
 	//=include partials/slider.js
-	//=include partials/filter.js
 	//=include partials/basket.js
+	//=include partials/filter.js
 
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').niceScroll({
@@ -23,9 +23,9 @@ $(document).ready(function () {
 		$(this).getNiceScroll().resize();
 	});
 
-	if($(window).width <= 768 ){
-		$('.filter-item__wrap').remove();
-	}
+	// if($(window).width <= 768 ){
+	// 	$('.filter-item__wrap').remove();
+	// }
 	
 
 	//Mask
@@ -79,6 +79,7 @@ $(document).ready(function () {
 			autoSize:!1,
 			fitToView:!1,
 			width:"100%",
+			maxWidth: '560px',
 			height:"auto",
 			margin:0,
 			padding:0,
@@ -90,6 +91,7 @@ $(document).ready(function () {
 			}
 		});
 	}
+	$('.js-popup--close').click(function (){$.fancybox.close();});
 
 	$('img').on('dragstart', function(event) { event.preventDefault(); });
 
