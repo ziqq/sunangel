@@ -23,11 +23,6 @@ $(document).ready(function () {
 		$(this).getNiceScroll().resize();
 	});
 
-	// if($(window).width <= 768 ){
-	// 	$('.filter-item__wrap').remove();
-	// }
-	
-
 	//Mask
 	if($('.phone-mask').length){
 		$('.phone-mask').mask("+7(999) 999-9999");
@@ -95,7 +90,10 @@ $(document).ready(function () {
 
 	$('img').on('dragstart', function(event) { event.preventDefault(); });
 
-	
+	//Go to top
+	$('.go-top').click(function (){
+		$('html, body').animate({scrollTop: 0}, 800);
+	});
 
 	//map-text close
 	$('.js-map-text-close').click(function (){

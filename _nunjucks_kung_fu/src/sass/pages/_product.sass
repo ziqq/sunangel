@@ -200,19 +200,29 @@
 					top: 2px
 		&.is-visible
 			.extra-item__dropdown
-				display: block
+				visibility: visible
+				opacity: 1
+				-webkit-filter: none
+				filter: none
+				display: block!important
+				top: 34px
+				pointer-events: auto
 		//extra-item__dropdown
 		&__dropdown
-			display: none
 			padding: 20px 25px
 			position: absolute
 			width: max-content
-			top: 34px
+			top: 44px
 			left: -7px
 			color: $color-text
 			background-color: #fff
 			+br(3px)
 			z-index: 99
+			pointer-events: none
+			visibility: hidden
+			opacity: 0
+			filter: alpha(opacity=0)
+			transition: opacity 200ms linear, top 200ms linear, bottom 200ms linear, visibility 200ms linear
 			&::before
 				content: ''
 				display: block

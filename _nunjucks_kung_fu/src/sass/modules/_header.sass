@@ -95,18 +95,26 @@
 		color: $color-brown
 		border-bottom-color: transparent
 		.city__inner
-			display: block
+			visibility: visible
+			opacity: 1
+			filter: none
+			display: block!important
+			top: 23px
+			pointer-events: auto
 
 	&__inner		
-		display: none
 		position: absolute
-		top: 23px
+		top: 33px
 		left: -20px
 		right: -20px
 		background-color: #FFF
-		// border: 1px solid $color-text-light
 		+bs(0 0 30px 1px rgba($color-text, .5))
 		z-index: 10
+		pointer-events: none
+		visibility: hidden
+		opacity: 0
+		filter: alpha(opacity=0)
+		transition: opacity 150ms linear, top 150ms linear, bottom 150ms linear, visibility 150ms linear
 		&::before
 			content: ''
 			display: block
@@ -239,6 +247,15 @@
 	&__item
 		display: inline-block
 		position: relative
+		&:hover
+			> .action__dropdown
+				visibility: visible
+				opacity: 1
+				-webkit-filter: none
+				filter: none
+				display: block
+				top: 40px
+				pointer-events: auto
 		& + &
 			margin-left: 50px
 			+r(768)
@@ -272,21 +289,27 @@
 				padding-right: 15px
 
 	&__dropdown
-		display: none
 		min-width: 320px
 		width: 460px
 		padding: 0 30px 35px
 		text-align: left
 		position: absolute
-		top: 45px
+		top: 55px
 		left: 0
 		z-index: 99
+		pointer-events: none
+		visibility: hidden
+		opacity: 0
+		filter: alpha(opacity=0)
+		transition: opacity 100ms linear, top 100ms linear, bottom 100ms linear, visibility 100ms linear
 		+beforearr($color-bg-darken, t, 22, 11)
 		&::before
 			top: -11px
 			margin-left: -11px
 		.sa-close
 			display: block !important
+		+r(480)			
+			display: none !important
 	&__title
 		margin-bottom: 40px
 		padding-top: 30px
@@ -325,7 +348,7 @@
 +r(480)
 	.mobile-search
 		position: absolute
-		top: -100%
+		top: -200%
 		left: 0
 		width: 100%
 		+tr(.35s)
@@ -452,10 +475,13 @@
 			.nicescroll-rails
 				left: 456px !important
 	&__img
-		margin-bottom: 40px
+		width: 150px
+		margin: 0 auto 40px
 		img
 			margin: 0 auto
 	&__desc
+		display: block
+		margin-bottom: 30px
 		text-align: center
 		font-size: rem(14)
 		line-height: 1.3

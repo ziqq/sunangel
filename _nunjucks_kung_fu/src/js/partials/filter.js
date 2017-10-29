@@ -17,6 +17,7 @@
 	
 	$('.js-filter-open').click(function (){
 		$('.filter').addClass('is-open');
+		$('.go-top').css('display', 'none');
 		$('body').addClass('is-fixed-bg');
 		return false
 
@@ -24,6 +25,7 @@
 
 	$('.js-filter-close').click(function (){
 		$('.filter').removeClass('is-open');
+		$('.go-top').removeAttr('style');
 		$('body').removeClass('is-fixed-bg');
 	});
 
@@ -68,11 +70,11 @@
 	function filterSm (){
 		var sorting = $('.sorting__wrap ');
 		var	fSmWrap = $('.filter-sm__wrap');
-		var	fSmWrapOffset = $('.filter-sm__wrap').offset();
+		var	fSmWrapOffset = $('.filter-sm__wrap').offset().top;
 		var fSmWrapClone = $('<div class="filter-sm--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
 		$(window).scroll(function (){
 			var winScrollTop = $(this).scrollTop();
-			if(winScrollTop >= fSmWrapOffset.top){
+			if(winScrollTop >= fSmWrapOffset){
 				fSmWrap.addClass('is-fixed');
 				fSmWrapClone.show();
 			}else{

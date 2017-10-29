@@ -592,7 +592,6 @@ input
 
 //Loading
 .loading
-	display: none
 	position: fixed
 	top: 0
 	left: 0
@@ -716,6 +715,34 @@ input
 				color: $color-text
 		&.is-active
 			color: $color-text
+
+//GoTOP
+.go-top
+	width: 35px
+	height: 35px
+	text-align: center
+	position: fixed
+	right: 10px
+	bottom: 10px
+	border: 1px solid $color-brown
+	color: $color-brown
+	cursor: pointer
+	+tr(.35s)
+	z-index: 97
+	&::before
+		content: '\f102'
+		font-family: FontAwesome
+		font-size: rem(22)
+		line-height: 35px
+		color: $color-brown
+		+tr(.35s)
+	&:hover
+		color: $color-text-btn
+		border: 1px solid $color-text-btn
+		&::before
+			color: $color-text-btn 
+	+r(480)
+		bottom: 50px
 
 
 @import layouts

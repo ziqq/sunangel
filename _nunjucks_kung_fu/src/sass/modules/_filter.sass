@@ -200,7 +200,7 @@
 		&_color
 			width: 150px
 
-//filtr-sm
+//filtr-sm__reset
 .filter-sm
 	+r(480)
 		display: none
@@ -248,7 +248,13 @@
 		&.is-active
 			color: $color-accent
 			.filter-sm__dropdown
-				display: block
+				visibility: visible
+				opacity: 1
+				-webkit-filter: none
+				filter: none
+				display: block!important
+				top: 40px
+				pointer-events: auto
 
 		&.is-checked
 			color: $color-text-btn
@@ -281,9 +287,8 @@
 			color: $color-accent
 	//filter-sm__dropdown
 	&__dropdown
-		display: none
 		position: absolute
-		top: 40px
+		top: 50px
 		left: 20px
 		width: 100%
 		min-width: 170px
@@ -291,6 +296,11 @@
 		z-index: 99
 		box-shadow: 0 0px 30px 1px rgba(#000, .5)
 		+beforearr(#fff, t, 12, 6)
+		pointer-events: none
+		visibility: hidden
+		opacity: 0
+		filter: alpha(opacity=0)
+		transition: opacity 150ms linear, top 150ms linear, bottom 150ms linear, visibility 150ms linear
 		&::before
 			left: 15px
 			margin-left: 0
@@ -333,7 +343,7 @@
 			bottom: 0
 			top: auto
 			width: 100%
-			z-index: 990
+			z-index: 115
 			background-color: $color-bg-darken
 			padding: 10px 0
 			text-transform: uppercase

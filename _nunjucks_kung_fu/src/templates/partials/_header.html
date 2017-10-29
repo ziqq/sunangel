@@ -127,15 +127,15 @@
 						<div class="action__dropdown bg--dark">
 							<h4 class="action__title">Избранное</h4>
 
-							<div class="favorite__clean hidden">
+							<div class="favorite__clean">
 								<div class="favorite__img">
 									<img src="../img/general/favorite-img.png" alt="Избранное" class="img-responsive">
 								</div>
 								<p class="favorite__desc">В избранном пока пусто. <br> Чтобы добавить украшения в избранное, воспользуйтесь каталогом нашего магазина.</p>
 							</div>
 
-							<div class="favorite__inner">
-
+							<div class="favorite__inner hidden">
+								{% for i in range(0, 10) -%}
 								<div class="cart-item">
 									<div class="cart-item__img">
 										{{mixin.img(60, 60)}}
@@ -145,85 +145,8 @@
 									<span class="cart-item__del del">
 										{{mixin.icon('close')}}
 									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-
+								</div>		
+								{%- endfor%}	
 							</div>
 
 							<div class="cart__action">
@@ -247,6 +170,7 @@
 							</div>
 
 							<div class="cart__inner">
+								{% for i in range(0, 10) -%}
 								<div class="cart-item">
 									<div class="cart-item__img">
 										{{mixin.img(60, 60)}}
@@ -257,56 +181,7 @@
 										{{mixin.icon('close')}}
 									</span>
 								</div>
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
-								<div class="cart-item">
-									<div class="cart-item__img">
-										{{mixin.img(60, 60)}}
-									</div>
-									<span class="cart-item__text">Золотая подвеска с минеральным стеклом и фианитами</span>
-									<span class="cart-item__price">13 490 <i class="rub">a</i></span>
-									<span class="cart-item__del">
-										{{mixin.icon('close')}}
-									</span>
-								</div>
+								{% endfor %}								
 							</div>
 								<div class="cart__action">
 									<a href="/cart.html" title="Перейти в корзину" class="btn">Перейти в корзину</a>
