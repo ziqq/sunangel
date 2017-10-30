@@ -1,5 +1,9 @@
 
-	$('.main').css('paddingBottom', $('.footer').outerHeight(true));
+	// function mainP (){
+	// 	$('.main').css('paddingBottom', $('.footer').outerHeight(true));
+	// }mainP();
+	// $(window).resize(mainP());
+	
 
 	if ($(window).width() <= 480) {
 		//скрытие и отображение меню при скроле

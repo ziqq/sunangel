@@ -287,15 +287,16 @@
 			color: $color-accent
 	//filter-sm__dropdown
 	&__dropdown
+		padding: 15px 10px
 		position: absolute
 		top: 50px
 		left: 20px
 		width: 100%
-		min-width: 170px
-		background-color: #fff
+		min-width: 230px
+		background-color: $color-bg-darken
 		z-index: 99
 		box-shadow: 0 0px 30px 1px rgba(#000, .5)
-		+beforearr(#fff, t, 12, 6)
+		+beforearr($color-bg-darken, t, 12, 6)
 		pointer-events: none
 		visibility: hidden
 		opacity: 0
@@ -304,6 +305,18 @@
 		&::before
 			left: 15px
 			margin-left: 0
+		.filter-item
+			width: 100%
+			margin: auto
+			float: none
+			text-align: left
+			.checkbox
+				font-family: encore-100, sans-serif
+				color: rgba(#fff, 0.7)
+				&:last-child
+					margin-bottom: 0
+				&.is-not-active
+
 	//filter-sm__inner
 	&__inner
 		text-align: left

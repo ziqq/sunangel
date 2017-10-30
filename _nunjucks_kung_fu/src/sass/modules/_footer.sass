@@ -4,10 +4,6 @@
 	background-image: url("../img/general/footer-bg.jpg")
 	background-size: cover
 	background-position: top center
-	position: absolute
-	left: 0
-	bottom: 0
-	width: 100%
 	+r(480)
 		padding: 50px 0
 
@@ -38,6 +34,18 @@
 		padding-top: 13px
 		padding-bottom: 11px
 		font-family: oswald-400, sans-serif
+		position: relative
+		&::after
+			display: none
+		+r(480)
+			display: inline-block
+			&::after
+				display: block
+				content: '\f107'
+				font-family: FontAwesome
+				color: $color-brown
+				+vy
+				right: -25px
 	&__wrap
 		+r(768)
 			display: flex

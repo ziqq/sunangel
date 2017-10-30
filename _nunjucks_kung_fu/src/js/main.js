@@ -71,6 +71,7 @@ $(document).ready(function () {
 	//Popup
 	if($('.js-fancybox').length){
 		$('.js-fancybox').fancybox({
+			touch: false,
 			autoSize:!1,
 			fitToView:!1,
 			width:"100%",
@@ -108,6 +109,14 @@ $(document).ready(function () {
 		$('.about-nav__item').removeClass('is-active');
 		$(this).addClass('is-active');
 	});
+
+	//footer accordeon
+	if($(window).width() <= 480){
+		$(".footer .footer-list").hide().prev().click(function() {
+			$(this).parents(".footer").find(".footer-list").not(this).slideUp().prev().removeClass("is-active");
+			$(this).next().not(":visible").slideDown().prev().addClass("is-active");
+		});		
+	}
 
 
 	//Map

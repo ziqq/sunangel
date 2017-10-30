@@ -17,6 +17,7 @@
 		padding-left: 65px
 		+r(480)
 			padding-left: 0
+			padding-top: 30px
 		//product-text__action
 		&__action
 			margin-bottom: 30px
@@ -310,7 +311,11 @@
 		left: 0
 		transform: translateY(-60%)
 		+r(480)
-			display: none
+			top: auto
+			bottom: -30px
+			transform: translateY(0)
+			text-align: center
+			width: 100%;
 		.product-slider__item
 			display: block
 			margin: 16px 2px
@@ -322,6 +327,8 @@
 				border: 1px solid $color-brown-lighten
 			&.active
 				border: 1px solid $color-brown-lighten
+			+r(480)
+				display: inline-block
 			img
 				@extend %i
 
