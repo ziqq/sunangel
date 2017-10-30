@@ -49,11 +49,10 @@
 		$('.js-filter-open').html('фильтр').appendTo('.block-move');
 	}
 
-	if($('.filter-sm__wrap').length){
-		var sorting = $('.sorting__wrap ');
-		var	fSmWrap = $('.filter-sm__wrap');
-		var	fSmWrapOffset = $('.filter-sm__wrap').offset().top;
-		var fSmWrapClone = $('<div class="filter-sm--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
+	if($('.filter__wrap').length){
+		var	fSmWrap = $('.filter__wrap');
+		var	fSmWrapOffset = fSmWrap.offset().top;
+		var fSmWrapClone = $('<div class="filter__wrap--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
 		$(window).scroll(function (){
 			var winScrollTop = $(this).scrollTop();
 			if(winScrollTop >= fSmWrapOffset){
@@ -65,23 +64,4 @@
 			}
 		});
 
-	}
-
-	if($('.js-filter-open').length){
-		var target = $('.footer');
-		var targetPos = target.offset().top;
-		var winHeight = $(window).height();
-		var scrollToElem = targetPos - winHeight;
-		$(window).scroll(function(){
-			var winScrollTop = $(this).scrollTop();
-			if(winScrollTop > scrollToElem){
-				$('.js-filter-open').css({
-					backgroundColor: '#fff',
-					color          : '#222222'
-				});
-			}else{
-				$('.js-filter-open').removeAttr('style');
-			}
-		});
-	}
-	
+	}	

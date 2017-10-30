@@ -1,10 +1,3 @@
-
-	// function mainP (){
-	// 	$('.main').css('paddingBottom', $('.footer').outerHeight(true));
-	// }mainP();
-	// $(window).resize(mainP());
-	
-
 	if ($(window).width() <= 480) {
 		//скрытие и отображение меню при скроле
 		var header = $(".header__top-line"); // Меню

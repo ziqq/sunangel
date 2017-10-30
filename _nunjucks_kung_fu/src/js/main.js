@@ -91,11 +91,6 @@ $(document).ready(function () {
 
 	$('img').on('dragstart', function(event) { event.preventDefault(); });
 
-	//Go to top
-	$('.go-top').click(function (){
-		$('html, body').animate({scrollTop: 0}, 800);
-	});
-
 	//map-text close
 	$('.js-map-text-close').click(function (){
 		$('.map__text').addClass('is-close');
@@ -117,6 +112,18 @@ $(document).ready(function () {
 			$(this).next().not(":visible").slideDown().prev().addClass("is-active");
 		});		
 	}
+
+	//Go to top	
+	$('.go-top').click(function (){
+		$('html, body').animate({scrollTop: 0}, 800);
+	});
+	$(window).scroll(function(){
+		if($(this).scrollTop() > $(this).height()){
+			$('.go-top').addClass('is-visible');
+		}else{
+			$('.go-top').removeClass('is-visible');
+		}
+	});
 
 
 	//Map
