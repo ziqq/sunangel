@@ -1,8 +1,24 @@
 <!-- begin main-slider -->
 <div class="slider__wrap main-slider hidden_sm">
 	<div class="slider js-slider">
-		{% for i in range(0, 15) -%}
-			{{item.slideritem()}}
+		{% for i in range(0, 4) -%}
+		<div class="slider__item">
+			<div class="slider__img"><img src="img/general/slider-img.png" alt="alt"></div>
+			<div class="slider__text">
+				<h1 class="h1 slider__title">Бриллианты <br> и золото</h1>
+				<div class="slider__desc">Благородный блеск золото в окружении ослепительных чистых бриллиантов – украшения, с которыми вам не захочется расставаться ни днем, ни ночью!</div>
+				<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+			</div>
+		</div>
+
+		<div class="slider__item slider__item_right">
+			<div class="slider__img"><img src="img/general/home-slide-2.png" alt="alt"></div>
+			<div class="slider__text">
+				<h1 class="h1 slider__title">Credo</h1>
+				<div class="slider__desc">Твой жизненный принцип – стремиться к лучшему. Следуя ему, ты меняешь этот мир. Оцени совершенство часов SUNANGEL</div>
+				<a href="#" class="slider__link btn btn_trans">Смотреть</a>
+			</div>
+		</div>
 		{%- endfor %}﻿
 	</div>
 	<div class="slider__dots"></div>

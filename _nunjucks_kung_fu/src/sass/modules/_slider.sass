@@ -36,6 +36,19 @@
 	//slider__item
 	&__item
 		position: relative
+		//slider__item_right
+		&_right
+			.slider
+				&__text
+					right: -100%
+					left: auto
+					+r(768)
+						top: 10%
+						right: 10px
+						transform: translate(0)
+				&__link
+					left: auto
+					right: -200%
 	//slider__title
 	&__title
 		display: block
@@ -96,7 +109,7 @@
 	//slider__dots
 	&__dots
 		position: absolute
-		left: 25%
+		left: 26%
 		bottom: 25px
 		+r(768)
 			+vx
@@ -118,6 +131,18 @@
 						left: 10px
 				&__link
 					left: 0
+			.slider__item_right
+				.slider
+					&__text
+						right: 15%
+						left: auto
+						+r(1024)
+							right: 11%
+						+r(768)
+							right: 10px
+					&__link
+						right: 0
+						left: auto
 
 //slider-brands
 .slider-brands

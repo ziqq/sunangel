@@ -21,6 +21,27 @@
 </div>
 {% endmacro %}
 
+{% macro productFav() %}
+<div class="product-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+	<div class="product-item__img">
+		<a href="#"><img src="img/catalog/thumbs/1.png" alt="alt" itemprop="image"></a>
+	</div>
+	<div class="product-item__other">
+		<h6 class="product-item__title" itemprop="name"><a href="#">Золотая подвеска «Знак зодиака Водолей»</a></h6>
+		<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+			<meta itemprop="priceCurrency" content="RUB" />
+			<span itemprop="price">58684444 <i class="rub">a</i></span>
+			<span class="product-item__price_old">88532 <i class="rub" itemprop="priceCurrency">a</i></span>
+			<span class="product-item__price_sale">-100%</span>
+		</div>
+		<div class="product-item__button">
+			<a href="#basket-in" class="btn btn_add js-fancybox" title="Добавить в корзину">Добавить в корзину</a>
+			<a href="javascript:void(0);" class="btn_fav" title="Удалить">{{mixin.icon('del')}}</a>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
 {% macro basketitem() %}
 <div class="basket-item">
 	<div class="basket-item__img">{{mixin.img(102, 102)}}</div>
@@ -57,16 +78,5 @@
 		<h4 class="news-item__title"><a href="#">Ксения Сухинова: «Главное – делать мир вокруг таким, каким ты его видишь»</a></h4>
 		<a href="#" class="news-item__more">Подробнее</a>
 	</div>			
-</div>
-{% endmacro %}
-
-{% macro slideritem() %}
-<div class="slider__item">
-	<div class="slider__img"><img src="img/general/slider-img.png" alt="alt"></div>
-	<div class="slider__text">
-		<h1 class="h1 slider__title">Бриллианты <br> и золото</h1>
-		<div class="slider__desc">Благородный блеск золото в окружении ослепительных чистых бриллиантов – украшения, с которыми вам не захочется расставаться ни днем, ни ночью!</div>
-		<a href="#" class="slider__link btn btn_trans">Смотреть</a>
-	</div>
 </div>
 {% endmacro %}

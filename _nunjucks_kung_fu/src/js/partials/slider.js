@@ -10,7 +10,7 @@
 	//Section slider
 	if($('.js-slider').length){
 		$('.js-slider').slick({
-			autoplay: true,
+			// autoplay: true,
 			autoplaySpeed: 5000,
 			speed: 2000,
 			infinite: true,
