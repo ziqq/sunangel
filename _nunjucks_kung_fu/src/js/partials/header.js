@@ -109,7 +109,6 @@
 	$(document).click(function(event) {
 		if ($(event.target).closest('.js-menu').length) return;
 		$('.js-mobile-menu-btn').removeClass('on');
-		$('.js-menu').slideUp();
 		$('.js-filter-open').removeClass('is-disable');
 		$('body').removeClass('is-fixed');
 		if($('.go-top').hasClass('is-visible')){

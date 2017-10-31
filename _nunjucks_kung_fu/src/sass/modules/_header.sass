@@ -617,4 +617,41 @@
 			.icon
 				fill: $color-accent
 
-
+//header-catalog
+.header-catalog
+	height: 70px
+	position: absolute
+	left: 0
+	top: -150%
+	width: 100%
+	background-color: #FFF
+	z-index: 115
+	+clr
+	&.is-visible
+		top: 0
+	&__logo
+		display: inline-block
+		vertical-align: middle
+		line-height: 70px
+		width: 150px
+		margin-right: 60px
+	&__callback
+		display: inline-block
+		vertical-align: middle
+		float: right
+		margin-right: 60px
+		line-height: 70px
+	&__menu
+		display: inline-block
+		line-height: 70px
+	&__item
+		display: inline-block
+		vertical-align: middle
+		& + &
+			margin-left: 30px
+	.action
+		width: auto
+		display: inline-block
+		vertical-align: middle
+		float: right
+		line-height: 70px

@@ -6,6 +6,7 @@ title: Подвески со знаками зодиака
 {% block content %}
 
 {% include "partials/_header.html" %}
+{% include "partials/_header-catalog.html" %}
 
 <!-- start main -->
 <main class="main">
@@ -19,123 +20,120 @@ title: Подвески со знаками зодиака
 
 	</div>
 
-	<!-- begin filter__wrap -->
-	<div class="filter__wrap">
-		<!-- begin filter-sm -->
-		<div class="filter-sm__wrap">
-			<div class="container">
-				<ul class="filter-sm">
-					<li class="filter-sm__item">
-						Вид украшения
-						<span class="filter-sm__reset"></span>
-						<div class="filter-sm__dropdown">
+	<!-- begin filter-sm -->
+	<div class="filter-sm__wrap">
+		<div class="container">
+			<ul class="filter-sm">
+				<li class="filter-sm__item">
+					Вид украшения
+					<span class="filter-sm__reset"></span>
+					<div class="filter-sm__dropdown">
 
-							<div class="filter-item">
-								<div class="filter-item__list">
+						<div class="filter-item">
+							<div class="filter-item__list">
 
+								{% import "data/data.html" as filterItem %}
+
+								{% for item in filterItem.filter %}
+								<label class="filter__checkbox checkbox checkbox__title js-checkbox-title {{item.disable}}">
+									<input type="checkbox">
+									<span class="text">{{item.view}}</span>
+									<span class="check"></span>
+								</label>
+								{% endfor %}
+
+							</div>
+						</div>
+
+					</div>
+				</li>
+				<li class="filter-sm__item">
+					Метал
+					<span class="filter-sm__reset"></span>
+					<div class="filter-sm__dropdown">
+
+						<div class="filter-item">
+							<div class="filter-item__list">
+								<ul class="filter-sm__inner">
 									{% import "data/data.html" as filterItem %}
-
 									{% for item in filterItem.filter %}
-									<label class="filter__checkbox checkbox checkbox__title js-checkbox-title {{item.disable}}">
+									<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
 										<input type="checkbox">
-										<span class="text">{{item.view}}</span>
+										<span class="text">{{item.metal}}</span>
 										<span class="check"></span>
 									</label>
 									{% endfor %}
-
-								</div>
+								</ul>
 							</div>
-
 						</div>
-					</li>
-					<li class="filter-sm__item">
-						Метал
-						<span class="filter-sm__reset"></span>
-						<div class="filter-sm__dropdown">
 
-							<div class="filter-item">
-								<div class="filter-item__list">
-									<ul class="filter-sm__inner">
-										{% import "data/data.html" as filterItem %}
-										{% for item in filterItem.filter %}
-										<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
-											<input type="checkbox">
-											<span class="text">{{item.metal}}</span>
-											<span class="check"></span>
-										</label>
-										{% endfor %}
-									</ul>
-								</div>
+					</div>
+				</li>
+				<li class="filter-sm__item is-checked">
+					Вставка
+					<span class="filter-sm__reset"></span>
+					<span class="filter-sm__choose">(2)</span>
+					<div class="filter-sm__dropdown">
+
+						<div class="filter-item">
+							<div class="filter-item__list">
+								<ul class="filter-sm__inner">
+									{% import "data/data.html" as filterItem %}
+									{% for item in filterItem.filter %}
+									<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+										<input type="checkbox">
+										<span class="text">{{item.insert}}</span>
+										<span class="check"></span>
+									</label>
+									{% endfor %}
+								</ul>
 							</div>
-
 						</div>
-					</li>
-					<li class="filter-sm__item is-checked">
-						Вставка
-						<span class="filter-sm__reset"></span>
-						<span class="filter-sm__choose">(2)</span>
-						<div class="filter-sm__dropdown">
 
-							<div class="filter-item">
-								<div class="filter-item__list">
-									<ul class="filter-sm__inner">
-										{% import "data/data.html" as filterItem %}
-										{% for item in filterItem.filter %}
-										<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
-											<input type="checkbox">
-											<span class="text">{{item.insert}}</span>
-											<span class="check"></span>
-										</label>
-										{% endfor %}
-									</ul>
-								</div>
+					</div>
+				</li>
+				<li class="filter-sm__item">
+					Бренд
+					<span class="filter-sm__reset"></span>
+					<div class="filter-sm__dropdown">
+
+						<div class="filter-item">
+							<div class="filter-item__list">
+								<ul class="filter-sm__inner">
+									{% import "data/data.html" as filterItem %}
+									{% for item in filterItem.filter %}
+									<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+										<input type="checkbox">
+										<span class="text">{{item.brand}}</span>
+										<span class="check"></span>
+									</label>
+									{% endfor %}
+								</ul>
 							</div>
-
 						</div>
-					</li>
-					<li class="filter-sm__item">
-						Бренд
-						<span class="filter-sm__reset"></span>
-						<div class="filter-sm__dropdown">
 
-							<div class="filter-item">
-								<div class="filter-item__list">
-									<ul class="filter-sm__inner">
-										{% import "data/data.html" as filterItem %}
-										{% for item in filterItem.filter %}
-										<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
-											<input type="checkbox">
-											<span class="text">{{item.brand}}</span>
-											<span class="check"></span>
-										</label>
-										{% endfor %}
-									</ul>
-								</div>
-							</div>
-
-						</div>
-					</li>
-					<li class="filter-sm__item">
-						<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>
-					</li>
-				</ul>
-			</div>
+					</div>
+				</li>
+				<li class="filter-sm__item">
+					<a href="javascript:void(0);" class="filter-sm__btn js-filter-open"><span>Расширенный фильтр</span></a>
+				</li>
+			</ul>
 		</div>
-		<!-- end filter-sm -->
-		<!-- begin sorting -->
-		<div class="sorting__wrap">
-			<div class="container">
-				<ul class="sorting">
-					<li class=" sorting__item sorting__item_title js-filter-sorting">Сортировать по:</li>
-					<li class="sorting__item js-filter-sorting">по популярности</li>
-					<li class="sorting__item js-filter-sorting is-active">возрастанию цены</li>
-					<li class="sorting__item js-filter-sorting"> убыванию цены</li>
-				</ul>
-			</div>
-		</div>
-		<!-- end sorting -->
 	</div>
-	<!-- end filter__wrap -->
+	<!-- end filter-sm -->
+
+	<!-- begin sorting -->
+	<div class="sorting__wrap">
+		<div class="container">
+			<ul class="sorting">
+				<li class=" sorting__item sorting__item_title js-filter-sorting">Сортировать по:</li>
+				<li class="sorting__item js-filter-sorting">по популярности</li>
+				<li class="sorting__item js-filter-sorting is-active">возрастанию цены</li>
+				<li class="sorting__item js-filter-sorting"> убыванию цены</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end sorting -->
 
 
 	

@@ -24,13 +24,6 @@
 		padding: 15px 0
 		background-color: #FFF
 		+clr
-		&.is-fixed
-			position: fixed
-			top: 0
-			left: 0
-			width: 100%
-			z-index: 98
-			box-shadow: 0 0 40px 1px rgba($color-bg-darken, .3);
 		+r(480)
 			display: none !important
 	//filter__inner
@@ -228,7 +221,7 @@
 
 //filtr-sm__reset
 .filter-sm
-	padding-bottom: 15px
+	padding: 15px 0
 	text-align: center
 	border-bottom: 1px solid $color-border
 	+clr
@@ -240,6 +233,12 @@
 		position: relative
 		background-color: #fff
 		+clr
+		&.is-fixed
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 98
 	//filter-sm__inner
 	&__inner
 		text-align: left

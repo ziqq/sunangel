@@ -49,10 +49,10 @@
 		$('.js-filter-open').html('фильтр').appendTo('.block-move');
 	}
 
-	if($('.filter__wrap').length){
-		var	fSmWrap = $('.filter__wrap');
+	if($('.filter-sm__wrap').length){
+		var	fSmWrap = $('.filter-sm__wrap');
 		var	fSmWrapOffset = fSmWrap.offset().top;
-		var fSmWrapClone = $('<div class="filter__wrap--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
+		var fSmWrapClone = $('<div class="filter-sm__wrap--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
 		$(window).scroll(function (){
 			var winScrollTop = $(this).scrollTop();
 			if(winScrollTop >= fSmWrapOffset){
