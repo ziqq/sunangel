@@ -105,6 +105,10 @@ $(document).ready(function () {
 		$(this).addClass('is-active');
 	});
 
+	if($(window).width() <= 480){
+		$('.news .about-nav').appendTo('.news .container');
+	}
+
 	//footer accordeon
 	if($(window).width() <= 480){
 		$(".footer .footer-list").hide().prev().click(function() {

@@ -1,9 +1,19 @@
+.main_news
+	padding-top: 20px
+	+r(480)
+		.breadcrumbs
+			display: none
+
 .news
 	.about-nav
 		margin-bottom: 70px
+		+r(480)
+
 	&__buttons
-		padding: 30px 0 50px
+		padding-bottom: 50px
 		text-align: center
+		+r(480)
+			padding-bottom: 80px
 		.btn_reset
 			min-width: auto
 			padding: 16px 15px 13px 45px
@@ -98,45 +108,67 @@
 //news-i
 .news-i
 	margin-top: 30px
+	+r(480)
+		margin-top: 0
+		> .container
+			padding: 0
 	//news-i__head
 	&__head
+		position: relative
 		margin-bottom: 80px
 		position: relative
 		min-height: 600px
 		background-repeat: no-repeat
 		+cover
-		+r(425)
-			margin-bottom: 30px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			+gp(to bottom, #000, #fff)
+			opacity: .3
+			z-index: 0
+		+r(480)
+			margin-bottom: 50px
 			min-height: 500px
 	//news-i__title
 	&__title
-		color: $color-text
-		font-family: encore-50, sans-serif
+		color: #fff
+		font-family: encore-hl, sans-serif
 		font-size: rem(48)
+		+r(480)
+			font-size: rem(40)
 	//news-i__text
 	&__text
+		color: #fff
 		+vx
 		bottom: 15%
 		max-width: 545px
 		text-align: center
+		z-index: 1
+		+r(480)
+			bottom: 5%
+			left: auto
+			transform: translateX(0)
 	//news-i__desc
 	&__desc
 		margin-bottom: 80px
-		+r(425)
-			margin-bottom: 30px
+		+r(480)
+			margin-bottom: 50px
 		p
 			color: #474747
 			font-size: rem(22)
 	//news-i__slider
 	.slider
-		margin-bottom: 50px
+		margin-bottom: 100px
 		position: relative
-		+r(480)
-			display: none
 		.slick-slide
 			margin-right: 10px
 			+r(480)
-				padding: 0 !important
+				margin: 0
 			img
 				margin-bottom: auto
 	//news-i__desc
@@ -144,7 +176,7 @@
 		border-bottom: 1px solid $color-border
 		p
 			display: block
-			margin-bottom: 40px
+			margin-bottom: 50px
 			color: #858585
 			+r(425)
 				margin-bottom: 30px

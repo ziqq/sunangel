@@ -49,6 +49,24 @@
 				&__link
 					left: auto
 					right: -200%
+	//slider__text
+	&__text
+		+vy
+		left: -100%
+		width: 350px
+		text-align: center
+		+tr(1s)
+		transition-delay: 1.7s
+		+r(480)
+			padding-top: 15px
+			position: relative
+			top: auto
+			transform: translateY(0)
+			width: auto
+		+r(768)
+			top: 10%
+			left: auto
+			transform: translate(0)
 	//slider__title
 	&__title
 		display: block
@@ -61,20 +79,7 @@
 		+r(1024)
 			margin-bottom: 15px
 		+r(768)
-			margin-bottom: 10px
 			font-size: rem(28)
-	//slider__text
-	&__text
-		+vy
-		left: -100%
-		width: 350px
-		text-align: center
-		+tr(1s)
-		transition-delay: 1.7s
-		+r(768)
-			top: 10%
-			left: 10px
-			transform: translate(0)
 	//slider__desc
 	&__desc
 		margin-bottom: 40px
@@ -85,11 +90,15 @@
 			display: block
 			+vx
 			bottom: -35px
-		+r(1024)
-			margin-bottom: 10px
-			display: none
 		+r(768)
 			font-size: rem(15)
+		+r(480)
+			padding: 0 20px
+			margin-bottom: 15px
+			&::after
+				display: none
+		+r(320)
+			margin-bottom: 0
 	//slider__link
 	&__link
 		border: none
@@ -106,11 +115,15 @@
 			background-color: transparent
 			&::after
 				right: 5px
+		+r(480)
+			left: auto
 	//slider__dots
 	&__dots
 		position: absolute
 		left: 26%
 		bottom: 25px
+		+r(1200)
+			left: 27%
 		+r(768)
 			+vx
 			bottom: 15px
@@ -129,6 +142,8 @@
 						left: 11%
 					+r(768)
 						left: 10px
+					+r(480)
+						left: 0
 				&__link
 					left: 0
 			.slider__item_right
@@ -144,6 +159,18 @@
 						right: 0
 						left: auto
 
+//Main Slider
+.main-slider
+	+r(480)
+		padding-top: 20px
+	.slider
+		&__dots
+			+r(480)
+				bottom: -30px
+	.slick-slide
+		+r(480)
+			padding: 0
+
 //slider-brands
 .slider-brands
 	//slider-brands__item
@@ -156,7 +183,7 @@
 
 .slider-addition, .slider-similar, .slider-news, .slider-brands
 	.slider__dots
-		bottom: -30px
+		bottom: -40px
 		left: 50%
 		transform: translateX(-50%)
 

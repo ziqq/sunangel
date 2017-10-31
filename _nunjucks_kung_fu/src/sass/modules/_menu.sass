@@ -3,16 +3,41 @@
 	margin: 0
 	padding: 20px 0
 	list-style-type: none
+	+r(480)
+		text-align: left
+		display: none
+		padding: 30px 110px 0
+		position: absolute
+		top: 50px
+		left: 0
+		width: 100%
+		overflow-y: auto
+		background-color: #FFF
+		+bs(0 10px 10px 1px rgba(0, 0, 0, 0.1))
+		z-index: 98
+	+r(425)
+		padding: 30px 85px 0
+	+r(414)
+		padding: 30px 79px 0
+	+r(375)
+		padding: 30px 59px 0
+	+r(320)
+		padding: 30px 30px 0
+		height: 100%
 	+clr
 	&__list
 		display: inline-block
 		vertical-align: middle
-		+r(1200)
+		+r(1199)
 			display: block
 			float: none
+		+r(480)
+			margin-bottom: 30px
 		& + &
 			margin-left: 65px
 			+r(1200)
+				margin-left: 55px
+			+r(480)
 				margin-left: 0
 		&_gender
 			float: left
@@ -21,12 +46,14 @@
 	&__item
 		display: inline-block
 		vertical-align: middle
+		+r(1199)
+			display: block
+		+r(480)
 		& + &
 			margin-left: 30px
-			+r(1200)
+			+r(1199)
 				margin-left: 0
-		+r(1200)
-			display: block
+			padding: 5px 0
 		&.is-active
 			.menu__link
 				color: $color-accent
@@ -58,53 +85,56 @@
 				position: absolute
 				left: -24px
 				top: -1px
+				+r(480)
+					left: auto
+					right: -30px
 
 //Mobile menu
-.mobile-menu
-	position: fixed
-	top: 0
-	left: 0
-	width: 320px
-	height: 100%
-	overflow: auto
-	z-index: -1
+// .mobile-menu
+// 	position: fixed
+// 	top: 0
+// 	left: 0
+// 	width: 320px
+// 	height: 100%
+// 	overflow: auto
+// 	z-index: -1
 
-	&__logo
-		display: block
-		margin: 15px 0 0 15px
-		text-transform: uppercase
-		font-family: oswald-600
-		font-size: 32px
-		color: $color-bg-dark
+// 	&__logo
+// 		display: block
+// 		margin: 15px 0 0 15px
+// 		text-transform: uppercase
+// 		font-family: oswald-600
+// 		font-size: 32px
+// 		color: $color-bg-dark
 
-	.menu
-		&__list
-			padding: 15px 0
-			border-bottom: 1px solid $color-text-btn
-			&:last-child
-				border-bottom: none
-		&__item
-			& + .menu__item
-				margin-top: 7px
-			&:hover, &:active, &.is-active
-				.menu__link
-					color: $color-text-light
-					background-color: rgba($color-accent, .1)
-					&::after
-						background-color: $color-accent
-		&__link
-			display: block
-			padding: 5px 0 6px 25px
-			color: $color-text-light
-			position: relative
-			&::after
-				content: ''
-				display: block
-				width: 4px
-				height: 100%
-				position: absolute
-				top: 0
-				left: 0
+// 	.menu
+// 		&__list
+// 			padding: 15px 0
+// 			border-bottom: 1px solid $color-text-btn
+// 			&:last-child
+// 				border-bottom: none
+// 		&__item
+// 			& + .menu__item
+// 				margin-top: 7px
+// 			&:hover, &:active, &.is-active
+// 				.menu__link
+// 					color: $color-text-light
+// 					background-color: rgba($color-accent, .1)
+// 					&::after
+// 						background-color: $color-accent
+// 		&__link
+// 			display: block
+// 			padding: 5px 0 6px 25px
+// 			color: $color-text-light
+// 			position: relative
+// 			&::after
+// 				content: ''
+// 				display: block
+// 				width: 4px
+// 				height: 100%
+// 				position: absolute
+// 				top: 0
+// 				left: 0
 
 
 //toggle-menu
@@ -116,7 +146,7 @@
 	top: 23px
 	left: 0
 	+r(480)
-		top: 19px
+		top: 14px
 		left: 10px
 	span
 		position: relative
@@ -151,8 +181,10 @@
 		span
 			background-color: transparent
 			&:before
+				background-color: $color-accent
 				transform: rotate(45deg) translate(-1px, 0px)
-			&:after
+			&:after			
+				background-color: $color-accent
 				transform: rotate(-45deg) translate(6px, -7px)
 
 
@@ -160,11 +192,15 @@
 .about-nav
 	text-align: center
 	border-bottom: 1px solid $color-border
+	+r(480)
+		border-bottom: none
 	//about-nav__list
 	&__list
 		margin: 0
 		padding: 0
 		list-style-type: none
+		+r(480)
+			padding: 0 10px
 	//about-nav__item
 	&__item
 		display: inline-block
@@ -189,11 +225,13 @@
 			.about-nav__link
 				color: $color-accent
 		+r(480)
-			padding: 10px 13px
-		+r(375)
-			padding: 5px 10px
-		+r(320)
-			padding: 5px 3px
+			display: block
+			margin-bottom: 10px
+			&.is-active
+				border-bottom: 1px solid $color-border
+				+br(4px)
+				&::before
+					display: none
 	//about-nav__link
 	&__link
 		color: $color-text
@@ -201,3 +239,10 @@
 		+tr(.35s)
 		&:hover
 			color: $color-accent
+		+r(480)
+			text-decoration: underline
+	//about-nav__news-i
+	&__news-i
+		display: none
+		+r(480)
+			display: block

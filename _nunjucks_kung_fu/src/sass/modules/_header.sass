@@ -15,9 +15,10 @@
 		border-bottom: none
 	&__top-line
 		+r(480)
+			height: 50px
+			text-align: center
 			background-color: #FFF
 			border-bottom: 1px solid $color-border
-			padding-bottom: 11px
 			width: 100%
 			z-index: 99
 			transform: translateX(0)
@@ -71,10 +72,7 @@
 	cursor: pointer
 	transition: color .35s ease
 	+r(480)
-		margin: 16px 0 0 55px
-		&__wrap
-			display: inline-block
-			padding-left: 30px
+		display: none
 	&::before, &::after
 		display: inline-block
 		font-family: fontawesome
@@ -156,11 +154,14 @@
 	+r(1200)
 		padding-left: 55px
 	+r(480)
+		width: auto
 		float: none
-		margin: 15px 0 0 15px
-		padding-top: 0
-		padding-left: 0
-		width: 88%
+		margin-right: 0
+		padding: 0
+		position: fixed
+		top: 12px
+		right: 35px
+		z-index: 99
 	&__time
 		margin-left: 20px
 		color: rgba($color-text, .7)
@@ -181,9 +182,12 @@
 			left: 0
 			+sprite(phone)
 		+r(480)
-			font-size: rem(14)
+			padding: 0
+			span
+				display: none
 			&::before
-				top: 0
+				top: 2px
+				left: 5px
 	&__link
 		display: inline-block
 		margin-left: 35px
@@ -209,11 +213,7 @@
 		img
 			width: 230px
 	+r(480)
-		width: 100%
-		float: none
-		img
-			width: 188px
-			height: auto
+		display: none
 	.icon
 		width: auto
 		height: 73px
@@ -224,6 +224,18 @@
 			margin-left: 13%
 		+r(1024)
 			margin: 0 auto
+	//logo_mobile
+	&_mobile
+		display: none
+		font-family: encore-400, sans-serif
+		font-size: rem(18)
+		text-transform: uppercase
+		line-height: 50px
+		img
+			width: 150px
+			height: 50px
+		+r(480)
+			display: inline-block
 
 .action
 	display: inline-block
@@ -231,14 +243,15 @@
 	padding-top: 10px
 	text-align: right
 	+r(1200)
-		text-align: left
+		text-align: center
 	+r(992)
 		text-align: right
 	+r(480)
-		display: inline-block
+		display: block
+		padding-bottom: 20px
 		width: auto
-		float: right
-		padding-top: 20px
+		float: none
+		text-align: center
 	&__link
 		.icon
 			+tr(.35s)
@@ -258,10 +271,6 @@
 				pointer-events: auto
 		& + &
 			margin-left: 50px
-			+r(768)
-				margin-left: 35px
-			+r(375)
-				margin-left: 15px
 		.icon
 			display: inline-block
 			width: 22px

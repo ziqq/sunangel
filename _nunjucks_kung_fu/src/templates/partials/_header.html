@@ -1,8 +1,9 @@
 <!-- begin header -->
 <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-	<div class="container">
 
-		<div class="header__top-line">
+	<!-- begin header__top-line -->
+	<div class="header__top-line">
+		<div class="container">
 			<div class="city js-city-hover">
 				Балаково
 				<div class="city__inner">
@@ -14,18 +15,28 @@
 					</ul>
 				</div>
 			</div>
+
+			<div class="logo_mobile">
+				<a href="/" class="logo__link">
+					<img src="img/general/logo_mobile.svg" alt="Logo" itemprop="logo">
+				</a>
+			</div>
+
 		</div>
+	</div>
+	<!-- end header__top-line -->
 
-		<div class="header__bottom">
-
+	<!-- begin header__bottom -->
+	<div class="header__bottom">
+		<div class="container">
 			<div class="callback">
-				<a href="tel: +79372213443" class="callback__phone phone" itemprop="telephone">+7 937 221-34-43</a>
+				<a href="tel: +79372213443" class="callback__phone phone" itemprop="telephone"><span>+7 937 221-34-43</span></a>
 				<span class="callback__time">с 9:00 до 21:00</span>
 				<a href="#callback" class="callback__link js-fancybox">Перезвоните мне</a>
 			</div>
 
 			<div class="logo">
-				<a href="#" class="logo__link">
+				<a href="/" class="logo__link">
 					<img src="img/general/logo.svg" alt="Logo" itemprop="logo">
 				</a>
 			</div>
@@ -183,10 +194,10 @@
 								</div>
 								{% endfor %}								
 							</div>
-								<div class="cart__action">
-									<a href="/cart.html" title="Перейти в корзину" class="btn">Перейти в корзину</a>
-									<div class="cart__summ"><span>Сумма:</span>32568 <i class="rub">a</i></div>
-								</div>
+							<div class="cart__action">
+								<a href="/cart.html" title="Перейти в корзину" class="btn">Перейти в корзину</a>
+								<div class="cart__summ"><span>Сумма:</span>32568 <i class="rub">a</i></div>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -194,6 +205,9 @@
 			<!-- end action -->
 		</div>
 	</div>
+	<!-- end header__bottom -->
+	
+
 	{% include "partials/_menu.html" %}
 </header>
 <!-- end header -->

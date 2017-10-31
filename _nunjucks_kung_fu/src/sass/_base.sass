@@ -102,10 +102,6 @@ img ,.img-responsive
 .hidden
 	display: none !important
 
-.hidden_sm
-	+r(480)
-		display: none !important
-
 .wrapper
 	position: relative
 	z-index: 10
@@ -113,8 +109,6 @@ img ,.img-responsive
 	+r(1200)
 		overflow: auto
 		+tr(.5s)
-	+r(480)
-		padding-top: 75px
 
 	&.is-menu-open
 		overflow: hidden
@@ -147,24 +141,6 @@ img ,.img-responsive
 	&.popup
 		h1,.h1,h2,.h2,h3,.h3,h5,.h5,h6,.h6
 			color: $color-text
-	// p
-	// 	color: $color-text-bg-dark
-	// .btn
-	// 	color: $color-text-btn
-	// 	background-color: $color-brown
-	// 	&:hover
-	// 		color: $color-text-btn
-	// 		background-color: $color-brown-lighten
-	// 	&_int
-	// 		color: $color-text
-	// 		background-color: transparent
-	// 		&:hover
-	// 			color: $color-text-lighten
-	// 			background-color: transparent		
-	// 	&_popup
-	// 		background-color: transparent
-	// 		&:hover
-	// 			background-color: transparent
 
 	.fa, .phone
 		color: rgba(#fff, .75)
@@ -310,16 +286,18 @@ img ,.img-responsive
 	&_trans
 		position: relative
 		padding-right: 45px
+		background-color: $color-brown-lighten
 		&::after
 			content: '\f178'
 			font-family: FontAwesome
 			display: block
 			+vy
-			right: 15px
+			right: 20px
 			+tr(.35s)
 		&:hover
+			color: $color-accent
 			&::after
-				right: 20px
+				right: 15px
 	//btn_shops
 	&_shops
 		min-width: auto

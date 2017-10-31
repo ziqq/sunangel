@@ -8,12 +8,16 @@
 
 	&_md
 		max-width: 850px
-		width: 98%
+		width: 100%
 		margin: 0 auto
+		+r(480)
+			padding: 0 10px
 	&_sm
 		max-width: 670px
-		width: 98%
+		width: 100%
 		margin: 0 auto
+		+r(480)
+			padding: 0 10px
 
 
 //Header
@@ -30,7 +34,7 @@
 //Filter
 .filter-item
 	+span(4)
-	margin-bottom: 30px
+	margin-bottom: 50px
 	+clr
 	&:nth-child(3n)
 		margin-right: 0
@@ -70,6 +74,7 @@
 		width: 100%
 		text-align: center
 		margin-right: 0
+		margin-bottom: 0
 		&_info
 			order: 2
 		&_buyers

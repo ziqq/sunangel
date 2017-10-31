@@ -176,15 +176,15 @@
 	//News Slider
 	if($('.js-news-slider').length){
 		$('.js-news-slider').slick({
-			autoplay: true,
+			// autoplay: true,
 			autoplaySpeed: 2000,
 			speed: 2000,
 			infinite: true,
-			slidesToShow: 2,
+			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: true,
 			appendArrows: '.slider-news .slider__dots',
-			variableWidth: true,
+			centerMode: true,
 
 			dots:true,
 			customPaging: function (slider, i)
