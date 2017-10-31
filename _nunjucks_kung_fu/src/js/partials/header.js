@@ -88,11 +88,12 @@
 
 	//Mobile Munu
 	if($(window).width() <= 480 ){
-		// $('<div class="mobile-menu bg--dark_lighten"></div>').insertAfter('.wrapper');
+		var hTopLine = $('.header__top-line');
+
 		$('<a href="javascript:void(0);" class="js-mobile-menu-btn toggle-menu"><span></span></a>').insertAfter('.logo_mobile');
 		$('.js-action').prependTo('.menu__inner');
-		$('.js-menu').appendTo('.header__top-line');
-		// $('<span class="mobile-menu__logo">sunangel</span>').insertBefore('.mobile-menu .menu');
+		$('.js-menu').appendTo(hTopLine);
+		$('<div class="header-clone">').css('height', $(hTopLine).innerHeight()).insertAfter(hTopLine);
 	}
 
 	$('.js-mobile-menu-btn').click(function() {
@@ -102,12 +103,14 @@
 		if($('.go-top').hasClass('is-visible')){
 			$('.go-top').toggleClass('is-visible');
 		}
+		$('.js-filter-open').toggleClass('is-disable');
 		return false
 	});
 	$(document).click(function(event) {
 		if ($(event.target).closest('.js-menu').length) return;
 		$('.js-mobile-menu-btn').removeClass('on');
 		$('.js-menu').slideUp();
+		$('.js-filter-open').removeClass('is-disable');
 		$('body').removeClass('is-fixed');
 		if($('.go-top').hasClass('is-visible')){
 		}else{

@@ -48,7 +48,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 .h1
 	font-size: rem(36)
 	+r(480)
-		font-size: rem(28)
+		font-size: rem(36)
 .h2
 	font-size: rem(36)
 
@@ -123,9 +123,9 @@ img ,.img-responsive
 	text-align: center
 	font-size: rem(36)
 	+r(480)
-		font-size: rem(32)
+		font-size: rem(36)
 	+r(320)
-		font-size: rem(27)
+		font-size: rem(22)
 
 .bg--dark
 	background-color: $color-bg-darken
@@ -608,6 +608,8 @@ input
 //Breadcrumbs
 .breadcrumbs
 	padding: 10px 0 11px
+	+r(480)
+		display: none
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -723,7 +725,7 @@ input
 	&.is-visible
 		right: 10px
 	+r(480)
-		bottom: 50px
+		bottom: 5px
 
 
 @import layouts

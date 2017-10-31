@@ -1,7 +1,8 @@
 .filter
 	position: fixed
 	top: 0
-	width: 1350px
+	max-width: 1350px
+	width: 100%
 	right: 0
 	bottom: 0
 	background-color: $color-bg-dark-lighten
@@ -11,12 +12,18 @@
 	+tr(.5s)
 	+r(1024)
 		height: 100vh
+		max-width: 768px
+	+r(768)
+		max-width: 425px
+	+r(425)
+		max-width: 100%
 	&.is-open
 		transform: translateX(0)
 	//filter__wrap
 	&__wrap
 		padding: 15px 0
 		background-color: #FFF
+		+clr
 		&.is-fixed
 			position: fixed
 			top: 0
@@ -32,6 +39,8 @@
 		+clr
 		+r(1024)
 			padding: 0 0 0 100px
+		+r(768)
+			padding: 0 0 0 50px
 		+r(480)
 			padding-left: 30px
 	//filter__close
@@ -44,8 +53,13 @@
 		position: absolute
 		top: 66px
 		right: 200px
+		+r(1024)
+			width: 45px
+			height: 45px
+			top: 40px
+			right: 80px
 		+r(768)
-			right: 95px
+			right: 30px
 		+r(480)
 			width: 38px
 			height: 38px
@@ -55,6 +69,8 @@
 				margin-top: 3px
 		.icon
 			margin-top: 10px
+			+r(1024)
+				margin-top: 7px
 	//filter__top
 	&__top
 		position: fixed
@@ -65,7 +81,7 @@
 		z-index: 10
 		+r(1024)
 			height: 125px
-		+r(480)
+		+r(768)
 			height: 70px
 	//filter__content
 	&__content
@@ -80,7 +96,7 @@
 		+r(1024)
 			top: 125px
 			bottom: 125px
-		+r(480)
+		+r(768)
 			top: 70px
 			bottom: 70px
 	//filter__bottom
@@ -95,7 +111,7 @@
 		+clr
 		+r(1024)
 			height: 125px
-		+r(480)
+		+r(768)
 			height: 70px
 	//filter__title
 	&__title
@@ -107,7 +123,7 @@
 		text-transform: uppercase
 		color: $color-text-light
 		letter-spacing: 2.61px
-		+r(480)
+		+r(768)
 			line-height: 70px
 	//filter__logo
 	&__logo
@@ -122,8 +138,9 @@
 		position: relative
 		right: -120px
 		+r(1024)
-			font-size: rem(58)
+			font-size: rem(52)
 			line-height: 125px
+			right: 10px
 		+r(768)
 			float: none
 			font-size: rem(42)
@@ -137,13 +154,13 @@
 		line-height: 130px
 		+r(1024)
 			line-height: 125px
-		+r(480)
+		+r(768)
 			line-height: 70px
 	//filter__btn
 	&__btn
 		vertical-align: middle
 		margin-right: 45px
-		+r(480)
+		+r(768)
 			margin-right: 15px
 			min-width: auto
 			padding: 12px 35px
@@ -378,6 +395,8 @@
 				display: none
 			&::after
 				top: -7px
+		&.is-disable
+			bottom: -100%
 		+r(480)
 			position: fixed
 			left: 0
