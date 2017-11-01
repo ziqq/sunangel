@@ -246,6 +246,8 @@
 		text-align: center
 	+r(992)
 		text-align: right
+	+r(768)
+		text-align: center
 	+r(480)
 		display: block
 		padding-bottom: 20px
@@ -271,6 +273,8 @@
 				pointer-events: auto
 		& + &
 			margin-left: 50px
+			+r(768)
+				margin-left: 30px
 		.icon
 			display: inline-block
 			width: 22px
@@ -314,7 +318,7 @@
 		opacity: 0
 		filter: alpha(opacity=0)
 		transition: opacity 100ms linear, top 100ms linear, bottom 100ms linear, visibility 100ms linear
-		+beforearr($color-bg-darken, t, 22, 11)
+		+beforearr(#393939, t, 22, 11)
 		&::before
 			top: -11px
 			margin-left: -11px
@@ -665,17 +669,12 @@
 		display: inline-block
 		vertical-align: middle
 		float: right
-		line-height: 70px
-		padding-top: 0
+		padding-top: 19px
 		&__item
-			&:hover
-				> .action__dropdown
-					top: 50px
 			& + .action__item
 				+r(1024)
 					margin-left: 30px
 		&__dropdown
-			top: 60px
 			left: auto
 			right: -20px
 			transform: translateX(0)

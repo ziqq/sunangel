@@ -118,14 +118,13 @@
 		event.stopPropagation();
 	});
 
+	if($(window).width() <= 1199 ){
+		$('.js-mobile-menu-btn').appendTo('.header__bottom');
+	}
+
 	if($(window).width() <= 480 ){
-		// $('.js-action').appendTo('.header__top-line');
 		$('.js-mobile-menu-btn').prependTo('.header__top-line');
 		$('.callback').appendTo('.header__top-line');
-		// $('.header__top-line').wrapInner('<div class="container"></div>').insertBefore('.wrapper');
-		// $('<div class="mobile-items bg--dark">').appendTo('.header__top-line .container');
-		// $('.mobile-search').clone().appendTo('.mobile-items');
-		// $('.user-enter').insertAfter('.mobile-menu');
 	}
 
 	//Search

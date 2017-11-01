@@ -150,6 +150,9 @@
 				font-size: rem(14)
 			tr
 				height: 30px
+				td
+					&:first-child
+						max-width: 95px
 //extra
 .extra
 	+r(480)
@@ -210,9 +213,11 @@
 				pointer-events: auto
 		//extra-item__dropdown
 		&__dropdown
+			min-width: 195px
+			max-width: 210px
+			width: 100%
 			padding: 20px 25px
 			position: absolute
-			width: max-content
 			top: 44px
 			left: -7px
 			color: $color-text
@@ -336,17 +341,19 @@
 .another-color
 	&__item
 		display: inline-block
-		margin-right: 15px
-		margin-bottom: 15px
-		&:nth-child(2n)
+		width: 60px
+		height: 60px
+		margin-right: 10px
+		margin-bottom: 10px
+		&:nth-child(3n)
 			margin-right: 0
 		+r(375)
-			&:nth-child(2n)
-				margin-right: 15px
+			&:nth-child(3n)
+				margin-right: 10px
 		+r(375)
 			margin-right: 10px
-			&:nth-child(2n)
-				margin-right: 10px
+
+
 
 
 //addition

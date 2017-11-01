@@ -113,31 +113,47 @@ title: Index page
 				<div class="product-desc__item product-desc__item_info">
 					<h3 class="product-desc__title">Характеристики</h3>
 					<table class="info__list">
-						<tr><td>Бренд:</td><td>Название бренда</td></tr>
-						<tr><td>Металл:</td><td>Золото</td></tr>
-						<tr><td>Вес изделия:</td><td>2.20</td></tr>
-						<tr><td>Проба:</td><td>585</td></tr>
-						<tr><td>Вставки:</td><td>Текст из 1с</td></tr>
-						<tr><td>Форма вставки:</td><td>Текст из 1с</td></tr>
-						<tr><td>Для кого:</td><td>Для женщин</td></tr>
+						<tr>
+							<td>Бренд: . . . . . . . . . . . . . . .</td>
+							<td>Название бренда</td>
+						</tr>
+						<tr>
+							<td>Металл: . . . . . . . . . . . . . . </td>
+							<td>Золото</td>
+						</tr>
+						<tr>
+							<td>Вес изделия: . . . . . . . . .</td>
+							<td>2.20</td>
+						</tr>
+						<tr>
+							<td>Проба: . . . . . . . . . . . . . . .</td>
+							<td>585</td>
+						</tr>
+						<tr>
+							<td>Вставки:. . . . . . . . . . . . . .</td>
+							<td>Текст из 1с</td>
+						</tr>
+						<tr>
+							<td>Форма вставки: . . . . . . . </td>
+							<td>Текст из 1с</td>
+						</tr>
+						<tr>
+							<td>Для кого: . . . . . . . . . . . . .</td>
+							<td>Для женщин</td>
+						</tr>
 					</table>
 				</div>
 
 				<div class="product-desc__item product-desc__item_color">
 					<h3 class="product-desc__title">В другом цвете</h3>
 					<ul class="another-color">
+
+						{% for i in range(0, 6) -%}
 						<li class="another-color__item">
 							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
 						</li>
-						<li class="another-color__item">
-							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
-						</li>
-						<li class="another-color__item">
-							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
-						</li>
-						<li class="another-color__item">
-							<a href="#" class="another-color__link">{{mixin.img(60, 60)}}</a>
-						</li>
+						{%- endfor %}
+
 					</ul>
 				</div>
 			</div>
