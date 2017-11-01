@@ -49,13 +49,28 @@
 		$('.js-filter-open').html('фильтр').appendTo('.block-move');
 	}
 
-	if($('.filter-sm__wrap').length){
-		var	fSmWrap = $('.filter-sm__wrap');
-		var	fSmWrapOffset = fSmWrap.offset().top;
-		var fSmWrapClone = $('<div class="filter-sm__wrap--clone">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
+
+	var header = $('.header');
+	var	fSmWrap = $('.filter-sm__wrap');
+	var	fSmWrapOffset = fSmWrap.offset().top;
+	var catHead = $('.js-header-catalog');
+
+	if ($('.js-header-catalog').length) {
 		$(window).scroll(function (){
 			var winScrollTop = $(this).scrollTop();
-			if(winScrollTop >= fSmWrapOffset){
+			if(winScrollTop >= header.height()){
+				catHead.addClass('is-visible');
+			}else{
+				catHead.removeClass('is-visible');
+			}
+		});
+	}
+
+	if($('.filter-sm__wrap').length){
+		var fSmWrapClone = $('<div class="empty">').css('height', fSmWrap.outerHeight(true)).insertAfter(fSmWrap).hide();
+		$(window).scroll(function (){
+			var winScrollTop = $(this).scrollTop();
+			if(winScrollTop >= fSmWrapOffset - fSmWrap.outerHeight(true)){
 				fSmWrap.addClass('is-fixed');
 				fSmWrapClone.show();
 			}else{

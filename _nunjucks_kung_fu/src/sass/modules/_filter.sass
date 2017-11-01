@@ -192,6 +192,10 @@
 				right: 0
 			&:hover
 				color: $color-brown
+		&_sorting
+			display: none
+			+r(768)
+				display: block
 	//filter-item__dropdown
 	&__dropdown
 		display: none
@@ -225,6 +229,8 @@
 	text-align: center
 	border-bottom: 1px solid $color-border
 	+clr
+	+r(1024)
+		text-align: left
 	+r(480)
 		display: none
 	//filter-sm__wrap
@@ -235,10 +241,13 @@
 		+clr
 		&.is-fixed
 			position: fixed
-			top: 0
+			top: 65px
 			left: 0
 			width: 100%
 			z-index: 98
+			border-bottom: 1px solid $color-border
+			.filter-sm
+				border-bottom: 0
 	//filter-sm__inner
 	&__inner
 		text-align: left

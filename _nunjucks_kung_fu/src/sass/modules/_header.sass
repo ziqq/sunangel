@@ -7,7 +7,7 @@
 		top: -6px
 		left: 50%
 		margin-left: -6px
-
+//header
 .header
 	color: $color-text
 	border-bottom: 1px solid $color-border
@@ -620,12 +620,13 @@
 //header-catalog
 .header-catalog
 	height: 70px
-	position: absolute
+	position: fixed
 	left: 0
 	top: -150%
 	width: 100%
 	background-color: #FFF
 	z-index: 115
+	+tr(1s)
 	+clr
 	&.is-visible
 		top: 0
@@ -635,15 +636,25 @@
 		line-height: 70px
 		width: 150px
 		margin-right: 60px
+		margin-left: 15px
+		+r(1024)
+			margin-right: 40px
 	&__callback
 		display: inline-block
 		vertical-align: middle
 		float: right
 		margin-right: 60px
 		line-height: 70px
+		+r(1024)
+			margin-right: 40px
+		+r(768)
+			display: none
 	&__menu
 		display: inline-block
 		line-height: 70px
+		margin-left: 27px
+		+r(1024)
+			margin-left: 0
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -655,3 +666,28 @@
 		vertical-align: middle
 		float: right
 		line-height: 70px
+		padding-top: 0
+		&__item
+			&:hover
+				> .action__dropdown
+					top: 50px
+			& + .action__item
+				+r(1024)
+					margin-left: 30px
+		&__dropdown
+			top: 60px
+			left: auto
+			right: -20px
+			transform: translateX(0)
+			&::before
+				left: auto
+				right: 20px
+	.user
+		.action
+			&__dropdown
+				left: auto
+				right: -20px
+				transform: translateX(0)
+				&::before
+					left: auto
+					right: 20px
