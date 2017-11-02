@@ -25,6 +25,7 @@
     "font-awesome": "fontawesome#^4.7.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "svg4everybody": "^2.1.9",
-    "equalheights": "equalHeights#*"
+    "equalheights": "equalHeights#*",
+    "nprogress": "^0.2.0"
   }
 }

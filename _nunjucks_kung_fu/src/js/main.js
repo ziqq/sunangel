@@ -5,7 +5,7 @@ $(document).ready(function () {
 	//=include partials/slider.js
 	//=include partials/basket.js
 	//=include partials/filter.js
-
+	NProgress.start();
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').niceScroll({
 			cursorcolor: '#baab82',
@@ -17,6 +17,24 @@ $(document).ready(function () {
 			cursorborder: 'none',
 			cursorborderradius:'0'
 		});
+
+		setTimeout(function (){
+			NProgress.set(0.33);
+		}, 1000);
+
+		setTimeout(function (){
+			NProgress.set(0.66);
+		}, 2000);
+
+		setTimeout(function (){
+			NProgress.set(0.9);
+		}, 3000);
+
+		setTimeout(function (){
+			NProgress.done();
+		}, 3500);
+
+		
 	});
 
 	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').mouseover(function() {

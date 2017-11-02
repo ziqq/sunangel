@@ -1,6 +1,9 @@
 //catalog
 .catalog
-	padding: 50px 0
+	.breadcrumbs
+		&__item
+			+r(480)
+				display: none
 //sorting
 .sorting
 	//sorting__wrap
@@ -76,7 +79,6 @@
 			opacity: 1
 	+r(768)
 		padding: 14px
-		border: 1px solid $color-brown-lighten
 	+r(480)
 		padding: 20px 30px
 	+r(375)

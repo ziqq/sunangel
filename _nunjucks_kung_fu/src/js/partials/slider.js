@@ -1,10 +1,27 @@
 	//Product Slider
-	if($('.product-slider_big').length){
-		$('.product-slider_big').bxSlider({
-			pagerCustom : '.product-slider_small',
-			responsive: true,
-			touchEnabled: true,
-			slideMargin: 0
+	if($('.product-slider').length){
+		$('.product-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.product-slider__nav',
+			arrows: false
+		});
+		$('.product-slider__nav').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.product-slider',
+			centerMode: true,
+			focusOnSelect: true,
+			arrows: false,
+			vertical: true,
+
+			responsive: [{
+				breakpoint: 1025,
+				settings: {
+					vertical: false,
+				}
+			}
+			]
 		});
 	}
 	//Section slider

@@ -9,7 +9,7 @@ title: Index page
 {% include "partials/_header.html" %}
 
 <!-- begin main -->
-<main class="main">
+<main class="main prod">
 	<div class="container">
 		{{mixin.breadcrumbs()}}
 	</div>
@@ -19,52 +19,55 @@ title: Index page
 		<div class="container">
 			<div class="product__inner">
 				<div class="product-img">
-					<div class="product-slider_big">
+					<div class="product-slider">
 						<div class="product-slider__item">{{mixin.img(500, 500)}}</div>
 						<div class="product-slider__item">{{mixin.img(500, 500)}}</div>
 						<div class="product-slider__item">{{mixin.img(500, 500)}}</div>
 					</div>
-					<div class="product-slider_small">
-						<a href="#" data-slide-index="0" class="product-slider__item">{{mixin.img(60, 60)}}</a>
-						<a href="#" data-slide-index="1" class="product-slider__item">{{mixin.img(60, 60)}}</a>
-						<a href="#" data-slide-index="2" class="product-slider__item">{{mixin.img(60, 60)}}</a>
+					<div class="product-slider__nav">
+						<div class="product-slider__item">{{mixin.img(60, 60)}}</div>
+						<div class="product-slider__item">{{mixin.img(60, 60)}}</div>
+						<div class="product-slider__item">{{mixin.img(60, 60)}}</div>
 					</div>
 				</div>
 
 				<div class="product-text">
-					<span class="product__articul">Артикул 3020399</span>
-					<h1 class="product__title">Подвеска из комбинированного золота с эмалью, бриллиантами и рубинами</h1>
-					<div class="product-text__inner">
+					<div class="product-text__top">
+						<span class="product__articul">Артикул 3020399</span>
+						<h1 class="product__title">Подвеска из комбинированного золота с эмалью, бриллиантами и рубинами</h1>
+					</div>
 
-						<div class="size">
-							<div class="extra-item js-extra-item">
-								Выбирете размер
-								<div class="extra-item__dropdown bg--dark">
-									<ul class="size__list">
-										<ul>
-											<li class="size__item">16</li>
-											<li class="size__item">16.5</li>
-											<li class="size__item">17</li>
-											<li class="size__item">17.5</li>
-										</ul>
-										<ul>
-											<li class="size__item">18</li>
-											<li class="size__item">18.5</li>
-											<li class="size__item">19</li>
-											<li class="size__item">19.5</li>
-										</ul>
-										<ul>
-											<li class="size__item">20</li>
-											<li class="size__item">20.5</li>
-											<li class="size__item">21</li>
-											<li class="size__item">21.5</li>
-										</ul>
-										<li class="size__item size__item_none"><a href="#">нет моего размера</a></li>
+					<div class="size">
+						<div class="extra-item js-extra-item">
+							Выбирете размер
+							<div class="extra-item__dropdown bg--dark">
+								<ul class="size__list">
+									<ul>
+										<li class="size__item">16</li>
+										<li class="size__item">16.5</li>
+										<li class="size__item">17</li>
+										<li class="size__item">17.5</li>
 									</ul>
-								</div>
+									<ul>
+										<li class="size__item">18</li>
+										<li class="size__item">18.5</li>
+										<li class="size__item">19</li>
+										<li class="size__item">19.5</li>
+									</ul>
+									<ul>
+										<li class="size__item">20</li>
+										<li class="size__item">20.5</li>
+										<li class="size__item">21</li>
+										<li class="size__item">21.5</li>
+									</ul>
+									<li class="size__item size__item_none"><a href="#">нет моего размера</a></li>
+								</ul>
 							</div>
-							<a href="#howsize" class="extra-item extra-item_noarrowbutton js-fancybox">Как выбрать размер ?</a>
 						</div>
+						<a href="#howsize" class="extra-item extra-item_noarrowbutton js-fancybox">Как выбрать размер ?</a>
+					</div>
+					
+					<div class="product-text__inner">
 
 						<div class="product-text__action">
 
@@ -167,11 +170,11 @@ title: Index page
 			<h2 class="h2 section-title">Дополниет свой образ</h2>
 			<div class="slider__wrap slider-addition">
 				<div class="slider js-addition-slider">
-				
+
 					{% for i in range(0, 15) -%}
-						{{item.product()}}
+					{{item.product()}}
 					{%- endfor %}
-				
+
 				</div>
 				<div class="slider__dots"></div>
 			</div>
@@ -185,9 +188,9 @@ title: Index page
 			<h2 class="h2 section-title">Похожие товары</h2>
 			<div class="slider__wrap slider-similar">
 				<div class="slider js-similar-slider">
-				
+
 					{% for i in range(0, 15) -%}
-						{{item.product()}}
+					{{item.product()}}
 					{%- endfor %}
 
 				</div>				

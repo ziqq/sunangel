@@ -99,6 +99,9 @@ img ,.img-responsive
 	font-family: rouble
 	font-style: normal
 
+.blur
+	+blur(4px)
+
 .hidden
 	display: none !important
 
@@ -556,23 +559,6 @@ input
 				left: 6px
 				top: 1px
 
-
-//Loading
-.loading
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	height: 4px
-	z-index: 999
-	&__inner
-		width: 80%
-		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
-		background-color: $color-accent
-
 .sa-close
 	display: inline-block
 	width: 32px
@@ -596,8 +582,6 @@ input
 //Breadcrumbs
 .breadcrumbs
 	padding: 10px 0 11px
-	+r(480)
-		display: none
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -649,6 +633,7 @@ input
 		color: #b8b8b8
 		&:hover
 			color: $color-brown
+
 
 //Paginator
 .paginator
@@ -714,6 +699,12 @@ input
 		right: 10px
 	+r(480)
 		bottom: 50px
+
+.main
+	&.prod
+		.breadcrumbs
+			&:not(.breadcrumbs__item_back)
+				display: none
 
 
 @import layouts

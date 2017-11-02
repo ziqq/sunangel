@@ -86,11 +86,15 @@
 		event.stopPropagation();
 	});
 
+	if($(window).width() <= 1024 ){
+		$('<a href="javascript:void(0);" class="js-mobile-menu-btn toggle-menu"><span></span></a>').prependTo('.header__bottom');
+	}
+
 	//Mobile Munu
 	if($(window).width() <= 480 ){
 		var hTopLine = $('.header__top-line');
 
-		$('<a href="javascript:void(0);" class="js-mobile-menu-btn toggle-menu"><span></span></a>').insertAfter('.logo_mobile');
+		$('js-mobile-menu-btn').insertAfter('.logo_mobile');
 		$('.js-action').prependTo('.menu__inner');
 		$('.js-menu').appendTo(hTopLine);
 		$('<div class="header-clone">').css('height', $(hTopLine).innerHeight()).insertAfter(hTopLine);

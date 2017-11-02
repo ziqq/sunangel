@@ -7,6 +7,8 @@
 		padding-bottom: 20px
 		border-bottom: 1px solid $color-border
 		+clr
+		+r(1024)
+			padding-bottom: 40px
 		+r(480)
 			margin-bottom: 30px
 	&-img
@@ -14,13 +16,18 @@
 		+clr
 	//product-text
 	&-text
-		padding-left: 65px
+		padding-left: 30px
 		+r(480)
 			padding-left: 0
 			padding-top: 30px
 		//product-text__action
 		&__action
 			margin-bottom: 30px
+			+r(1024)
+				margin-left: -40px
+				margin-bottom: 53px
+			+r(768)
+				margin-left: 20px
 			+r(480)
 				display: flex
 				align-items: center
@@ -33,6 +40,10 @@
 				width: 50%
 				margin-right: 50px
 				padding-left: 35px
+				+r(1024)
+					display: block
+					padding: 0
+					margin: 0 auto
 				+r(768)
 					width: 100%
 					margin-right: 0
@@ -49,10 +60,15 @@
 			&__button
 				opacity: 1
 				display: inline-block
+				+r(1024)
+					display: block
+					margin-top: 20px
 				.btn_add
 					padding: 16px 25px 15px 45px
 					&::after
 						left: 15px
+					+r(768)
+						margin-left: -30px
 					+r(425)
 						padding: 13px 15px 13px 30px
 						&::after
@@ -74,9 +90,10 @@
 					left: 0
 					+s(price-border)
 				+r(1024)
-					margin-bottom: 33px
 					&::after
-						display: none
+						left: -75px
+				+r(768)
+					position: relative
 				+r(480)
 					margin-bottom: 0
 				+r(425)
@@ -109,8 +126,9 @@
 		font-family: encore-50, sans-serif
 		font-size: rem(36)
 		line-height: 1.3
-		+r(768)
+		+r(1024)
 			margin-bottom: 30px
+		+r(768)
 			font-size: rem(26)
 
 //product-item
@@ -153,6 +171,8 @@
 				td
 					&:first-child
 						max-width: 95px
+						+r(1024)						
+							+text-overflow
 //extra
 .extra
 	+r(480)
@@ -250,6 +270,8 @@
 //size
 .size
 	margin-bottom: 50px
+	+r(1024)
+		margin-bottom: 80px
 	.extra-item
 		padding: 0
 		margin-right: 30px
@@ -306,36 +328,40 @@
 //product-slider
 .product-slider
 	position: relative
+	max-width: 500px
+	margin-left: auto
+	float: right
+	+r(1024)
+		float: none
+	//product-slider__item
 	&__item
-		img
+		max-width: 500px
 		margin: 0 auto
-	//product-slider_small
-	&_small
-		position: absolute
-		top: 50%
-		left: 0
-		transform: translateY(-60%)
-		+r(480)
-			top: auto
-			bottom: -30px
-			transform: translateY(0)
-			text-align: center
-			width: 100%;
-		.product-slider__item
-			display: block
-			margin: 16px 2px
-			width: 62px
-			height: 62px
-			cursor: pointer
-			border: 1px solid transparent
-			&:hover
-				border: 1px solid $color-brown-lighten
-			&.active
-				border: 1px solid $color-brown-lighten
-			+r(480)
-				display: inline-block
-			img
-				@extend %i
+		img
+			margin: 0 auto
+	///product-slider__nav
+	&__nav
+		max-width: 60px
+		max-height: 60px
+		padding-top: 135px
+		+r(1024)
+			max-width: 100%
+			padding-top: 0
+		.slick-slide
+			max-width: 60px
+			max-height: 60px
+			margin: 10px 0
+			+r(1024)
+				margin: 0 10px
+			&.slick-current
+				border: 1px solid $color-border
+		.slick-track, .slick-list
+			+r(1024)
+				display: flex
+				justify-content: space-around
+		.slick-list
+			+rmin(1025)
+				padding: 0 !important
 
 //another-color
 .another-color
