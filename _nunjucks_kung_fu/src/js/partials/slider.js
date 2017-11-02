@@ -20,8 +20,7 @@
 				settings: {
 					vertical: false,
 				}
-			}
-			]
+			}],
 		});
 	}
 	//Section slider

@@ -20,6 +20,10 @@
 		+r(480)
 			padding-left: 0
 			padding-top: 30px
+		//product-text__top
+		&__top
+			+r(480)
+				text-align: center
 		//product-text__action
 		&__action
 			margin-bottom: 30px
@@ -27,35 +31,15 @@
 				margin-left: -40px
 				margin-bottom: 53px
 			+r(768)
-				margin-left: 20px
+				margin-left: 0
 			+r(480)
 				display: flex
 				align-items: center
 				justify-content: space-between
 				flex-wrap: wrap
+				flex-direction: column
+				flex-wrap: wrap
 		.product-item
-			//product-item__price
-			&__price
-				display: inline-block
-				width: 50%
-				margin-right: 50px
-				padding-left: 35px
-				+r(1024)
-					display: block
-					padding: 0
-					margin: 0 auto
-				+r(768)
-					width: 100%
-					margin-right: 0
-					padding-left: 0
-				+r(480)
-					width: 50%
-					margin-right: 23px
-				+r(425)
-					margin: 0
-				+r(375)
-					width: 100%
-					margin-bottom: 30px
 			//product-item__button
 			&__button
 				opacity: 1
@@ -69,12 +53,18 @@
 						left: 15px
 					+r(768)
 						margin-left: -30px
+					+r(480)
+						margin-left: 0
 					+r(425)
 						padding: 13px 15px 13px 30px
 						&::after
 							left: 8px
 			//product-item__price
 			&__price
+				display: inline-block
+				width: 50%
+				margin-right: 50px
+				padding-left: 35px
 				text-align: left
 				position: relative
 				color: $color-text
@@ -90,14 +80,34 @@
 					left: 0
 					+s(price-border)
 				+r(1024)
+					display: block
+					padding: 0
+					margin: 0 auto
 					&::after
 						left: -75px
 				+r(768)
+					width: 100%
+					margin-right: 0
+					padding-left: 0
+					padding-left: 32px
 					position: relative
+					&:after
+						left: 0
+						+s(price-border--small)
 				+r(480)
-					margin-bottom: 0
+					margin: 0 auto 0
+					padding-left: 0
+					width: auto
+					&::after
+						left: -48px
 				+r(425)
+					margin: 0
 					font-size: rem(18)
+					&::after
+						left: -48px
+				+r(375)
+					width: 100%
+					margin-bottom: 30px
 				&_old
 					margin-left: 12px
 					font-family: oswald-300, sans-serif
@@ -119,6 +129,8 @@
 		font-size: rem(12)
 		color: #b8b8b8
 		text-transform: uppercase
+		+r(480)
+			font-size: rem(14)
 	//product__title
 	&__title
 		margin-bottom: 80px
@@ -176,6 +188,7 @@
 //extra
 .extra
 	+r(480)
+		display: flex
 	&-item
 		display: inline-block
 		padding: 0 20px 0 30px
@@ -195,8 +208,13 @@
 			left: 0
 		+r(1024)
 			padding-right: 5px
+		+r(768)
+			display: block
+			margin-bottom: 15px
+			margin-left: 70px
 		+r(480)
 			padding-left: 20px
+			margin: auto
 		+r(375)
 			font-size: rem(13)
 		&_credit
@@ -272,10 +290,18 @@
 	margin-bottom: 50px
 	+r(1024)
 		margin-bottom: 80px
+	+r(480)
+		text-align: center
+		max-width: 250px
+		margin: 0 auto 80px
 	.extra-item
 		padding: 0
 		margin-right: 30px
 		border-bottom: 1px dashed $color-border
+		+r(480)
+			margin-right: 0
+			margin-left: 0
+			display: inline-block
 		&:last-child
 			margin-right: 0
 			&::after
@@ -358,7 +384,7 @@
 		.slick-track, .slick-list
 			+r(1024)
 				display: flex
-				justify-content: space-around
+				justify-content: center
 		.slick-list
 			+rmin(1025)
 				padding: 0 !important

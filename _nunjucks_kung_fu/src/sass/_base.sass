@@ -703,8 +703,9 @@ input
 .main
 	&.prod
 		.breadcrumbs
-			&:not(.breadcrumbs__item_back)
-				display: none
+			&__item
+				&:not(.breadcrumbs__item_back)
+					display: none
 
 
 @import layouts

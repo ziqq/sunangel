@@ -26,7 +26,7 @@ gulp.task('js:assets', function () {
 });
 
 gulp.task('js:libs', function() {
-	return gulp.src(config.src.js + '/scripts.js')
+	return gulp.src(config.src.js + '/libs.js')
 	.pipe(include())
 	.on('error', function(){notify("Javascript include error");})
 	.pipe(rename({suffix: '.min', prefix : ''}))

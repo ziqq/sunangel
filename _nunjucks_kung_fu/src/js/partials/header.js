@@ -154,9 +154,9 @@
 		$('body').removeClass('is-fixed-bg');
 	});
 
-		$(".auth__item").not(":first").hide();
-		$(".auth__tab").click(function() {
-			$('.auth__tab').removeClass('is-active');
-			$(this).addClass('is-active');
-			$(".auth__item").hide().eq($(this).index()).fadeIn();
-		}).eq(0).addClass("is-active");
+	$(".auth__item").not(":first").hide();
+	$(".auth__tab").click(function() {
+		$('.auth__tab').removeClass('is-active');
+		$(this).addClass('is-active');
+		$(".auth__item").hide().eq($(this).index()).fadeIn();
+	}).eq(0).addClass("is-active");

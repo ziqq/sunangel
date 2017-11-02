@@ -1,10 +1,10 @@
-$(document).ready(function () {	
+$(document).ready(function (){
 
-	//Partials
 	//=include partials/header.js
 	//=include partials/slider.js
 	//=include partials/basket.js
 	//=include partials/filter.js
+
 	NProgress.start();
 	$(window).on("load",function(){
 		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').niceScroll({
@@ -33,7 +33,6 @@ $(document).ready(function () {
 		setTimeout(function (){
 			NProgress.done();
 		}, 3500);
-
 		
 	});
 
@@ -125,6 +124,7 @@ $(document).ready(function () {
 
 	if($(window).width() <= 480){
 		$('.news .about-nav').appendTo('.news .container');
+		$('.js-product-title').insertAfter('.breadcrumbs');
 	}
 
 	//footer accordeon
@@ -193,6 +193,5 @@ $(document).ready(function () {
 			myMap.geoObjects.add(myPin);
 		}
 	}
-
 
 });
