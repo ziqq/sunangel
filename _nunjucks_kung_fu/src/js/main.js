@@ -68,6 +68,12 @@ $(document).ready(function (){
 	if($('.product-item__title').length){
 		heightses();
 	}
+
+	//product text
+	$('.js-product-desc-text').click(function (){
+		$(this).prev('.product-desc__inner').css('max-height', '100%');
+		$(this).css('display', 'none');
+	});
 	
 
 	$('.seo-text__desc').not(':first').hide();

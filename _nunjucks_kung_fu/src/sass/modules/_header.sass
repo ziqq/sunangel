@@ -12,9 +12,6 @@
 	color: $color-text
 	border-bottom: 1px solid $color-border
 	+r(480)
-		border-bottom: none
-	&__top-line
-		+r(480)
 			height: 50px
 			text-align: center
 			background-color: #FFF
@@ -24,11 +21,9 @@
 			transform: translateX(0)
 			transition: transform .5s ease
 			position: fixed
-			&.is-menu-open
-				transform: translateX(320px)
-		+r(320)
-			&.is-menu-open
-				transform: translateX(271px)
+	&__top-line
+		+r(480)
+			display: none
 	&__bottom
 		position: relative
 		margin-bottom: 45px
@@ -160,7 +155,7 @@
 		margin-right: 0
 		padding: 0
 		position: fixed
-		top: 12px
+		top: 20px
 		right: 35px
 		z-index: 99
 	&__time
@@ -187,7 +182,7 @@
 			span
 				display: none
 			&::before
-				top: 2px
+				top: 13px
 				left: 5px
 	&__link
 		display: inline-block

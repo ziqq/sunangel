@@ -1,6 +1,6 @@
 	if ($(window).width() <= 480) {
 		//скрытие и отображение меню при скроле
-		var header = $(".header__top-line"); // Меню
+		var header = $(".header"); // Меню
 		var wrapp = $(".wrapper"); // Wrapper
 		var main = $('.main');
 		var scrollPrev = 0; // Предыдущее значение скролла
@@ -86,18 +86,26 @@
 		event.stopPropagation();
 	});
 
+	if($(window).width() <= 1199 ){
+		$('.js-mobile-menu-btn').appendTo('.header__bottom');
+	}
+
+
 	if($(window).width() <= 1024 ){
 		$('<a href="javascript:void(0);" class="js-mobile-menu-btn toggle-menu"><span></span></a>').prependTo('.header__bottom');
 	}
 
 	//Mobile Munu
 	if($(window).width() <= 480 ){
-		var hTopLine = $('.header__top-line');
+		var header = $('.header');
 
 		$('js-mobile-menu-btn').insertAfter('.logo_mobile');
 		$('.js-action').prependTo('.menu__inner');
-		$('.js-menu').appendTo(hTopLine);
-		$('<div class="header-clone">').css('height', $(hTopLine).innerHeight()).insertAfter(hTopLine);
+		$('.js-menu').appendTo(header);
+		$('<div class="header-clone">').css('height', $(header).innerHeight()).insertAfter(header);
+
+		$('.js-mobile-menu-btn').prependTo(header);
+		$('.callback').appendTo(header);
 	}
 
 	$('.js-mobile-menu-btn').click(function() {
@@ -121,16 +129,7 @@
 		}
 		event.stopPropagation();
 	});
-
-	if($(window).width() <= 1199 ){
-		$('.js-mobile-menu-btn').appendTo('.header__bottom');
-	}
-
-	if($(window).width() <= 480 ){
-		$('.js-mobile-menu-btn').prependTo('.header__top-line');
-		$('.callback').appendTo('.header__top-line');
-	}
-
+	
 	//Search
 	$('.js-search').click(function (){
 		$('.mobile-search').addClass('is-visible');

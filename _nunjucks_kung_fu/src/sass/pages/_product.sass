@@ -38,7 +38,6 @@
 				justify-content: space-between
 				flex-wrap: wrap
 				flex-direction: column
-				flex-wrap: wrap
 		.product-item
 			//product-item__button
 			&__button
@@ -98,16 +97,14 @@
 					margin: 0 auto 0
 					padding-left: 0
 					width: auto
+					left: -16px
 					&::after
-						left: -48px
+						left: -28px
 				+r(425)
 					margin: 0
 					font-size: rem(18)
 					&::after
-						left: -48px
-				+r(375)
-					width: 100%
-					margin-bottom: 30px
+						left: -41px
 				&_old
 					margin-left: 12px
 					font-family: oswald-300, sans-serif
@@ -156,6 +153,8 @@
 	//product-desc__title
 	+r(480)
 		margin-bottom: 30px
+		display: flex
+		flex-direction: column
 	&__title
 		display: block
 		margin-bottom: 30px
@@ -177,6 +176,9 @@
 	&__item
 		.info__list
 			+r(480)
+				max-width: 350px
+			+r(320)
+				max-width: 300px
 				font-size: rem(14)
 			tr
 				height: 30px
@@ -185,10 +187,36 @@
 						max-width: 95px
 						+r(1024)						
 							+text-overflow
+		//product-desc__item_about
+		&_about
+			+r(480)
+				order: 2
+				display: flex
+				flex-direction: column
+				.product-desc__inner
+					margin-bottom: 15px
+					max-height: 170px
+					overflow: hidden
+					+tr(.5s)
+			.btn_next
+				display: none
+				margin: 0 auto
+				+r(480)
+					display: inline-block
+		//product-desc__item_info
+		&_info
+			+r(480)
+				order: 1
+		//product-desc__item_color
+		&_color
+			+r(480)
+				width: 100%
+				order: 3
 //extra
 .extra
 	+r(480)
 		display: flex
+		flex-wrap: wrap
 	&-item
 		display: inline-block
 		padding: 0 20px 0 30px
@@ -209,14 +237,14 @@
 		+r(1024)
 			padding-right: 5px
 		+r(768)
-			display: block
 			margin-bottom: 15px
 			margin-left: 70px
 		+r(480)
+			display: block
 			padding-left: 20px
-			margin: auto
+			margin: 0 auto 15px
 		+r(375)
-			font-size: rem(13)
+			font-size: rem(14)
 		&_credit
 			padding-left: 25px
 			&::before
@@ -237,9 +265,21 @@
 				content: ''
 				top: 5px
 				+s('gift')
+			+r(480)
+				.extra-item__dropdown
+					left: auto
+					right: 0
+					&::before
+						left: 50%
+						margin-left: -3px
 			+r(375)
 				&::before
 					top: 2px
+			+r(320)
+				.extra-item__dropdown
+					right: auto
+					left: 50%
+					transform: translateX(-50%)
 		&.is-visible
 			.extra-item__dropdown
 				visibility: visible
@@ -294,14 +334,24 @@
 		text-align: center
 		max-width: 250px
 		margin: 0 auto 80px
+	+r(425)
+		max-width: 155px
+	+r(375)
+		max-width: 140px
 	.extra-item
+		display: inline-block
 		padding: 0
-		margin-right: 30px
+		margin:
+			top: 15px
+			left: 0
+			right: 30px
 		border-bottom: 1px dashed $color-border
 		+r(480)
 			margin-right: 0
 			margin-left: 0
 			display: inline-block
+		+r(425)
+			display: block
 		&:last-child
 			margin-right: 0
 			&::after
@@ -373,6 +423,10 @@
 		+r(1024)
 			max-width: 100%
 			padding-top: 0
+		+r(480)
+			.product-slider__item
+				width: 60px !important
+				height: 60px !important
 		.slick-slide
 			max-width: 60px
 			max-height: 60px
@@ -399,7 +453,7 @@
 		margin-bottom: 10px
 		&:nth-child(3n)
 			margin-right: 0
-		+r(375)
+		+r(480)
 			&:nth-child(3n)
 				margin-right: 10px
 		+r(375)
