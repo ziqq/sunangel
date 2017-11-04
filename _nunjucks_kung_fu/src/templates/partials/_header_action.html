@@ -3,21 +3,37 @@
 	<ul class="action__list">
 		<li class="action__item action__item_search search js-action__link">
 			<a class="action__link js-search" href="javascript:void(0);">{{mixin.icon('search')}}</a>
-			<div class="action__dropdown bg--dark">
+			<div class="action__dropdown bg--dark search-block">
 				<h4 class=" h4 action__title">Поиск</h4>
 				<span class="search__desc">поиск среди 45 000 ювелирных изделий</span>
-				<label class="sa-input__box mobile-search">
-					<input class="sa-input js-sa-input" type="seatch">
+				<label class="sa-input__box">
+					<input class="sa-input js-sa-input js-search" type="seatch">
 					<span class="sa-input__placeholder">Введите название изделия или его индекс</span>
 					{{mixin.icon('search')}}
 				</label>
+				<div class="search__result">
+					{% for i in range(0, 10) -%}
+					<div class="cart-item">
+						<div class="cart-item__img">
+							{{mixin.img(60, 60)}}
+						</div>									
+						<div class="cart-item__text">
+							<span class="cart-item__articul">485326</span>
+							Золотая подвеска с минеральным стеклом и фианитами
+						</div>
+						<span class="cart-item__price">13 490 <i class="rub">a</i></span>
+						<span class="cart-item__del del">
+							{{mixin.icon('close')}}
+						</span>
+					</div>		
+					{%- endfor%}
+				</div>
 			</div>
 		</li>
 		<li class="action__item action__item_use user js-action__link">
-			<a class="action__link js-auth--open" href="javascript:void(0);">{{mixin.icon('user')}}</a>
+			<a class="action__link js-auth" href="javascript:void(0);">{{mixin.icon('user')}}</a>
 			<div class="action__dropdown bg--dark user-enter">
 				<h4 class="action__title">Войти</h4>
-				<div class="sa-close js-auth--close js-close">{{mixin.icon('close')}}</div>
 				<div class="social header__social">
 					<span class="social__title">Через социальную сеть:</span>
 					<ul class="social__list social__list_icon">
@@ -32,11 +48,11 @@
 				<!-- begin auth -->
 				<div class="auth">
 					<div class="auth__tabs">
-						<span class="auth__tab is-active">Телефон</span>
-						<span class="auth__tab">Email</span>    
+						<span class="auth__tab js-tab--clone is-active">Телефон</span>
+						<span class="auth__tab js-tab--clone">Email</span>    
 					</div>
 					<div class="auth__content">
-						<div class="auth__item">
+						<div class="auth__item js-tab-item--clone">
 							<label class="sa-input__box">
 								<input class="sa-input js-sa-input phone-mask" type="tel">
 								<span class="sa-input__placeholder">Введите Ваш номер телефона</span>
@@ -61,7 +77,7 @@
 							</div>
 						</div>
 
-						<div class="auth__item">
+						<div class="auth__item js-tab-item--clone">
 							<label class="sa-input__box">
 								<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 								<span class="sa-input__placeholder">Введите Ваш Email</span>
@@ -86,7 +102,7 @@
 							</div>
 						</div>
 					</div>
-				</div>							
+				</div>
 				<!-- end auth -->
 			</div>
 		</li>
@@ -159,4 +175,4 @@
 		</li>
 	</ul>
 </div>			
-			<!-- end action -->
+<!-- end action -->

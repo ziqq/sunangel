@@ -182,7 +182,7 @@
 			span
 				display: none
 			&::before
-				top: 13px
+				top: -6px
 				left: 5px
 	&__link
 		display: inline-block
@@ -262,10 +262,9 @@
 			> .action__dropdown
 				visibility: visible
 				opacity: 1
-				-webkit-filter: none
 				filter: none
 				display: block
-				top: 40px
+				top: 35px
 				pointer-events: auto
 		& + &
 			margin-left: 50px
@@ -303,7 +302,7 @@
 		padding: 0 30px 35px
 		text-align: left
 		position: absolute
-		top: 55px
+		top: 45px
 		left: 0
 		z-index: 99
 		background-image: url("../img/general/dropdown-bg.png")
@@ -318,10 +317,16 @@
 		&::before
 			top: -11px
 			margin-left: -11px
-		.sa-close
-			display: block !important
 		+r(480)			
 			display: none !important
+			opacity: 1
+			visibility: visible
+			filter: none
+			pointer-events: auto
+			&.user-enter, &.search-block
+				display: block !important
+				.sa-close
+					display: inline-flex !important
 	&__title
 		margin-bottom: 40px
 		padding-top: 30px
@@ -330,9 +335,13 @@
 		text-align: center
 		letter-spacing: 0.26px
 		color: $color-text
+		+r(320)
+			font-size: rem(32)
+			margin-bottom: 20px
 
 .search
 	text-align: center
+	//search__desc
 	&__desc
 		display: block
 		margin-bottom: 25px
@@ -340,6 +349,14 @@
 		font-family: encore-300
 		font-size: rem(14)
 		line-height: 18px
+	//search__result
+	&__result
+		display: none
+		max-height: 275px
+		padding-right: 10px
+		overflow-y: auto
+		+r(480)
+			max-height: 100%
 	.action
 		&__dropdown
 			left: 50%
@@ -347,38 +364,7 @@
 	.sa-input 
 		padding-right: 40px
 		&__box
-			.icon-search
-				position: absolute
-				top: 18px
-				right: 15px
-				cursor: pointer
-				+tr(.35s)
-				&:hover
-					fill: $color-accent
-
-//Mobile Search
-+r(480)
-	.mobile-search
-		position: absolute
-		top: -200%
-		left: 0
-		width: 100%
-		+tr(.35s)
-		&.is-visible
-			top: 0
-		.sa-input
-			padding-right: 40px
-			+br(0)
-			+placeholder
-				font-size: 14px
-		.icon
-			position: absolute
-			top: 50%
-			right: 10px
-			width: 23px
-			height: 23px
-			margin-top: -11.5px
-			fill: $color-accent
+			margin-bottom: 25px
 
 //User
 .user
@@ -568,11 +554,13 @@
 	margin-bottom: 30px
 	position: relative
 	+clr
+	//cart-item__img
 	&__img
 		float: left
 		width: 60px
 		height: 60px
 		margin-right: 20px
+	//cart-item__text
 	&__text
 		float: left
 		display: inline-block
@@ -582,17 +570,25 @@
 		text-align: left
 		line-height: 1.3
 		color: $color-text-light
+	//cart-item__articul
+	&__articul
+		display: block
+		font-size: rem(13)
+		font-family: oswald-400, sans-serif
+		color: $color-accent-two
+	//cart-item__price
 	&__price
 		display: inline-block
 		float: right
-		margin-right: 52px
-		padding-top: 21px
 		font-family: oswald-300
 		font-size: rem(16)
 		line-height: 1.3
 		color: $color-accent
+		+vy
+		right: 50px
 		.rub
 			color: $color-accent
+	//cart-item__del
 	&__del
 		display: inline-block
 		width: 32px
@@ -677,6 +673,8 @@
 			&::before
 				left: auto
 				right: 20px
+			+r(480)
+				display: none !important
 	.user
 		.action
 			&__dropdown

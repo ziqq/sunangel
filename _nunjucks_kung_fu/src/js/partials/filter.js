@@ -18,7 +18,8 @@
 	$('.js-filter-open').click(function (){
 		$('.filter').addClass('is-open');
 		$('.go-top').css('display', 'none');
-		$('body').addClass('is-fixed-bg');
+		$('body').addClass('is-fixed');
+		$('.mask').css('display', 'block');
 		return false
 
 	});
@@ -26,7 +27,8 @@
 	$('.js-filter-close').click(function (){
 		$('.filter').removeClass('is-open');
 		$('.go-top').removeAttr('style');
-		$('body').removeClass('is-fixed-bg');
+		$('body').removeClass('is-fixed');
+		$('.mask').removeAttr('style');
 	});
 
 	$('.js-checkbox-title').click(function (){
@@ -44,7 +46,6 @@
 	})
 
 	if($(window).width() <= 480){
-		$('<div class="block-move">').insertAfter('.wrapper');
 		$('.js-filter').appendTo('.block-move');
 		$('.js-filter-open').html('фильтр').appendTo('.block-move');
 	}

@@ -1,7 +1,7 @@
 .filter
 	position: fixed
 	top: 0
-	max-width: 1200px
+	max-width: 414px
 	width: 100%
 	right: 0
 	bottom: 0
@@ -12,10 +12,7 @@
 	+tr(.5s)
 	+r(1024)
 		height: 100vh
-		max-width: 768px
-	+r(768)
-		max-width: 425px
-	+r(425)
+	+r(414)
 		max-width: 100%
 	&.is-open
 		transform: translateX(0)
@@ -28,131 +25,79 @@
 			display: none !important
 	//filter__inner
 	&__inner
-		padding: 0 250px 0 95px
+		padding: 0 30px 0 50px
 		+clr
-		+r(1024)
-			padding: 0 0 0 100px
-		+r(768)
-			padding: 0 0 0 50px
-		+r(480)
-			padding-left: 30px
+		+r(375)
+			padding: 0 30px
 	//filter__close
 	&__close
-		width: 52px
-		height: 52px
+		width: 40px
+		height: 40px
 		+br(3px)
 		border: 1px solid $color-text-btn
 		background-color: $color-bg-dark
 		position: absolute
-		top: 66px
-		right: 200px
-		+r(1024)
-			width: 45px
-			height: 45px
-			top: 40px
-			right: 80px
-		+r(768)
-			right: 30px
-		+r(480)
-			width: 38px
-			height: 38px
-			right: 30px
-			top: 18px
-			.icon
-				margin-top: 3px
-		.icon
-			margin-top: 10px
-			+r(1024)
-				margin-top: 7px
+		top: 18px
+		right: 30px
+		+r(320)
+			width: 35px
+			height: 35px
+			top: 16px
 	//filter__top
 	&__top
 		position: fixed
 		top: 0
 		left: 0
 		width: 100%
-		height: 130px
+		height: 70px
 		z-index: 10
-		+r(1024)
-			height: 125px
-		+r(768)
-			height: 70px
 	//filter__content
 	&__content
 		padding: 30px 0
 		position: fixed
-		top: 130px
-		bottom: 130px
+		top: 70px
+		bottom: 70px
 		left: 0
 		right: 0
 		overflow: auto
-		// +my-scroll
-		+r(1024)
-			top: 125px
-			bottom: 125px
-		+r(768)
-			top: 70px
-			bottom: 70px
+		+r(375)
+			padding: 15px 0
 	//filter__bottom
 	&__bottom
 		position: fixed
 		bottom: 0
 		left: 0
 		width: 100%
-		height: 130px
+		height: 70px
 		border-top: 1px solid $color-bg-dark
 		z-index: 10
 		+clr
-		+r(1024)
-			height: 125px
-		+r(768)
-			height: 70px
+		+r(375)
+			.filter__bottom
+				padding: 0 0 0 30px
 	//filter__title
 	&__title
 		width: 145px
 		height: 25px
 		font-family: encore-50
 		font-size: rem(36)
-		line-height: 130px
+		line-height: 70px
 		text-transform: uppercase
 		color: $color-text-light
 		letter-spacing: 2.61px
-		+r(768)
-			line-height: 70px
-	//filter__logo
-	&__logo
-		display: inline-block
-		vertical-align: middle
-		float: right
-		color: $color-bg-dark
-		font-family: encore-300
-		text-transform: uppercase
-		font-size: rem(90)
-		line-height: 130px
-		position: relative
-		right: -120px
-		+r(1024)
-			font-size: rem(52)
-			line-height: 125px
-			right: 10px
-		+r(768)
-			float: none
-			font-size: rem(42)
-			right: 0
-		+r(480)
-			display: none
+		+r(375)
+			font-size: rem(28)
 	//filter__action
 	&__action
 		display: inline-block
 		vertical-align: middle
-		line-height: 130px
-		+r(1024)
-			line-height: 125px
-		+r(768)
-			line-height: 70px
+		line-height: 70px
 	//filter__btn
 	&__btn
 		vertical-align: middle
 		margin-right: 45px
+		min-width: auto
+		padding: 13px 35px
 		+r(768)
 			margin-right: 15px
 			min-width: auto

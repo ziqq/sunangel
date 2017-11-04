@@ -7,7 +7,7 @@ $(document).ready(function (){
 
 	NProgress.start();
 	$(window).on("load",function(){
-		$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').niceScroll({
+		$('.city-dropdown, .js-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner, .search__result').niceScroll({
 			cursorcolor: '#baab82',
 			horizrailenabled: false,
 			autohidemode: false,
@@ -36,9 +36,11 @@ $(document).ready(function (){
 		
 	});
 
-	$('.city-dropdown, .mobile-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner').mouseover(function() {
+	$('.city-dropdown, .js-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner, search__result').mouseover(function() {
 		$(this).getNiceScroll().resize();
 	});
+
+
 
 	//Mask
 	if($('.phone-mask').length){
@@ -152,7 +154,6 @@ $(document).ready(function (){
 			$('.go-top').removeClass('is-visible');
 		}
 	});
-
 
 	//Map
 	if ($('#map').length){
