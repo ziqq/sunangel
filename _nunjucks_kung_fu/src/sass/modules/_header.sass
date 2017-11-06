@@ -12,15 +12,19 @@
 	color: $color-text
 	border-bottom: 1px solid $color-border
 	+r(480)
-			height: 50px
-			text-align: center
-			background-color: #FFF
-			border-bottom: 1px solid $color-border
+		height: 50px
+		text-align: center
+		background-color: #FFF
+		border-bottom: 1px solid $color-border
+		width: 100%
+		z-index: 99
+		top: -50px
+		transition:  top .7s ease
+		&.is-fixed
 			width: 100%
-			z-index: 99
-			transform: translateX(0)
-			transition: transform .5s ease
 			position: fixed
+			left: 0
+			top: 0
 	&__top-line
 		+r(480)
 			display: none
@@ -154,7 +158,7 @@
 		float: none
 		margin-right: 0
 		padding: 0
-		position: fixed
+		position: absolute
 		top: 20px
 		right: 35px
 		z-index: 99

@@ -18,7 +18,7 @@
 	$('.js-filter-open').click(function (){
 		$('.filter').addClass('is-open');
 		$('.go-top').css('display', 'none');
-		$('body').addClass('is-fixed');
+		$('body').addClass('is-fixed-bg');
 		$('.mask').css('display', 'block');
 		return false
 
@@ -27,7 +27,7 @@
 	$('.js-filter-close').click(function (){
 		$('.filter').removeClass('is-open');
 		$('.go-top').removeAttr('style');
-		$('body').removeClass('is-fixed');
+		$('body').removeClass('is-fixed-bg');
 		$('.mask').removeAttr('style');
 	});
 
@@ -37,12 +37,12 @@
 		}else{
 			$(this).removeClass('is-active');
 		}
-		
 	});
 
 	$('.js-filter-showmore').click(function (){
 		$(this).parent('.filter-item__list').find('.checkbox').removeClass('hidden');
 		$(this).hide();
+		return false
 	})
 
 	if($(window).width() <= 480){

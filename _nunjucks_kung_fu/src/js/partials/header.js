@@ -1,81 +1,20 @@
 	if ($(window).width() <= 480) {
-		//скрытие и отображение меню при скроле
-		var header = $(".header"); // Меню
-		var wrapp = $(".wrapper"); // Wrapper
-		var main = $('.main');
-		var scrollPrev = 0; // Предыдущее значение скролла
-
-		$(window).scroll(function () {
-			var scrolled = $(window).scrollTop(); // Высота скролла в px
-			var firstScrollUp = false; // Параметр начала сколла вверх
-			var firstScrollDown = false; // Параметр начала сколла вниз
-
-			// Если скроллим
-			if (scrolled > 0) {
-				// $('.header_clone').show();
-				// Если текущее значение скролла > предыдущего, т.е. скроллим вниз
-				if (scrolled > scrollPrev) {
-					firstScrollUp = false; // Обнуляем параметр начала скролла вверх
-					// Если меню видно
-					if (scrolled < header.height() + header.offset().top) {
-						// Если только начали скроллить вниз
-						if (firstScrollDown == false) {
-							var topPosition = header.offset().top; // Фиксируем текущую позицию меню
-							header.css({
-								"top": topPosition + "px"
-							});
-							firstScrollDown = true;
-						}
-						// Позиционируем меню абсолютно
-						header.css({
-							"position": "absolute"
-						});
-						// wrapp.css({
-						// 	paddingTop: 60
-						// });
-						// Если меню НЕ видно
-					} else {
-						// Позиционируем меню фиксированно вне экрана
-						header.css({
-							"position": "fixed",
-							"top": "-" + header.outerHeight(true) + "px"
-						});
-					}
-
-					// Если текущее значение скролла < предыдущего, т.е. скроллим вверх
-				} else {
-					firstScrollDown = false; // Обнуляем параметр начала скролла вниз
-					// Если меню не видно
-					if (scrolled > header.offset().top) {
-						// Если только начали скроллить вверх
-						if (firstScrollUp === false) {
-							var topPosition = header.offset().top; // Фиксируем текущую позицию меню
-							header.css({
-								"top": topPosition + "px"
-							});
-							firstScrollUp = true;
-						}
-						// Позиционируем меню абсолютно
-						header.css({
-							"position": "absolute"
-						});
-						// wrapp.css({
-						// 	paddingTop: 60
-						// });
-					} else {
-						// Убираем все стили
-						header.removeAttr("style");
-						// wrapp.removeAttr("style");
-					}
-				}
-				// Присваеваем текущее значение скролла предыдущему
-				scrollPrev = scrolled;
+		var lastScrollTop = 0;
+		var header = $('.header');
+		var headerClone = $('<div class="header-clone">').css('height', header.innerHeight()).insertBefore(header).hide();
+		$(window).scroll(function(event){
+			var st = $(this).scrollTop();
+			if (st > lastScrollTop){   
+				header.removeClass('is-fixed');
+				headerClone.hide();
+			} else {
+				header.addClass('is-fixed');
+				headerClone.show();
 			}
-
+			lastScrollTop = st;
 		});
-
 	}
-	
+
 	//City hover
 	$('.js-city-hover').click(function (){
 		$(this).toggleClass('is-active');
@@ -100,15 +39,11 @@
 		var header = $('.header');
 
 		$('<div class="block-move">').insertAfter('.wrapper');
-
 		$('js-mobile-menu-btn').insertAfter('.logo_mobile');
 		$('.js-action').prependTo('.menu__inner');
 		$('.js-menu').appendTo(header);
-		$('<div class="header-clone">').css('height', $(header).innerHeight()).insertAfter(header);
-
 		$('.js-mobile-menu-btn').prependTo(header);
 		$('.callback').appendTo(header);
-
 		$('.js-user-enter').appendTo('.block-move');
 		$('.js-search-block').appendTo('.block-move');
 	}
@@ -116,24 +51,28 @@
 	$('.js-mobile-menu-btn').click(function() {
 		$(this).toggleClass('on');
 		$('.js-menu').slideToggle();
-		$('body').toggleClass('is-fixed');
+		$('body').toggleClass('is-fixed-bg');
 		if($('.go-top').hasClass('is-visible')){
 			$('.go-top').toggleClass('is-visible');
 		}
 		$('.js-filter-open').toggleClass('is-disable');
 		return false
 	});
+
 	$(document).click(function(event) {
-		if ($(event.target).closest('.js-menu, .js-user-enter, .js-search-block, .js-mobile-menu-btn').length) return;
-		$('.js-mobile-menu-btn').removeClass('on');
-		$('.js-menu').slideUp();
-		$('.js-filter-open').removeClass('is-disable');
-		$('body').removeClass('is-fixed');
-		if($('.go-top').hasClass('is-visible')){
-		}else{
-			$('.go-top').addClass('is-visible');
+		if($(window).width() <= 1024){	
+			if ($(event.target).closest('.js-menu, .js-user-enter, .js-search-block, .js-mobile-menu-btn').length) return;
+			$('.js-mobile-menu-btn').removeClass('on');
+			$('.js-filter-open').removeClass('is-disable');
+			$('body').removeClass('is-fixed-bg');
+
+			if($('.go-top').hasClass('is-visible')){
+			}else{
+				$('.go-top').addClass('is-visible');
+			}		
+			$('.js-menu').slideUp();
+			event.stopPropagation();
 		}
-		event.stopPropagation();
 	});
 	
 	//Search

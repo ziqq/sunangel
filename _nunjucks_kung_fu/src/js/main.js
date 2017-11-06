@@ -5,7 +5,6 @@ $(document).ready(function (){
 	//=include partials/basket.js
 	//=include partials/filter.js
 
-	NProgress.start();
 	$(window).on("load",function(){
 		$('.city-dropdown, .js-menu, .popup, .filter__content, .filter-sm__inner, .favorite__inner, .cart__inner, .search__result').niceScroll({
 			cursorcolor: '#baab82',
@@ -18,21 +17,26 @@ $(document).ready(function (){
 			cursorborderradius:'0'
 		});
 
-		setTimeout(function (){
-			NProgress.set(0.33);
-		}, 1000);
+		if($(window).width() > 480){
 
-		setTimeout(function (){
-			NProgress.set(0.66);
-		}, 2000);
+			setTimeout(function (){
+				NProgress.set(0.33);
+			}, 1000);
 
-		setTimeout(function (){
-			NProgress.set(0.9);
-		}, 3000);
+			setTimeout(function (){
+				NProgress.set(0.66);
+			}, 2000);
 
-		setTimeout(function (){
+			setTimeout(function (){
+				NProgress.set(0.9);
+			}, 3000);
+
+			setTimeout(function (){
+				NProgress.done();
+			}, 3500);
+		}else{
 			NProgress.done();
-		}, 3500);
+		}
 		
 	});
 

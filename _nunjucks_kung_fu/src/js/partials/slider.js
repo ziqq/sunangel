@@ -4,7 +4,7 @@
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			asNavFor: '.product-slider__nav',
-			arrows: false
+			arrows: false,			
 		});
 		$('.product-slider__nav').slick({
 			slidesToShow: 3,
