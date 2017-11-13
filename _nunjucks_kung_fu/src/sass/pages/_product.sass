@@ -149,7 +149,6 @@
 //product-desc
 .product-desc
 	margin-bottom: 120px
-	font-family: encore-100, sans-serif
 	+clr
 	//product-desc__title
 	+r(480)
@@ -173,11 +172,16 @@
 		font-size: rem(16)
 		&:last-child
 			margin-bottom: 0
+		+r(480)
+			color: #333
 	//product-desc__item
 	&__item
 		.info__list
+			font-size: rem(15) 
 			+r(480)
 				max-width: 350px
+				font-size: rem(16) 
+				color: #333 
 			+r(320)
 				max-width: 300px
 				font-size: rem(14)
@@ -185,7 +189,7 @@
 				height: 30px
 				td
 					&:first-child
-						max-width: 95px
+						max-width: 98px
 						+r(1024)						
 							+text-overflow
 		//product-desc__item_about
@@ -218,6 +222,7 @@
 	+r(480)
 		display: flex
 		flex-wrap: wrap
+		color: $color-text 
 	&-item
 		display: inline-block
 		padding: 0 20px 0 30px
@@ -244,6 +249,7 @@
 			display: block
 			padding-left: 20px
 			margin: 0 auto 15px
+			color: $color-text 
 		+r(375)
 			font-size: rem(14)
 		&_credit
@@ -346,11 +352,10 @@
 			top: 15px
 			left: 0
 			right: 30px
-		border-bottom: 1px dashed $color-border
 		+r(480)
 			margin-right: 0
 			margin-left: 0
-			display: inline-block
+			display: block
 		+r(425)
 			display: block
 		&:last-child
@@ -363,6 +368,12 @@
 			display: inline-block
 			position: relative
 			top: 1px
+		span
+			display: inline-block
+			color: $color-text 
+			border-bottom: 1px dashed $color-border
+			+r(480)
+				color: #333 
 		&_noarrow
 			&::after
 				display: none
