@@ -111,8 +111,31 @@ $(document).ready(function (){
 			closeSpeed:0,
 			helpers:{
 				overlay:{
-					locked:!1
+					locked: false
 				}
+			}
+		});
+	}
+
+	//Popup
+	if($('.js-fancybox--map').length){
+		$('.js-fancybox--map').fancybox({
+			touch: false,
+			autoSize:!1,
+			fitToView:!1,
+			width:"100%",
+			maxWidth: '560px',
+			height:"auto",
+			margin:0,
+			padding:0,
+			closeSpeed:0,
+			helpers:{
+				overlay:{
+					locked: false
+				}
+			},
+			afterLoad: function (){
+
 			}
 		});
 	}
@@ -176,10 +199,10 @@ $(document).ready(function (){
 			myMap.behaviors.disable(['scrollZoom']);
 
 			myMap.controls
-			.remove('searchControl')
-			.remove('trafficControl')
-			.remove('typeSelector')
-			.add( 'routeEditor');
+				.remove('searchControl')
+				.remove('trafficControl')
+				.remove('typeSelector')
+				.add( 'routeEditor');
 
 			myPin = new ymaps.GeoObjectCollection({}, {
 				iconLayout: 'default#image',
@@ -202,6 +225,13 @@ $(document).ready(function (){
 
 			myPin.add(myPlacemark1).add(myPlacemark2);
 			myMap.geoObjects.add(myPin);
+
+
+			$('.js-fancybox--map').fancybox({
+				afterLoad : function () {
+					myMap.redraw();
+				}
+			});
 		}
 	}
 

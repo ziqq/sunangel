@@ -1,7 +1,5 @@
 .product
-	padding-top: 70px
-	+r(480)
-		padding-top: 30px
+	padding-top: 30px
 	&__inner
 		margin-bottom: 60px
 		padding-bottom: 20px
@@ -129,10 +127,22 @@
 		text-transform: uppercase
 		+r(480)
 			font-size: rem(14)
+	//product__badge
+	&__badge
+		display: inline-block
+		padding: 5px 10px 4px
+		border: 1px solid $color-brown
+		background: transparent
+		margin-bottom: 4px
+		font-size: rem(14)
+		line-height: 1
+		letter-spacing: 1px
+		text-transform: none
+		white-space: nowrap
 	//product__title
 	&__title
 		margin-bottom: 80px
-		color: #474747
+		color: $color-text
 		font-family: encore-50, sans-serif
 		font-size: rem(36)
 		line-height: 1.3
