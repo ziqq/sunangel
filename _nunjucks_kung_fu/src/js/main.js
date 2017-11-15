@@ -101,8 +101,6 @@ $(document).ready(function (){
 	if($('.js-fancybox').length){
 		$('.js-fancybox').fancybox({
 			touch: false,
-			autoSize:!1,
-			fitToView:!1,
 			width:"100%",
 			maxWidth: '560px',
 			height:"auto",
@@ -116,72 +114,14 @@ $(document).ready(function (){
 			}
 		});
 	}
-
-	//Popup
-	if($('.js-fancybox--map').length){
-		$('.js-fancybox--map').fancybox({
-			maxWidth   : 880,
-			maxHeight  : 700,
-			padding    : 50,
-			// fitToView  : false,
-			width      : '90%',
-			height     : '90%',
-			autoSize   : false,
-			closeClick : false,
-
-			afterShow  : function() {
-				ymaps.ready(init);
-				var myMap,
-				myPlacemark1,
-				myPlacemark2,
-				myPin;
-
-				function init(){
-					myMap = new ymaps.Map("wherebuyit", {
-						center: [52.01662042, 47.81215808],
-						zoom: 14
-					});
-
-					myMap.behaviors.disable(['scrollZoom']);
-
-					myMap.controls
-						.remove('searchControl')
-						.remove('trafficControl')
-						.remove('typeSelector')
-						.add( 'routeEditor');
-
-					myPin = new ymaps.GeoObjectCollection({}, {
-						iconLayout: 'default#image',
-						iconImageHref: 'img/general/map-pin.svg',
-						iconImageSize: [30, 42],
-						iconImageOffset: [-3, -42]
-					});
-
-					myPlacemark1 = new ymaps.Placemark([52.02289564, 47.82915305], {
-						balloonContentHeader: '<span class="map-pin__title"> Тц, ГринХаус, Салон Sunangel</span>',
-						balloonContentBody: '<span class="map-shop__place">ул. Трнавская, 24</span><span class="map-shop__time"><i class="fa fa-clock-o"></i>10:00 — 22:00</span><span class="map-shop__phone"><i class="fa fa-phone-square"></i><a href="tel:">+7 (999) 000-00-00</a></span>',
-						hintContent: 'Sunangel'
-					});
-
-					myPlacemark2 = new ymaps.Placemark([52.01096799, 47.79694039], {
-						balloonContentHeader: '<span class="map-pin__title"> Тц, Оранж, Салон Sunangel</span>',
-						balloonContentBody: '<span class="map-shop__place">ул. Волжская, 100</span><span class="map-shop__time"><i class="fa fa-clock-o"></i>9:00 — 21:00</span><span class="map-shop__phone"><i class="fa fa-phone-square"></i><a href="tel:">+7 (999) 000-00-00</a></span>',
-						hintContent: 'Sunangel'
-					});
-
-					myPin.add(myPlacemark1).add(myPlacemark2);
-					myMap.geoObjects.add(myPin);
-				}
-
-			},
-			
-			afterClose:function (){
-	          myMap.destroy();
-	          myMap = null;
-	        }
-	    });
-	}
 	$('.js-popup--close').click(function (){$.fancybox.close();});
+
+	$('.js-bookit--open').on('click', function (){
+		$('.bookit').addClass('is-active');
+	});
+	$('.js-bookit--close').on('click', function (){
+		$('.bookit').removeClass('is-active');
+	});
 
 	$('img').on('dragstart', function(event) { event.preventDefault(); });
 

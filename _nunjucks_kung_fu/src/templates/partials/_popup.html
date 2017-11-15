@@ -122,14 +122,8 @@
 	<!-- end popup-nomysize -->
 	<!-- begin popup-wherebuyit -->
 	<div id="wherebuyit" class="wherebuyit popup bg--dark">
-
-		<h3 class="popup__title">Наши магазины находятся</h3>
-
 		<div class="map__wrap">
-			<div id="map" class="map"></div>
-			<button class="btn btn_shops js-map-shops">магазины</button>
 			<div class="map__text">
-				<div class="sa-close js-map-text-close">{{mixin.icon('close')}}</div>
 				<h3 class="map__title">Магазины в</h3>
 				<div class="map__city">
 					<div class="city js-city-hover">
@@ -144,23 +138,67 @@
 						</div>
 					</div>
 				</div>
-				<div class="map__shops">
-					<div class="map-shop">
-						<h4 class="map-shop__title">Тц, ГринХаус, Салон Sunangel</h4>
-						<span class="map-shop__place">ул. Трнавская, 24</span>
-						<span class="map-shop__phone"><i class="fa fa-phone-square"></i>+7 (999) 000-00-00</span>
-						<span class="map-shop__time"><i class="fa fa-clock-o"></i>10:00 — 20:00</span>
-					</div>
+				<div class="map-shop">
+					<h4 class="map-shop__title">Тц, ГринХаус, Салон Sunangel</h4>
+					<span class="map-shop__place">ул. Трнавская, 24</span>
+					<span class="map-shop__phone"><i class="fa fa-phone-square"></i>+7 (999) 000-00-00</span>
+					<span class="map-shop__time"><i class="fa fa-clock-o"></i>10:00 — 20:00</span>
+					<button class="btn map-shop__btn js-bookit--open">Забронировать</button>
 				</div>
-				<div class="map__shops">
-					<div class="map-shop">
-						<h4 class="map-shop__title">Тц, Оранж, Салон Sunangel</h4>
-						<span class="map-shop__place">ул. Волжская, 4</span>
-						<span class="map-shop__phone"><i class="fa fa-phone-square"></i>+7 (999) 000-00-00</span>
-						<span class="map-shop__time"><i class="fa fa-clock-o"></i>10:00 — 20:00</span>
-					</div>
+				<div class="map-shop">
+					<h4 class="map-shop__title">Тц, Оранж, Салон Sunangel</h4>
+					<span class="map-shop__place">ул. Волжская, 4</span>
+					<span class="map-shop__phone"><i class="fa fa-phone-square"></i>+7 (999) 000-00-00</span>
+					<span class="map-shop__time"><i class="fa fa-clock-o"></i>10:00 — 20:00</span>
+					<button class="btn map-shop__btn js-bookit--open">Забронировать</button>
 				</div>
 			</div>
+		</div>
+		<div class="bookit">
+
+			<h3 class="popup__title">Забронировать</h3>
+			<span class="sa-close js-bookit--close">{{mixin.icon('close')}}</span>
+
+			<form class="bookit__form">
+				<label class="sa-input__box">
+					<input class="sa-input js-sa-input" type="text">
+					<span class="sa-input__placeholder">Введите Ваше имя</span>
+				</label>
+				<label class="sa-input__box">
+					<input class="sa-input js-sa-input phone-mask" type="tel">
+					<span class="sa-input__placeholder">Введите Ваш номер телефона</span>
+				</label>
+				<label class="sa-input__box">
+					<input class="sa-input js-sa-input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+					<span class="sa-input__placeholder">Введите Ваш Email</span>
+				</label>
+				<div class="extra-item js-extra-item">
+					<span>Выбирете размер</span>
+					<div class="extra-item__dropdown">
+						<ul class="size__list">
+							<ul>
+								<li class="size__item">16</li>
+								<li class="size__item">16.5</li>
+								<li class="size__item">17</li>
+								<li class="size__item">17.5</li>
+							</ul>
+							<ul>
+								<li class="size__item">18</li>
+								<li class="size__item">18.5</li>
+								<li class="size__item">19</li>
+								<li class="size__item">19.5</li>
+							</ul>
+							<ul>
+								<li class="size__item">20</li>
+								<li class="size__item">20.5</li>
+								<li class="size__item">21</li>
+								<li class="size__item">21.5</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
+				<button class="btn">Забронировать</button>
+			</form>
 		</div>
 	</div>
 	<!-- end popup-wherebuyit -->

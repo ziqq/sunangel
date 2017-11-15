@@ -77,6 +77,8 @@
 		font-family: encore-50, sans-serif
 		font-size: rem(36)
 		text-align: center
+		+r(375)
+			font-size: rem(32)
 	&__desc
 		display: block
 		margin-bottom: 40px
@@ -134,17 +136,98 @@
 			font-family: oswald-500
 			font-size: rem(24)
 
+//nomysize
 .nomysize
 	.extra-item
+		display: inline-block
 		margin: 20px 0 35px 25px
 		padding-right: 15px
 		&__dropdown
 			left: 0
 			width: 225px
 			max-width: 225px
+			&::before
+				left: 10px
 	.btn
 		display: block
 		margin: 0 auto
+
+//wherebuyit
+.wherebuyit
+	position: relative
+	overflow: hidden !important
+	.map
+		&__text
+			padding: 0
+			width: 100%
+			position: relative
+			top: auto
+			left: auto
+			bottom: auto
+			background-color: transparent
+			box-shadow: none
+			+tX(0)
+			.city
+				&__inner
+					top: 40px
+	.map-shop
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		&__btn
+			padding: 10px 30px
+			margin-top: 15px
+	.city
+		&__inner
+			top: 40px
+		&.is-active
+			.city
+				&__inner
+					top: 30px
+	.bookit
+		padding: 30px
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $color-bg-darken
+		background-image: url("../img/general/dropdown-bg.png")
+		background-repeat: no-repeat
+		background-position: top left
+		z-index: 99
+		+tY(-150%)
+		+tr(.5s)
+		+r(480)
+			padding: 15px 30px 30px
+		&.is-active
+			+tY(0)
+		.extra-item
+			display: inline-block
+			margin: 20px 0 35px 25px
+			padding-right: 15px
+			&.is-visible
+				.extra-item__dropdown
+					top: -170px
+			&__dropdown
+				top: -180px
+				left: 0
+				width: 225px
+				max-width: 225px
+				&::before
+					left: 10px
+					top: auto
+					bottom: -6px
+					+rotate(180)
+		.btn
+			display: block
+			margin: 0 auto
+		.sa-close
+			position: absolute
+			top: 44px
+			right: 30px
+			+r(375)
+				top: 26px
 
 //callback
 #callback
