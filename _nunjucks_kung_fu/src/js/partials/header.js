@@ -76,7 +76,9 @@
 			}else{
 				$('.go-top').removeClass('is-visible');
 			}
-			$('.js-menu').slideUp();
+			if($(window).width() <= 1024){
+				$('.js-menu').slideUp();
+			}			
 		}
 	});
 	

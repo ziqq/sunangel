@@ -4,9 +4,9 @@ var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var mqpacker     = require('css-mqpacker');
-var config       = require('../config');
 var csso         = require('postcss-csso');
 var rename       = require('gulp-rename');
+var config       = require('../config');
 
 var processors = [
 	autoprefixer({

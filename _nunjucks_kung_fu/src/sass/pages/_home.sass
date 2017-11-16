@@ -1,8 +1,6 @@
 //home
 .home
-	padding: 20px 0 50px
-	+r(480)
-		padding-top: 0
+	padding-bottom: 50px
 	.product-item
 		padding: 50px
 		+tr(.35s)
@@ -13,13 +11,10 @@
 		&:nth-child(3n)
 			margin-right: 0
 		+r(768)
-			+span(6)
+			padding: 15px
 			border: none
-			&:nth-child(2n)
-				margin-right: 0
-			&:nth-child(3n)
-				margin-right: gutter()
 		+r(480)
+			+span(6)
 			padding-bottom: 0
 			margin: 0 auto
 			&:nth-child(2n)
@@ -57,9 +52,11 @@
 	//home-item__wrap
 	&__wrap
 		display: flex
-		margin-bottom: 30px
+		margin-bottom: 50px
 		+r(768)
 			flex-wrap: wrap
+		+r(480)
+			margin-bottom: 20px
 		&_left
 			display: flex
 			width: 56%
@@ -75,6 +72,7 @@
 				margin-right: 0
 			+r(480)
 				flex-wrap: wrap
+				margin-bottom: 20px
 			+r(320)
 				padding: 320px 0 25px
 			.home-item
@@ -167,3 +165,58 @@
 //brands
 .brands
 	padding: 30px 0 50px
+
+//home-section
+.home-section
+	position: relative
+	min-height: 500px
+	margin-bottom: 50px
+	+cover
+	//home-section__text
+	&__text
+		+vy
+		left: 60px
+		width: 350px
+		text-align: center
+		+r(480)
+			padding-top: 15px
+			position: relative
+			margin: 0 auto
+			top: auto
+			left: auto
+			+tY(0)
+	//home-section__title
+	&__title
+		display: block
+		margin-bottom: 42px
+		font-family: encore-50, sans-serif
+		font-size: rem(36)
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: 2.61px
+		position: relative
+		+r(768)
+			font-size: rem(28)
+		&::after
+			content: '. . . . .'
+			color: $color-text-light
+			display: block
+			+vx
+			bottom: -35px
+		span
+			display: block
+	//home-section__link
+	&__link
+		border: none
+		background-color: transparent
+		color: $color-text-light
+		text-transform: initial
+		min-width: auto
+		padding-right: 35px
+		position: relative
+		&:hover
+			background-color: transparent
+			&::after
+				right: 5px
+		&::after
+			top: 53%
