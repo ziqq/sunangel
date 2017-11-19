@@ -26,6 +26,8 @@ body
 	overflow-x: hidden
 	z-index: 1
 	+my-scroll
+	+smooth-font
+	+smooth-scroll
 	&.is-fixed
 		overflow: hidden
 		&-bg
@@ -35,6 +37,8 @@ body
 			height: 100%
 	&.fancybox-iosfix
 		position: static
+	+r(425)
+		font-family: $f-mobile
 
 .mask
 	position: absolute
@@ -49,6 +53,8 @@ body
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 	font-family: encore-50, sans-serif
 	color: $color-text
+	+r(425)
+		font-family: $f-mobile-light
 
 .h1
 	font-size: rem(36)
@@ -75,10 +81,12 @@ p
 	font-family: encore-300, sans-serif
 	font-size: rem(16)
 	color: $color-text-lighten
+	+r(425)
+		font-family: $f-mobile
 
 .page-title
 	display: block
-	margin: 60px 0
+	margin: 40px 0 45px
 	text-align: center
 	font-size: rem(48)
 	font-family: encore-50, sans-serif
@@ -87,6 +95,8 @@ p
 	+r(480)
 		margin: 35px 0
 		font-size: rem(32)
+	+r(425)
+		font-family: $f-mobile
 
 %i
 	display: block
@@ -417,6 +427,8 @@ img ,.img-responsive
 			color: $color-text
 			&::after
 				color: $color-text
+		+r(425)
+			font-family: $f-mobile
 
 @keyframes reset-rotate
 	%0
@@ -452,6 +464,8 @@ input
 	border-radius: 3px
 	border: 1px solid $color-border
 	background-color: #fff
+	+r(425)
+		font-family: $f-mobile-light
 	&__box
 		display: block
 		position: relative
@@ -466,6 +480,8 @@ input
 					color: #b8b8b8
 					font-size: rem(13)
 					top: 5px
+					+r(425)
+						font-family: $f-mobile-light
 		.icon-search
 			position: absolute
 			top: 18px

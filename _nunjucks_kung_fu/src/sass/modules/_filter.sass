@@ -1,7 +1,7 @@
 .filter
 	position: fixed
 	top: 0
-	max-width: 414px
+	max-width: 425px
 	width: 100%
 	right: 0
 	bottom: 0
@@ -85,6 +85,8 @@
 		text-transform: uppercase
 		color: $color-text-light
 		letter-spacing: 2.61px
+		+r(425)
+			font-family: $f-mobile-light 
 		+r(375)
 			font-size: rem(28)
 	//filter__action
@@ -123,6 +125,8 @@
 		font-family: encore-200
 		font-size: rem(18)
 		color: $color-brown
+		+r(425)
+			font-family: $f-mobile-light 
 	//filter-item__item
 	&__item
 		&_showmore
@@ -172,7 +176,7 @@
 
 //filtr-sm__reset
 .filter-sm
-	padding: 15px 0 10px
+	padding: 7px 0
 	text-align: center
 	border-bottom: 1px solid $color-border
 	+clr
@@ -188,7 +192,7 @@
 		+clr
 		&.is-fixed
 			position: fixed
-			top: 65px
+			top: 60px
 			left: 0
 			width: 100%
 			z-index: 98
@@ -310,6 +314,8 @@
 			.checkbox
 				font-family: encore-100, sans-serif
 				color: rgba(#fff, 0.7)
+				+r(425)
+					font-family: $f-mobile-light 
 				&:last-child
 					margin-bottom: 0
 				&.is-disable

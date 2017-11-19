@@ -74,7 +74,7 @@
 		if($(window).width() > 480){
 			$(window).scroll(function (){
 				var winScrollTop = $(this).scrollTop();
-				if(winScrollTop >= fSmWrapOffset - fSmWrap.outerHeight(true)){
+				if(winScrollTop >= fSmWrapOffset - fSmWrap.outerHeight() * 2){
 					fSmWrap.addClass('is-fixed');
 					fSmWrapClone.show();
 				}else{

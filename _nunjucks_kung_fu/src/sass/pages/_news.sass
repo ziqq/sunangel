@@ -1,6 +1,7 @@
 .main_news
 	padding-top: 20px
 	+r(480)
+		padding-top: 0
 		.breadcrumbs
 			display: none
 
@@ -128,8 +129,8 @@
 			left: 0
 			width: 100%
 			height: 100%
-			+gp(to bottom, #000, #fff)
-			opacity: .3
+			+gp(to top, #000, #fff)
+			opacity: .4
 			z-index: 0
 		+r(480)
 			margin-bottom: 50px
@@ -141,6 +142,8 @@
 		font-size: rem(48)
 		+r(480)
 			font-size: rem(40)
+		+r(425)
+			font-family: $f-mobile-light 
 	//news-i__text
 	&__text
 		color: #fff
