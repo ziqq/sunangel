@@ -16,11 +16,13 @@
 		+r(480)
 			+span(6)
 			padding-bottom: 0
-			margin: 0 auto
+			margin: 0 auto 30px
 			&:nth-child(2n)
-				margin: 0 auto
+				margin: 0 auto 30px
 			&:nth-child(3n)
-				margin: 0 auto
+				margin: 0 auto 30px
+			&:last-child
+				margin-bottom: 0
 		&__wrap
 			margin-bottom: 40px
 			+r(480)
@@ -35,11 +37,15 @@
 			font-size: rem(28)
 			text-transform: uppercase
 			letter-spacing: 2.17px
+			+r(425)
+				font-family: $f-mobile-light
 		&__button
 			opacity: 1
 			text-align: center
 	.slider__link
 		left: auto
+		+r(480)
+			padding: 0 30px
 		&::after
 			transform: translateY(-38%)
 
@@ -136,6 +142,9 @@
 						color: $color-text
 						font-family: encore-100, sans-serif
 						font-size: rem(24)
+						+r(425)
+							font-family: $f-mobile-light
+							font-size: rem(20)
 						+r(375)
 							font-size: rem(20)
 				.btn
@@ -148,6 +157,8 @@
 		font-size: rem(36)
 		text-transform: uppercase
 		letter-spacing: 2.61px
+		span
+			display: block
 	//home-item__subtitle
 	&__subtitle
 		display: block
@@ -184,7 +195,7 @@
 			margin: 0 auto
 			top: auto
 			left: auto
-			+tY(0)
+			+tY(70%)
 	//home-section__title
 	&__title
 		display: block
