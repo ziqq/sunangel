@@ -143,6 +143,8 @@
 		letter-spacing: 1px
 		text-transform: none
 		white-space: nowrap
+		+r(425)
+			font-family: $f-mobile-light
 	//product__title
 	&__title
 		margin-bottom: 80px
@@ -210,6 +212,9 @@
 						max-width: 98px
 						+r(1024)						
 							+text-overflow
+						+r(425)
+							max-width: 145px
+							font-size: rem(16)
 		//product-desc__item_about
 		&_about
 			+r(480)
