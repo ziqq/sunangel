@@ -7,10 +7,9 @@
 *.swo
 *.swp
 *.zip
+*.7zip
 *.vi
 *~
-*.psd
-*.psb
 
 # OS or Editor folders
 .DS_Store
@@ -32,6 +31,4 @@ nbproject
 _tmp
 node_modules
 bower_components
-Design
-References
 build

@@ -1,0 +1,196 @@
+---
+title: Подвески со знаками зодиака
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_header.html" %}
+{% include "partials/_header-catalog.html" %}
+
+<!-- start main -->
+<main class="main catalog">
+	<div class="container">
+
+		{{mixin.breadcrumbs()}}
+
+		<div class="page-title">
+			<h1 class="h1">{{title}}</h1>
+		</div>
+
+	</div>
+
+	<!-- begin filter-top -->
+	<div class="filter-top__wrap">
+		<div class="container">
+			<ul class="filter-top">
+				<li class="filter-top__item">
+					Вид украшения
+					<span class="filter-top__reset"></span>
+					<div class="filter-top__dropdown">
+
+						<div class="filter-top__dropdown_inner">
+
+							<div class="filter-item">
+								<div class="filter-item__list">
+
+									{% import "data/data.html" as filterItem %}
+
+									{% for i in range(0, 4) %}
+									{% for item in filterItem.filter %}
+									<label class="filter__checkbox checkbox checkbox__title js-checkbox-title {{item.disable}}">
+										<input type="checkbox">
+										<span class="text">{{item.view}}</span>
+										<span class="check"></span>
+									</label>
+									{% endfor %}
+										{% endfor %}
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</li>
+				<li class="filter-top__item">
+					Метал
+					<span class="filter-top__reset"></span>
+					<div class="filter-top__dropdown">
+
+						<div class="filter-top__dropdown_inner">
+
+							<div class="filter-item">
+								<div class="filter-item__list">
+									<ul class="filter-top__inner">
+										{% import "data/data.html" as filterItem %}
+										{% for item in filterItem.filter %}
+										<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+											<input type="checkbox">
+											<span class="text">{{item.metal}}</span>
+											<span class="check"></span>
+										</label>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</li>
+				<li class="filter-top__item is-checked">
+					Вставка
+					<span class="filter-top__reset"></span>
+					<span class="filter-top__choose">(2)</span>
+					<div class="filter-top__dropdown">
+						<div class="filter-top__dropdown_inner">
+							<div class="filter-item">
+								<div class="filter-item__list">
+									<ul class="filter-top__inner">
+										{% import "data/data.html" as filterItem %}
+										{% for item in filterItem.filter %}
+										<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+											<input type="checkbox">
+											<span class="text">{{item.insert}}</span>
+											<span class="check"></span>
+										</label>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="filter-top__item">
+					Бренд
+					<span class="filter-top__reset"></span>
+					<div class="filter-top__dropdown">
+						<div class="filter-top__dropdown_inner">
+							<div class="filter-item">
+								<div class="filter-item__list">
+									<ul class="filter-top__inner">
+										{% import "data/data.html" as filterItem %}
+										{% for item in filterItem.filter %}
+										<label class="filter__checkbox checkbox checkbox__title js-checkbox-title">
+											<input type="checkbox">
+											<span class="text">{{item.brand}}</span>
+											<span class="check"></span>
+										</label>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="filter-top__item">
+					<a href="javascript:void(0);" class="filter-top__btn js-filter-open"><span>Расширенный фильтр</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end filter-top -->
+
+	<!-- begin sorting -->
+	<div class="sorting__wrap">
+		<div class="container">
+			<ul class="sorting">
+				<li class=" sorting__item sorting__item_title js-filter-sorting">Сортировать по:</li>
+				<li class="sorting__item js-filter-sorting">по популярности</li>
+				<li class="sorting__item js-filter-sorting is-active">возрастанию цены</li>
+				<li class="sorting__item js-filter-sorting"> убыванию цены</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end sorting -->
+
+
+
+	<!-- begin catalog -->
+	<section class="catalog">
+		<div class="container">
+
+			<div class="product-item__wrap">
+				{% for i in range(0, 11) -%}
+					{{item.product()}}
+				{%- endfor%}
+			</div>
+
+		</div>
+
+		<div class="container">
+			<div class="paginator">
+				<ul class="paginator__list">
+					<li class="paginator__item">1</li>
+					<li class="paginator__item is-active">2</li>
+					<li class="paginator__item">3</li>
+					<li class="paginator__item">4</li>
+					<li class="paginator__item">5</li>
+					<li class="paginator__item">6</li>
+					<li class="paginator__item">7</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end catalog -->
+
+	<!-- begin seo-text -->
+	<section class="seo-text catalog__seo-text">
+		<div class="container">
+			<h2 class="seo-text__title">Золотые украшения Sanangel</h2>
+			<p class="seo-text__desc">Символы зодиакального круга всегда наделялись охранной силой для своего обладателя. Выбери оригинальную подвеску со своим знаком зодиака и не расставайся с ней. Самые модные, яркие и оригинальные драгоценности из благородных металлов, инкрустированные россыпью сияющих камней, только у нас!</p>
+			<p class="seo-text__desc">Символы зодиакального круга всегда наделялись охранной силой для своего обладателя. Выбери оригинальную подвеску со своим знаком зодиака и не расставайся с ней. Самые модные, яркие и оригинальные драгоценности из благородных металлов, инкрустированные россыпью сияющих камней, только у нас!</p>
+			<p class="seo-text__desc">Символы зодиакального круга всегда наделялись охранной силой для своего обладателя. Выбери оригинальную подвеску со своим знаком зодиака и не расставайся с ней. Самые модные, яркие и оригинальные драгоценности из благородных металлов, инкрустированные россыпью сияющих камней, только у нас!</p>
+			<div class="seo-text__readnext btn_next">Далее</div>
+		</div>
+	</section>
+	<!-- end seo-text -->
+
+	{% include "partials/_filter.html" %}
+
+</main>
+<!-- end main -->
+
+{% include "partials/_footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,209 @@
+//Menu
+.menu
+	margin: 0
+	padding: 20px 0
+	list-style-type: none
+	+r(1024)
+		text-align: left
+		display: none
+		padding: 30px 110px 0
+		position: fixed
+		top: 147px
+		left: 0
+		width: 100%
+		overflow-y: auto
+		-webkit-overflow-scrolling:touch
+		background-color: #FFF
+		+bs(0 10px 10px 1px rgba(0, 0, 0, 0.1))
+		z-index: 98
+	+r(480)
+		padding: 30px 110px 0
+		top: 50px
+		height: calc(100% - 50px)
+	+r(425)
+		padding: 30px 85px 0
+	+r(414)
+		padding: 30px 79px 0
+	+r(375)
+		padding: 30px 59px 0
+	+r(320)
+		padding: 30px 30px 0
+	+clr
+	&__list
+		display: inline-block
+		vertical-align: middle
+		+r(1024)
+			display: block
+			float: none
+			margin-bottom: 30px
+		& + &
+			margin-left: 65px
+			+r(1200)
+				margin-left: 55px
+			+r(1024)
+				margin-left: 0
+		&_gender
+			float: left
+		&_sale
+			float: right
+	&__item
+		display: inline-block
+		vertical-align: middle
+		+r(1024)
+			display: block
+		+r(480)
+		& + &
+			margin-left: 30px
+			+r(1024)
+				margin-left: 0
+			padding: 5px 0
+		&.is-active
+			.menu__link
+				color: $color-accent
+
+	&__link
+		font-size: rem(16)
+		+r(480)
+			font-size: rem(20)
+		&:hover
+			color: $color-accent
+		&_sale
+			position: relative
+			&:hover
+				&::before
+					+scale(1.3)
+					font-size: rem(12)
+			&::before
+				content: '%'
+				display: block
+				width: 21px
+				height: 21px
+				+br(50%)
+				background-color: $color-brown-lighten
+				font-family: encore-300
+				font-size: rem(11)
+				line-height: rem(21)
+				text-align: center
+				color: $color-accent
+				+scale(1)
+				+tr(.35s)
+				position: absolute
+				left: -24px
+				top: -1px
+				+r(1024)
+					left: auto
+					right: -30px
+					top: 4px
+
+//toggle-menu
+.toggle-menu
+	display: inline-block
+	width: 28px
+	height: 28px
+	position: absolute
+	top: 23px
+	left: 0
+	z-index: 99
+	+r(1199)
+		left: 20px
+	+r(480)
+		top: 14px
+		left: 10px
+	span
+		position: relative
+		display: block
+		width: 100%
+		height: 2px
+		background-color: $color-text
+		+tr(.35s)
+		backface-visibility: hidden
+		border-radius: 2px
+		&:after, &:before
+			content: ' '
+			position: absolute
+			left: 0
+			top: 9px
+		&:after
+			top: 18px
+			width: 100%
+			height: 2px
+			background-color: $color-text
+			+tr(.35s)
+			backface-visibility: hidden
+			border-radius: 2px
+		&:before
+			width: 100%
+			height: 2px
+			background-color: $color-text
+			+tr(.35s)
+			backface-visibility: hidden
+			border-radius: 2px
+	&.on
+		span
+			background-color: transparent
+			&:before
+				background-color: $color-accent
+				transform: rotate(45deg) translate(-1px, 0px)
+			&:after
+				background-color: $color-accent
+				transform: rotate(-45deg) translate(6px, -7px)
+
+
+//about-nav
+.about-nav
+	text-align: center
+	border-bottom: 1px solid $color-border
+	+r(480)
+		border-bottom: none
+	//about-nav__list
+	&__list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		+r(480)
+			padding: 0 10px
+	//about-nav__item
+	&__item
+		display: inline-block
+		vertical-align: middle
+		padding: 10px 30px
+		position: relative
+		&::before
+			content: ''
+			display: none
+			width: 100%
+			height: 1px
+			background-color: #FFF
+			position: absolute
+			left: 0
+			bottom: -1px
+		&.is-active
+			border: 1px solid $color-border
+			border-bottom: none
+			border-radius: 4px 4px 0 0
+			&::before
+				display: block
+			.about-nav__link
+				color: $color-accent
+		+r(480)
+			display: block
+			margin-bottom: 10px
+			&.is-active
+				border-bottom: 1px solid $color-border
+				+br(4px)
+				&::before
+					display: none
+	//about-nav__link
+	&__link
+		color: $color-text
+		font-size: rem(16)
+		+tr(.35s)
+		&:hover
+			color: $color-accent
+		+r(480)
+			text-decoration: underline
+	//about-nav__news-i
+	&__news-i
+		display: none
+		+r(480)
+			display: block
